@@ -5,8 +5,8 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 get_header();

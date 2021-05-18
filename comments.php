@@ -8,8 +8,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 /*
@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 	return;
 }
 
-$twenty_twenty_one_comment_count = get_comments_number();
+$darchitect_comment_count = get_comments_number();
 ?>
 
 <div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
@@ -31,14 +31,14 @@ $twenty_twenty_one_comment_count = get_comments_number();
 		;
 		?>
 		<h2 class="comments-title">
-			<?php if ( '1' === $twenty_twenty_one_comment_count ) : ?>
+			<?php if ( '1' === $darchitect_comment_count ) : ?>
 				<?php esc_html_e( '1 comment', 'twentytwentyone' ); ?>
 			<?php else : ?>
 				<?php
 				printf(
 					/* translators: %s: Comment count number. */
-					esc_html( _nx( '%s comment', '%s comments', $twenty_twenty_one_comment_count, 'Comments title', 'twentytwentyone' ) ),
-					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) )
+					esc_html( _nx( '%s comment', '%s comments', $darchitect_comment_count, 'Comments title', 'twentytwentyone' ) ),
+					esc_html( number_format_i18n( $darchitect_comment_count ) )
 				);
 				?>
 			<?php endif; ?>
@@ -63,13 +63,13 @@ $twenty_twenty_one_comment_count = get_comments_number();
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
-					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
+					is_rtl() ? darchitect_get_icon_svg( 'ui', 'arrow_right' ) : darchitect_get_icon_svg( 'ui', 'arrow_left' ),
 					esc_html__( 'Older comments', 'twentytwentyone' )
 				),
 				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					esc_html__( 'Newer comments', 'twentytwentyone' ),
-					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
+					is_rtl() ? darchitect_get_icon_svg( 'ui', 'arrow_left' ) : darchitect_get_icon_svg( 'ui', 'arrow_right' )
 				),
 			)
 		);

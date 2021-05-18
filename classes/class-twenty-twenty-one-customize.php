@@ -3,24 +3,24 @@
  * Customizer settings for this theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
-if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
+if ( ! class_exists( 'Darchitect_Customize' ) ) {
 	/**
 	 * Customizer Settings.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 */
-	class Twenty_Twenty_One_Customize {
+	class Darchitect_Customize {
 
 		/**
 		 * Constructor. Instantiate the object.
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since Darchitect 1.0
 		 */
 		public function __construct() {
 			add_action( 'customize_register', array( $this, 'register' ) );
@@ -31,7 +31,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since Darchitect 1.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 *
@@ -121,7 +121,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 			include_once get_theme_file_path( 'classes/class-twenty-twenty-one-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 			// Register the custom control.
-			$wp_customize->register_control_type( 'Twenty_Twenty_One_Customize_Color_Control' );
+			$wp_customize->register_control_type( 'Darchitect_Customize_Color_Control' );
 
 			// Get the palette from theme-supports.
 			$palette = get_theme_support( 'editor-color-palette' );
@@ -136,7 +136,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 
 			// Add the control. Overrides the default background-color control.
 			$wp_customize->add_control(
-				new Twenty_Twenty_One_Customize_Color_Control(
+				new Darchitect_Customize_Color_Control(
 					$wp_customize,
 					'background_color',
 					array(
@@ -153,7 +153,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since Darchitect 1.0
 		 *
 		 * @param bool $checked Whether or not a box is checked.
 		 *
@@ -168,7 +168,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since Darchitect 1.0
 		 *
 		 * @return void
 		 */
@@ -181,7 +181,7 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		 *
 		 * @access public
 		 *
-		 * @since Twenty Twenty-One 1.0
+		 * @since Darchitect 1.0
 		 *
 		 * @return void
 		 */

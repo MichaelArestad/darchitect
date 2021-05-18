@@ -1,24 +1,24 @@
 <?php
 /**
- * Twenty Twenty-One Starter Content
+ * Darchitect Starter Content
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 /**
  * Function to return the array of starter content for the theme.
  *
- * Passes it through the `twenty_twenty_one_starter_content` filter before returning.
+ * Passes it through the `darchitect_starter_content` filter before returning.
  *
- * @since Twenty Twenty-One 1.0
+ * @since Darchitect 1.0
  *
  * @return array A filtered array of args for the starter_content.
  */
-function twenty_twenty_one_get_starter_content() {
+function darchitect_get_starter_content() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
@@ -84,7 +84,7 @@ function twenty_twenty_one_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Twenty Twenty-One includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<p>' . esc_html_x( 'Darchitect includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'twentytwentyone' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
@@ -94,7 +94,7 @@ function twenty_twenty_one_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Twenty Twenty-One also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'twentytwentyone' ) . '</p>
+					<p>' . esc_html_x( 'Darchitect also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'twentytwentyone' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns -->
@@ -176,9 +176,9 @@ function twenty_twenty_one_get_starter_content() {
 	/**
 	 * Filters the array of starter content.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
-	return apply_filters( 'twenty_twenty_one_starter_content', $starter_content );
+	return apply_filters( 'darchitect_starter_content', $starter_content );
 }

@@ -7,21 +7,21 @@
  * relies on many newer functions and markup changes introduced in 5.3.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 /**
  * Display upgrade notice on theme switch.
  *
- * @since Twenty Twenty-One 1.0
+ * @since Darchitect 1.0
  *
  * @return void
  */
-function twenty_twenty_one_switch_theme() {
-	add_action( 'admin_notices', 'twenty_twenty_one_upgrade_notice' );
+function darchitect_switch_theme() {
+	add_action( 'admin_notices', 'darchitect_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
+add_action( 'after_switch_theme', 'darchitect_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
@@ -29,13 +29,13 @@ add_action( 'after_switch_theme', 'twenty_twenty_one_switch_theme' );
  * Prints an update nag after an unsuccessful attempt to switch to
  * the theme on WordPress versions prior to 5.3.
  *
- * @since Twenty Twenty-One 1.0
+ * @since Darchitect 1.0
  *
  * @global string $wp_version WordPress version.
  *
  * @return void
  */
-function twenty_twenty_one_upgrade_notice() {
+function darchitect_upgrade_notice() {
 	echo '<div class="error"><p>';
 	printf(
 		/* translators: %s: WordPress Version. */
@@ -48,13 +48,13 @@ function twenty_twenty_one_upgrade_notice() {
 /**
  * Prevents the Customizer from being loaded on WordPress versions prior to 5.3.
  *
- * @since Twenty Twenty-One 1.0
+ * @since Darchitect 1.0
  *
  * @global string $wp_version WordPress version.
  *
  * @return void
  */
-function twenty_twenty_one_customize() {
+function darchitect_customize() {
 	wp_die(
 		sprintf(
 			/* translators: %s: WordPress Version. */
@@ -67,18 +67,18 @@ function twenty_twenty_one_customize() {
 		)
 	);
 }
-add_action( 'load-customize.php', 'twenty_twenty_one_customize' );
+add_action( 'load-customize.php', 'darchitect_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 5.3.
  *
- * @since Twenty Twenty-One 1.0
+ * @since Darchitect 1.0
  *
  * @global string $wp_version WordPress version.
  *
  * @return void
  */
-function twenty_twenty_one_preview() {
+function darchitect_preview() {
 	if ( isset( $_GET['preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 		wp_die(
 			sprintf(
@@ -89,4 +89,4 @@ function twenty_twenty_one_preview() {
 		);
 	}
 }
-add_action( 'template_redirect', 'twenty_twenty_one_preview' );
+add_action( 'template_redirect', 'darchitect_preview' );

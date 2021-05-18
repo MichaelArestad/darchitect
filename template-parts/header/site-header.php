@@ -3,8 +3,8 @@
  * Displays the site header.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 $wrapper_classes  = 'site-header';

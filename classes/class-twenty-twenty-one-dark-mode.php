@@ -3,21 +3,21 @@
  * Dark Mode Class
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 /**
  * This class is in charge of Dark Mode.
  */
-class Twenty_Twenty_One_Dark_Mode {
+class Darchitect_Dark_Mode {
 
 	/**
 	 * Instantiate the object.
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 */
 	public function __construct() {
 
@@ -51,7 +51,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -61,7 +61,7 @@ class Twenty_Twenty_One_Dark_Mode {
 		}
 		$background_color            = get_theme_mod( 'background_color', 'D1E4DD' );
 		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', false );
-		if ( $should_respect_color_scheme && Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
+		if ( $should_respect_color_scheme && Darchitect_Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
 			// Add Dark Mode variable overrides.
 			wp_add_inline_style(
 				'twenty-twenty-one-custom-color-overrides',
@@ -90,7 +90,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -110,7 +110,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -132,7 +132,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 *
@@ -158,14 +158,14 @@ class Twenty_Twenty_One_Dark_Mode {
 		);
 
 		$wp_customize->add_control(
-			new Twenty_Twenty_One_Customize_Notice_Control(
+			new Darchitect_Customize_Notice_Control(
 				$wp_customize,
 				'respect_user_color_preference_notice',
 				array(
 					'section'         => 'colors',
 					'priority'        => 100,
 					'active_callback' => function() {
-						return 127 >= Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
+						return 127 >= Darchitect_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
 					},
 				)
 			)
@@ -184,7 +184,7 @@ class Twenty_Twenty_One_Dark_Mode {
 
 		$description  = '<p>';
 		$description .= sprintf(
-			/* translators: %s: Twenty Twenty-One support article URL. */
+			/* translators: %s: Darchitect support article URL. */
 			__( 'Dark Mode is a device setting. If a visitor to your site requests it, your site will be shown with a dark background and light text. <a href="%s">Learn more about Dark Mode.</a>', 'twentytwentyone' ),
 			esc_url( __( 'https://wordpress.org/support/article/twenty-twenty-one/#dark-mode-support', 'twentytwentyone' ) )
 		);
@@ -200,7 +200,7 @@ class Twenty_Twenty_One_Dark_Mode {
 				'priority'        => 110,
 				'description'     => $description,
 				'active_callback' => function( $value ) {
-					return 127 < Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
+					return 127 < Darchitect_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) );
 				},
 			)
 		);
@@ -224,7 +224,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param string $classes The classes for <html> element.
 	 *
@@ -237,7 +237,7 @@ class Twenty_Twenty_One_Dark_Mode {
 
 		$background_color            = get_theme_mod( 'background_color', 'D1E4DD' );
 		$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', false );
-		if ( $should_respect_color_scheme && 127 <= Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
+		if ( $should_respect_color_scheme && 127 <= Darchitect_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
 			return ( $classes ) ? ' respect-color-scheme-preference' : 'respect-color-scheme-preference';
 		}
 
@@ -249,7 +249,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param string $classes The admin body-classes.
 	 *
@@ -269,7 +269,7 @@ class Twenty_Twenty_One_Dark_Mode {
 			$should_respect_color_scheme = get_theme_mod( 'respect_user_color_preference', false );
 			$background_color            = get_theme_mod( 'background_color', 'D1E4DD' );
 
-			if ( $should_respect_color_scheme && Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
+			if ( $should_respect_color_scheme && Darchitect_Custom_Colors::get_relative_luminance_from_hex( $background_color ) > 127 ) {
 				$classes .= ' twentytwentyone-supports-dark-theme';
 			}
 		}
@@ -282,7 +282,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return bool
 	 */
@@ -291,7 +291,7 @@ class Twenty_Twenty_One_Dark_Mode {
 		return (
 			get_theme_mod( 'respect_user_color_preference', false ) &&
 			! $is_IE &&
-			127 <= Twenty_Twenty_One_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) )
+			127 <= Darchitect_Custom_Colors::get_relative_luminance_from_hex( get_theme_mod( 'background_color', 'D1E4DD' ) )
 		);
 	}
 
@@ -300,7 +300,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -319,7 +319,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param array $attrs The attributes to add to our <button> element.
 	 *
@@ -380,7 +380,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -395,7 +395,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -403,10 +403,10 @@ class Twenty_Twenty_One_Dark_Mode {
 		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
 			return;
 		}
-		$content = '<p class="privacy-policy-tutorial">' . __( 'Twenty Twenty-One uses LocalStorage when Dark Mode support is enabled.', 'twentytwentyone' ) . '</p>'
+		$content = '<p class="privacy-policy-tutorial">' . __( 'Darchitect uses LocalStorage when Dark Mode support is enabled.', 'twentytwentyone' ) . '</p>'
 				. '<strong class="privacy-policy-tutorial">' . __( 'Suggested text:', 'twentytwentyone' ) . '</strong> '
 				. __( 'This website uses LocalStorage to save the setting when Dark Mode support is turned on or off.<br> LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.<br> No data is saved in the database or transferred.', 'twentytwentyone' );
-		wp_add_privacy_policy_content( 'Twenty Twenty-One', wp_kses_post( wpautop( $content, false ) ) );
+		wp_add_privacy_policy_content( 'Darchitect', wp_kses_post( wpautop( $content, false ) ) );
 	}
 
 }

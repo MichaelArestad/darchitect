@@ -6,8 +6,8 @@
  * @link https://developer.wordpress.org/reference/functions/register_block_pattern_category/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 /**
@@ -17,7 +17,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
 		'twentytwentyone',
-		array( 'label' => esc_html__( 'Twenty Twenty-One', 'twentytwentyone' ) )
+		array( 'label' => esc_html__( 'Darchitect', 'twentytwentyone' ) )
 	);
 }
 

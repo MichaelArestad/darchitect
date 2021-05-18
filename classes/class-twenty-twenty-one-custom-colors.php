@@ -3,21 +3,21 @@
  * Custom Colors Class
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 /**
  * This class is in charge of color customization via the Customizer.
  */
-class Twenty_Twenty_One_Custom_Colors {
+class Darchitect_Custom_Colors {
 
 	/**
 	 * Instantiate the object.
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 */
 	public function __construct() {
 
@@ -38,7 +38,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @param string $background_color The background color.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return string (hex color)
 	 */
@@ -55,7 +55,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param string|null $context Can be "editor" or null.
 	 *
@@ -89,7 +89,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -104,7 +104,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @return void
 	 */
@@ -129,7 +129,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param string $hex The HEX color.
 	 *
@@ -160,7 +160,7 @@ class Twenty_Twenty_One_Custom_Colors {
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since Darchitect 1.0
 	 *
 	 * @param array $classes The existing body classes.
 	 *

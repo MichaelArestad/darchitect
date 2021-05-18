@@ -10,8 +10,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 get_header();
@@ -26,7 +26,7 @@ if ( have_posts() ) {
 	}
 
 	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
+	darchitect_the_posts_navigation();
 
 } else {
 

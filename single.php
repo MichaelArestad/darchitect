@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Darchitect
+ * @since Darchitect 1.0
  */
 
 get_header();
@@ -33,8 +33,8 @@ while ( have_posts() ) :
 	}
 
 	// Previous/next post navigation.
-	$twentytwentyone_next = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' );
-	$twentytwentyone_prev = is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' );
+	$twentytwentyone_next = is_rtl() ? darchitect_get_icon_svg( 'ui', 'arrow_left' ) : darchitect_get_icon_svg( 'ui', 'arrow_right' );
+	$twentytwentyone_prev = is_rtl() ? darchitect_get_icon_svg( 'ui', 'arrow_right' ) : darchitect_get_icon_svg( 'ui', 'arrow_left' );
 
 	$twentytwentyone_next_label     = esc_html__( 'Next post', 'twentytwentyone' );
 	$twentytwentyone_previous_label = esc_html__( 'Previous post', 'twentytwentyone' );

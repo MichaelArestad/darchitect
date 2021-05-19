@@ -10,8 +10,9 @@
 		margin-bottom: 0;
 	}
 
-	background-color: var(--cover--color-background);
-	min-height: var(--cover--height);
+	color: var(--color-2);
+	background-color: var(--color-1);
+	min-height: 30vh;
 	margin-top: inherit;
 	margin-bottom: inherit;
 
@@ -19,15 +20,15 @@
 	.wp-block-cover-image-text,
 	.wp-block-cover-text {
 		color: currentColor; // Uses text color specified with background-color options in 07-utilities\color-palette.scss
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
+		margin-top: rem(32px);
+		margin-bottom: rem(32px);
 
 		a:not(.wp-block-button__link):not(.wp-block-file__button) {
 			color: currentColor;
 		}
 
 		.has-link-color a {
-			color: var(--wp--style--color--link, var(--global--color-primary));
+			color: var(--color-1);
 		}
 	}
 
@@ -37,15 +38,15 @@
 		.wp-block-cover__inner-container,
 		.wp-block-cover-image-text,
 		.wp-block-cover-text {
-			color: var(--cover--color-foreground);
+			color: var(--color-2);
 		}
 	}
 
 	/* Treating H2 separately to account for legacy /core styles */
 	h2 {
-		font-size: var(--heading--font-size-h2);
-		letter-spacing: var(--heading--letter-spacing-h2);
-		line-height: var(--heading--line-height-h2);
+		// font-size: var(--heading--font-size-h2);
+		// letter-spacing: var(--heading--letter-spacing-h2);
+		// line-height: var(--heading--line-height-h2);
 		max-width: inherit; // undo opinionated styles
 		text-align: inherit; // undo opinionated styles
 		padding: 0;
@@ -65,15 +66,15 @@
 
 	.wp-block-cover__inner-container {
 
-		width: calc(100% - calc(2 * var(--global--spacing-vertical)));
+		width: calc(100% - rem(32px));
 
 		> * {
-			margin-top: calc(0.666 * var(--global--spacing-vertical));
-			margin-bottom: calc(0.666 * var(--global--spacing-vertical));
+			margin-top: rem(16px);
+			margin-bottom: rem(16px);
 
-			@include media(mobile) {
-				margin-top: var(--global--spacing-vertical);
-				margin-bottom: var(--global--spacing-vertical);
+			@include break-xs {
+				margin-top: rem(32px);
+				margin-bottom: rem(32px);
 			}
 
 			&:first-child {
@@ -91,10 +92,10 @@
 		margin-top: 0;
 
 		> * {
-			margin-top: calc(2 * var(--global--spacing-vertical));
-			margin-bottom: calc(2 * var(--global--spacing-vertical));
-			padding-left: var(--global--spacing-horizontal);
-			padding-right: var(--global--spacing-horizontal);
+			margin-top: rem(32px);
+			margin-bottom: rem(32px);
+			padding-left: rem(40px);
+			padding-right: rem(40px);
 			width: 100%;
 		}
 	}
@@ -106,7 +107,7 @@
 
 	/* Block Styles */
 	&.is-style-twentytwentyone-border {
-		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+		border: rem(3px) solid var(--color-1);
 	}
 
 	/* The background color class is used just for the overlay, and does not need to be applied to the inner container. */

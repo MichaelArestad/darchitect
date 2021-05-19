@@ -6,20 +6,20 @@
 	.blocks-gallery-item {
 
 		// On mobile and responsive viewports, we allow only 1 or 2 columns at the most.
-		width: calc((100% - var(--global--spacing-unit)) / 2);
+		width: calc((100% - #{rem(16px)}) / 2);
 
 		figcaption {
 			margin: 0;
 			// Text color is always white to account for default gradient background
-			color: var(--global--color-white);
-			font-size: var(--global--font-size-xs);
+			color: var(--color-2);
+			font-size: var(--font-size-xs);
 
 			a {
-				color: var(--global--color-white);
+				color: var(--color-2);
 
 				&:focus {
 					background-color: transparent;
-					outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+					outline: 2px solid var(--color-2);
 					text-decoration: none;
 				}
 			}

@@ -24,25 +24,25 @@ input[type="reset"],
 
 			// Text colors
 			&:not(.has-text-color) {
-				color: var(--global--color-background);
+				color: var(--color-2);
 
 				// Nested
 				.has-background & {
-					color: var(--local--color-background, var(--global--color-background));
+					color: var(--color-2);
 
 					&.has-background {
-						color: var(--global--color-primary);
+						color: var(--color-1);
 					}
 				}
 			}
 
 			// Background-colors
 			&:not(.has-background) {
-				background-color: var(--global--color-primary);
+				background-color: var(--color-1);
 
 				// Nested
 				.has-background & {
-					background-color: var(--local--color-primary, var(--global--color-primary));
+					background-color: var(--color-1);
 				}
 			}
 		}
@@ -70,11 +70,11 @@ input[type="reset"],
 
 			// Text colors
 			&:not(.has-text-color) {
-				color: var(--global--color-primary);
+				color: var(--color-1);
 
 				// Nested
 				.has-background & {
-					color: var(--local--color-primary, var(--global--color-primary));
+					color: var(--color-1);
 				}
 			}
 
@@ -95,16 +95,16 @@ input[type="reset"],
 		.wp-block-button__link:active {
 
 			border-color: transparent !important;
-			background-color: var(--global--color-primary) !important;
-			color: var(--global--color-background) !important;
+			background-color: var(--color-1) !important;
+			color: var(--color-2) !important;
 
 			.has-background & {
-				background-color: var(--local--color-primary, var(--global--color-primary)) !important;
-				color: var(--local--color-background, var(--global--color-background)) !important;
+				background-color: var(--color-1) !important;
+				color: var(--color-2) !important;
 			}
 
 			.has-text-color & {	
-				color: var(--local--color-background, var(--global--color-background)) !important;
+				color: var(--color-2) !important;
 			}
 		}
 	}
@@ -118,5 +118,5 @@ input[type="reset"],
 .is-style-outline .wp-block-button__link[style*="radius"]:focus,
 .wp-block-button a.wp-block-button__link[style*="radius"]:focus {
 	outline-offset: 2px;
-	outline: 2px dotted var(--button--color-background);
+	outline: 2px dotted var(--color-1);
 }

@@ -13,8 +13,8 @@
 	--font-size-s: #{rem(14px)};
 	--font-size-m: #{rem(16px)};
 	--font-size-l: #{rem(20px)};
-	// --font-size-xl: #{rem(32px)};
-	// --font-size-xxl: #{rem(40px)};
+	--font-size-xl: #{rem(32px)};
+	--font-size-xxl: #{rem(40px)};
 	--font-size-xxxl: #{rem(80px)};
 	// --font-size-xxxxl: #{rem(104px)};
 	// --font-size-xxxxxl: #{rem(128px)};
@@ -101,6 +101,7 @@
 	// --global--color-border: var(--global--color-primary); /* Used for borders (separators) */
 
 	/* Spacing */
+	--page-margin: #{rem(40px)};
 	// --global--spacing-unit: #{2 * $baseline-unit}; // 20px
 	// --global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
 	// --global--spacing-horizontal: #{2.5 * $baseline-unit}; // 25px

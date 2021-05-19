@@ -3,11 +3,11 @@ Breakpoint mixin - about as simple as it gets and mobile first
 */
 
 $break-zoomed-in: 280px;
-$break-xs: 480px;
-$break-s: 600px;
-$break-m: 782px;
-$break-l: 960px;
-$break-xl: 1080px;
+$break-xs: 480px;   // mobile:   breakpoint_sm
+$break-s: 600px;    // tablet:   breakpoint_md
+$break-m: 782px;    // laptop:   breakpoint_lg
+$break-l: 960px;    // desktop:  breakpoint_xl
+$break-xl: 1080px;  // wide:     breakpoint_xxl
 $break-xxl: 1280px;
 $break-xxxl: 1440px;
 

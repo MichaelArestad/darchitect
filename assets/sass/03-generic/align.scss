@@ -1,0 +1,154 @@
+/**
+ * Responsive Styles
+ */
+
+/**
+ * Required Variables
+ */
+
+ $default_width: 610px;
+ $max_content_width: 1240px;
+//  $breakpoint_sm: 482px;
+//  $breakpoint_md: 592px;
+//  $breakpoint_lg: 652px;
+//  $breakpoint_xl: 822px;
+//  $breakpoint_xxl: 1024px;
+ 
+/**
+* Root Media Query Variables
+*/
+:root {
+  --responsive--spacing-horizontal: rem(40px);
+  --responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
+  --responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
+  --responsive--alignfull-width: 100%;
+  --responsive--alignright-margin: var(--page-margin);
+  --responsive--alignleft-margin: var(--page-margin);
+}
+
+@include break-xs {
+
+  :root {
+    --responsive--aligndefault-width: min(calc(100vw - 4 * var(--page-margin)), #{$default_width});
+    --responsive--alignwide-width: calc(100vw - 4 * var(--page-margin));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+  }
+}
+
+@include break-l {
+
+  :root {
+    --responsive--aligndefault-width: min(calc(100vw - 8 * var(--page-margin)), #{$default_width});
+    // --responsive--aligndefault-width: #{$default_width};
+    --responsive--alignwide-width: min(calc(100vw - 8 * var(--page-margin)), #{$max_content_width});
+  }
+}
+ 
+/**
+* Extends
+*/
+%responsive-aligndefault-width {
+  max-width: var(--responsive--aligndefault-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%responsive-alignwide-width {
+  max-width: var(--responsive--alignwide-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%responsive-alignfull-width-mobile {
+  max-width: var(--responsive--alignfull-width);
+  width: var(--responsive--alignfull-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include break-xs {
+  %responsive-alignfull-width {
+    max-width: var(--responsive--alignfull-width);
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+%responsive-alignwide-width-nested {
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--responsive--alignwide-width);
+  max-width: var(--responsive--alignfull-width);
+}
+
+%responsive-alignfull-width-nested {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(var(--responsive--alignfull-width) - calc(2 * var(--responsive--spacing-horizontal)));
+  max-width: var(--responsive--alignfull-width);
+}
+
+@include break-l {
+  %responsive-alignfull-width-nested {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(var(--responsive--alignfull-width) - calc(4 * var(--responsive--spacing-horizontal)));
+    max-width: var(--responsive--alignfull-width);
+  }
+}
+
+
+%responsive-alignleft-mobile {
+
+  /*rtl:ignore*/
+  margin-left: 0;
+
+  /*rtl:ignore*/
+  margin-right: var(--responsive--spacing-horizontal);
+}
+
+@include break-xs {
+  %responsive-alignleft {
+
+    /*rtl:ignore*/
+    margin-left: var(--responsive--alignleft-margin);
+
+    /*rtl:ignore*/
+    margin-right: var(--page-margin);
+  }
+}
+
+%responsive-alignright-mobile {
+
+  /*rtl:ignore*/
+  margin-left: var(--responsive--spacing-horizontal);
+
+  /*rtl:ignore*/
+  margin-right: 0;
+}
+
+@include break-xs {
+  %responsive-alignright {
+
+    /*rtl:ignore*/
+    margin-left: var(--page-margin);
+
+    /*rtl:ignore*/
+    margin-right: var(--responsive--alignright-margin);
+  }
+}
+ 
+// Output
+.default-max-width {
+  @extend %responsive-aligndefault-width;
+}
+
+.wide-max-width {
+  @extend %responsive-alignwide-width;
+}
+
+.full-max-width {
+  @extend %responsive-alignfull-width;
+}

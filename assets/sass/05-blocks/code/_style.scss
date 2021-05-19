@@ -1,12 +1,12 @@
 .wp-block-code {
-	border-color: var(--global--color-border);
-	border-radius: 0;
-	border-style: solid;
-	border-width: 0.1rem;
-	padding: var(--global--spacing-unit);
-
+	border: rem(1px) solid var(--color-1);
+	color: var(--color-1);
+	border-radius: rem(3px);
+	padding: rem(16px);
+	
 	code {
-		color: var(--global--color-primary);
+		font-family: var(--font-family-mono);
+		font-size: var(--font-size-s);
 		white-space: pre;
 		overflow-x: auto;
 		display: block;

@@ -26,7 +26,7 @@
 	@extend %responsive-alignleft;
 }
 
-@include media(mobile) {
+@include break-xs {
 
 	.alignleft {
 
@@ -71,7 +71,7 @@
 	@extend %responsive-alignright;
 }
 
-@include media(mobile) {
+@include break-xs {
 
 	.alignright {
 
@@ -134,14 +134,14 @@
 
 // Drop caps
 .has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--heading--font-family);
-	font-weight: var(--heading--font-weight);
+	font-family: var(--font-family-serif);
+	font-weight: var(--font-weight-strong);
 	line-height: 0.66;
 	text-transform: uppercase;
 	font-style: normal;
 	float: left;
 	margin: 0.1em 0.1em 0 0;
-	font-size: calc(1.2 * var(--heading--font-size-h1));
+	font-size: var(--font-size-xl);
 }
 
 .has-drop-cap:not(:focus)::after {
@@ -154,7 +154,7 @@
 .desktop-only {
 	display: none;
 
-	@include media(mobile) {
+	@include break-xs {
 		display: block;
 	}
 }

@@ -18,6 +18,12 @@
 		"selector-pseudo-element-colon-notation": null,
 		"number-leading-zero": null,
 		"no-descending-specificity": null,
+		"font-family-no-missing-generic-family-keyword": [
+			true,
+			{
+				"ignoreFontFamilies": ["undefined"]
+			}
+		],
 		"length-zero-no-unit": [true, {"ignore": ["custom-properties"]}]
 	}
 }

@@ -1,21 +1,21 @@
 // Responsive breakpoints mixin
-@mixin add_variables( $view: frontend ) {
+// @mixin add_variables( $view: frontend ) {
 
-	@if frontend == $view {
+// 	@if frontend == $view {
 
-		:root {
-			@content;
-		}
-	}
+// 		:root {
+// 			@content;
+// 		}
+// 	}
 
-	@if editor == $view {
+// 	@if editor == $view {
 
-		:root,
-		body {
-			@content;
-		}
-	}
-}
+// 		:root,
+// 		body {
+// 			@content;
+// 		}
+// 	}
+// }
 
 // Button style
 // - Applies button styles to blocks and elements that share them.

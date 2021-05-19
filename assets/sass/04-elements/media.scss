@@ -23,10 +23,9 @@ figcaption,
 .wp-caption-text,
 .wp-block-embed figcaption {
 	color: currentColor;
-	font-size: var(--global--font-size-xs);
-	line-height: var(--global--line-height-body);
-	margin-top: calc(0.5 * var(--global--spacing-unit));
-	margin-bottom: var(--global--spacing-unit);
+	font-size: var(--font-size-xs);
+	margin-top: rem(16px);
+	margin-bottom: rem(16px);
 	text-align: center;
 
 	.alignleft &,

@@ -5,7 +5,7 @@
  */
 a {
 	cursor: pointer;
-	color: var(--wp--style--color--link, var(--global--color-primary));
+	color: var(--color-1);
 	text-underline-offset: 3px;
 	text-decoration-skip-ink: all;
 }
@@ -25,25 +25,25 @@ a:hover {
 	background: rgba(255, 255, 255, .9);
 
 	// Change text color when the body background is dark.
-	.is-dark-theme & {
-		background: var(--global--color-black);
-		color: var(--global--color-white);
-		text-decoration: none;
+	// .is-dark-theme & {
+	// 	background: var(--color-2);
+	// 	color: var(--color-1);
+	// 	text-decoration: none;
 
-		.meta-nav {
-			color: var(--wp--style--color--link, var(--global--color-white));
-		}
-	}
+	// 	.meta-nav {
+	// 		color: var(--wp--style--color--link, var(--global--color-white));
+	// 	}
+	// }
 
 	// Change colors when the body background is white.
-	.has-background-white & {
-		background: rgba(0, 0, 0, .9);
-		color: var(--wp--style--color--link, var(--global--color-white));
+	// .has-background-white & {
+	// 	background: rgba(0, 0, 0, .9);
+	// 	color: var(--wp--style--color--link, var(--global--color-white));
 
-		.meta-nav {
-			color: var(--wp--style--color--link, var(--global--color-white));
-		}
-	}
+	// 	.meta-nav {
+	// 		color: var(--wp--style--color--link, var(--global--color-white));
+	// 	}
+	// }
 
 	&.skip-link {
 
@@ -62,7 +62,7 @@ a:hover {
 	}
 
 	img {
-		outline: 2px dotted var(--wp--style--color--link, var(--global--color-primary));
+		outline: 2px dotted var(--color-1);
 	}
 }
 
@@ -72,6 +72,6 @@ a:hover {
 	// Target both current level and nested block.
 	.has-link-color a,
 	&.has-link-color a {
-		color: var(--wp--style--color--link, var(--global--color-primary));
+		color: var(--color-1);
 	}
 }

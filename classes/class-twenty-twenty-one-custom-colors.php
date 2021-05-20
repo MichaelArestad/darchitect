@@ -95,7 +95,7 @@ class Darchitect_Custom_Colors {
 	 */
 	public function custom_color_variables() {
 		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
-			wp_add_inline_style( 'twenty-twenty-one-style', $this->generate_custom_color_variables() );
+			wp_add_inline_style( 'darchitect-style', $this->generate_custom_color_variables() );
 		}
 	}
 
@@ -110,7 +110,7 @@ class Darchitect_Custom_Colors {
 	 */
 	public function editor_custom_color_variables() {
 		wp_enqueue_style(
-			'twenty-twenty-one-custom-color-overrides',
+			'darchitect-custom-color-overrides',
 			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
 			array(),
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
@@ -118,7 +118,7 @@ class Darchitect_Custom_Colors {
 
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
-			wp_add_inline_style( 'twenty-twenty-one-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
+			wp_add_inline_style( 'darchitect-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 

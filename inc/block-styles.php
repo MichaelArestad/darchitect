@@ -22,8 +22,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/columns',
 			array(
-				'name'  => 'twentytwentyone-columns-overlap',
-				'label' => esc_html__( 'Overlap', 'twentytwentyone' ),
+				'name'  => 'darchitect-columns-overlap',
+				'label' => esc_html__( 'Overlap', 'darchitect' ),
 			)
 		);
 
@@ -31,8 +31,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/cover',
 			array(
-				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+				'name'  => 'darchitect-border',
+				'label' => esc_html__( 'Borders', 'darchitect' ),
 			)
 		);
 
@@ -40,8 +40,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/group',
 			array(
-				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+				'name'  => 'darchitect-border',
+				'label' => esc_html__( 'Borders', 'darchitect' ),
 			)
 		);
 
@@ -49,8 +49,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+				'name'  => 'darchitect-border',
+				'label' => esc_html__( 'Borders', 'darchitect' ),
 			)
 		);
 
@@ -58,8 +58,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'twentytwentyone-image-frame',
-				'label' => esc_html__( 'Frame', 'twentytwentyone' ),
+				'name'  => 'darchitect-image-frame',
+				'label' => esc_html__( 'Frame', 'darchitect' ),
 			)
 		);
 
@@ -67,8 +67,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'twentytwentyone-latest-posts-dividers',
-				'label' => esc_html__( 'Dividers', 'twentytwentyone' ),
+				'name'  => 'darchitect-latest-posts-dividers',
+				'label' => esc_html__( 'Dividers', 'darchitect' ),
 			)
 		);
 
@@ -76,8 +76,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'twentytwentyone-latest-posts-borders',
-				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+				'name'  => 'darchitect-latest-posts-borders',
+				'label' => esc_html__( 'Borders', 'darchitect' ),
 			)
 		);
 
@@ -85,8 +85,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/media-text',
 			array(
-				'name'  => 'twentytwentyone-border',
-				'label' => esc_html__( 'Borders', 'twentytwentyone' ),
+				'name'  => 'darchitect-border',
+				'label' => esc_html__( 'Borders', 'darchitect' ),
 			)
 		);
 
@@ -94,8 +94,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/separator',
 			array(
-				'name'  => 'twentytwentyone-separator-thick',
-				'label' => esc_html__( 'Thick', 'twentytwentyone' ),
+				'name'  => 'darchitect-separator-thick',
+				'label' => esc_html__( 'Thick', 'darchitect' ),
 			)
 		);
 
@@ -103,8 +103,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/social-links',
 			array(
-				'name'  => 'twentytwentyone-social-icons-color',
-				'label' => esc_html__( 'Dark gray', 'twentytwentyone' ),
+				'name'  => 'darchitect-social-icons-color',
+				'label' => esc_html__( 'Dark gray', 'darchitect' ),
 			)
 		);
 	}

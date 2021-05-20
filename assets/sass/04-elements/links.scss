@@ -6,7 +6,7 @@
 a {
 	cursor: pointer;
 	color: var(--color-1);
-	text-underline-offset: 3px;
+	text-underline-offset: 0.125; // 2px/16
 	text-decoration-skip-ink: all;
 }
 

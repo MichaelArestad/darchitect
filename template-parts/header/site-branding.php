@@ -39,4 +39,8 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 			<?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		</p>
 	<?php endif; ?>
+
+	<?php if ( is_front_page() || is_home() ) : ?>
+		<?php get_search_form(); ?>
+	<?php endif; ?>
 </div><!-- .site-branding -->

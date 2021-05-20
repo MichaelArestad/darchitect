@@ -8,6 +8,7 @@
 
 // Site branding
 .site-branding {
+	text-align: center;
 	// color: var(--branding--color-text);
 	// margin-right: 140px;
 
@@ -20,6 +21,10 @@
 
 // Site title
 .site-title {
+	font-size: var(--font-size-l);
+	font-family: var(--font-family-mono);
+	font-weight: 700;
+	text-transform: uppercase;
 	// color: var(--branding--color-link);
 	// font-family: var(--branding--title--font-family);
 	// font-size: var(--branding--title--font-size-mobile);

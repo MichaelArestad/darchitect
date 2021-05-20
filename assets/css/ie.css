@@ -21,11 +21,12 @@ Darchitect is distributed under the terms of the GNU GPL.
 
 /**
  * FUNCTIONS
- * Rem..................Converts px to rem units
+ * Rem..................Converts px to rem units.
  *
  * MIXINS
- * Functions............Global functions.
- * Mixins...............Global mixins.
+ * Break................Basic breakpoint mixin.
+ * Button...............Button styles.
+ * Inner Block Margin Clear...Does what it says.
  *
  * SETTINGS
  * File-header..........The file header for the themes style.css file.
@@ -1821,7 +1822,7 @@ pre {
 a {
 	cursor: pointer;
 	color: #000;
-	text-underline-offset: 3px;
+	text-underline-offset: 0.125;
 	text-decoration-skip-ink: all;
 }
 
@@ -4308,6 +4309,17 @@ table.wp-calendar-table caption {
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .wp-custom-logo .site-header {
 	align-items: center;
+}
+
+.site-branding {
+	text-align: center;
+}
+
+.site-title {
+	font-size: 1.5rem;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .entry-title {

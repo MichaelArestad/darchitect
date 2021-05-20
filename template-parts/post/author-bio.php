@@ -16,7 +16,7 @@
 			<?php
 			printf(
 				/* translators: %s: Author name. */
-				esc_html__( 'By %s', 'twentytwentyone' ),
+				esc_html__( 'By %s', 'darchitect' ),
 				get_the_author()
 			);
 			?>
@@ -28,7 +28,7 @@
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				sprintf(
 					/* translators: %s: Author name. */
-					esc_html__( 'View all of %s\'s posts.', 'twentytwentyone' ),
+					esc_html__( 'View all of %s\'s posts.', 'darchitect' ),
 					get_the_author()
 				)
 			);

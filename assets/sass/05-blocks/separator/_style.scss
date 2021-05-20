@@ -1,12 +1,12 @@
 hr {
 	border-style: none;
-	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	border-bottom: rem(3px) solid var(--color-1);
 	clear: both;
 	margin-left: auto;
 	margin-right: auto;
 
 	&.wp-block-separator {
-		border-bottom: var(--separator--height) solid var(--separator--border-color);
+		border-bottom: rem(3px) solid var(--color-1);
 		opacity: 1;
 
 		&:not(.is-style-dots):not(.alignwide) {
@@ -28,7 +28,7 @@ hr {
 		 * Block Options
 		 */
 		&.is-style-twentytwentyone-separator-thick {
-			border-bottom-width: calc(3 * var(--separator--height));
+			border-bottom-width: rem(6px);
 		}
 
 		&.is-style-dots {
@@ -43,10 +43,10 @@ hr {
 			}
 
 			&:before {
-				color: var(--separator--border-color);
-				font-size: var(--global--font-size-xl);
-				letter-spacing: var(--global--font-size-sm);
-				padding-left: var(--global--font-size-sm);
+				color: var(--color-1);
+				// font-size: var(--global--font-size-xl);
+				// letter-spacing: var(--global--font-size-sm);
+				// padding-left: var(--global--font-size-sm);
 			}
 		}
 

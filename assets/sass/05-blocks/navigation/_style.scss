@@ -4,14 +4,14 @@
 		padding: 0;
 
 		.wp-block-navigation-link__content {
-			padding: var(--primary-nav--padding);
+			padding: rem(8px) rem(12px);
 		}
 
-		.wp-block-navigation-link__label {
-			font-family: var(--primary-nav--font-family);
-			font-size: var(--primary-nav--font-size);
-			font-weight: var(--primary-nav--font-weight);
-		}
+		// .wp-block-navigation-link__label {
+		// 	font-family: var(--primary-nav--font-family);
+		// 	font-size: var(--primary-nav--font-size);
+		// 	font-weight: var(--primary-nav--font-weight);
+		// }
 	}
 
 	.wp-block-navigation-link__submenu-icon {
@@ -30,7 +30,7 @@
 			.wp-block-navigation__container {
 				border: none;
 				left: 0;
-				margin-left: var(--primary-nav--padding);
+				margin-left: rem(8px);
 				min-width: max-content;
 				opacity: 0;
 				padding: 0;
@@ -41,7 +41,7 @@
 
 					.wp-block-navigation-link__content {
 						display: inline-block;
-						padding: calc(0.5 * var(--primary-nav--padding)) var(--primary-nav--padding);
+						padding: rem(4px) rem(8px);
 					}
 				}
 
@@ -64,12 +64,12 @@
 		> .has-child {
 
 			> .wp-block-navigation__container {
-				background: var(--global--color-background);
+				background: var(--color-2);
 				margin: 0;
 				padding: 0;
 				position: absolute;
 				top: 100%;
-				border: 1px solid var(--primary-nav--border-color);
+				border: 1px solid var(--color-1);
 
 				&:before,
 				&:after {
@@ -80,13 +80,13 @@
 					top: -10px;
 					left: var(--global--spacing-horizontal);
 					border-style: solid;
-					border-color: var(--primary-nav--border-color) transparent;
+					border-color: var(--color-1) transparent;
 					border-width: 0 7px 10px 7px;
 				}
 
 				&:after {
 					top: -9px;
-					border-color: var(--global--color-background) transparent;
+					border-color: var(--color-2) transparent;
 				}
 			}
 		}
@@ -95,10 +95,10 @@
 	&:not(.has-background) {
 
 		.wp-block-navigation__container {
-			background: var(--global--color-background);
+			background: var(--color-2);
 
 			.wp-block-navigation__container {
-				background: var(--global--color-background);
+				background: var(--color-2);
 			}
 		}
 	}
@@ -109,10 +109,10 @@
 
 			> a {
 
-				&:hover,
-				&:focus {
-					color: var(--primary-nav--color-link-hover);
-				}
+				// &:hover,
+				// &:focus {
+				// 	color: var(--primary-nav--color-link-hover);
+				// }
 
 				&:hover {
 					text-decoration: underline;

@@ -12,17 +12,17 @@
 	.wp-block-media-text__content {
 		padding: var(--global--spacing-horizontal);
 
-		@include media(tablet) {
-			padding: var(--global--spacing-vertical);
+		@include break-s {
+			padding: rem(32px);
 		}
 
 		> * {
-			margin-top: calc(0.666 * var(--global--spacing-vertical));
-			margin-bottom: calc(0.666 * var(--global--spacing-vertical));
+			margin-top: rem(16px);
+			margin-bottom: rem(16px);
 
-			@include media(mobile) {
-				margin-top: var(--global--spacing-vertical);
-				margin-bottom: var(--global--spacing-vertical);
+			@include break-xs {
+				margin-top: rem(32px);
+				margin-bottom: rem(32px);
 			}
 
 			&:first-child {
@@ -40,14 +40,14 @@
 	 */
 
 	&.is-stacked-on-mobile .wp-block-media-text__content {
-		@include media(mobile) {
-			padding-top: var(--global--spacing-vertical);
-			padding-bottom: var(--global--spacing-vertical);
+		@include break-xs {
+			padding-top: rem(32px);
+			padding-bottom: rem(32px);
 		}
 	}
 
 	// Block Styles
 	&.is-style-twentytwentyone-border {
-		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+		border: rem(1px) solid var(--color-1);
 	}
 }

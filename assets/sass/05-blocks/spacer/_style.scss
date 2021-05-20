@@ -4,10 +4,10 @@
 	margin-bottom: 0 !important;
 	margin-top: 0 !important;
 
-	@include media(mobile-only) {
+	@media (max-width: 480px) {
 
 		&[style] {
-			height: var(--global--spacing-unit) !important;
+			height: rem(40px) !important;
 		}
 	}
 }

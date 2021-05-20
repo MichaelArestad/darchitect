@@ -3,8 +3,8 @@
 
 	&:before {
 		content: "\201C";
-		font-size: var(--quote--font-size);
-		line-height: var(--quote--line-height);
+		// font-size: var(--quote--font-size);
+		// line-height: var(--quote--line-height);
 		left: 8px;
 	}
 
@@ -22,29 +22,44 @@
 
 	/**
 	 * Block Options
-	 */
+	 */	
 	&.has-text-align-right {
-		margin: var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) auto;
-		padding-right: 0;
+		margin: rem(32px) rem(40px) rem(32px) auto;
+		padding-left: 0;
+		padding-right: calc(0.5 * rem(40px));
 		border-right: none;
-
+		
+		@include break-xs {
+			padding-right: 0;
+		}
+		
 		// Hide the left aligned quote.
 		&:before {
+			right: 0;
 			display: none;
+
+			@include break-xs {
+				right: auto;
+			}	
 		}
 
 		// Align the quote left of the text.
 		p:before {
 			content: "\201D";
-			font-size: var(--quote--font-size);
+			// font-size: var(--quote--font-size);
 			font-weight: normal;
-			line-height: var(--quote--line-height);
-			margin-right: 5px;
+			// line-height: var(--quote--line-height);
+			margin-right: rem(5px);
 		}
 	}
 
 	&.has-text-align-center {
-		margin: var(--global--spacing-vertical) auto;
+		margin: rem(32px) auto;
+
+		@include break-xs {
+			padding-left: auto;
+			padding-right: auto;
+		}
 
 		&:before {
 			display: none;
@@ -57,19 +72,19 @@
 		padding-right: 0;
 
 		/* Resetting margins to match _block-container.scss */
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
+		margin-top: rem(32px);
+		margin-bottom: rem(32px);
 
 		p {
-			font-size: var(--quote--font-size-large);
-			font-style: var(--quote--font-style-large);
-			line-height: var(--quote--line-height-large);
+			font-size: var(--font-size-xl);
+			// font-style: var(--quote--font-style-large);
+			// line-height: var(--quote--line-height-large);
 		}
 
 		&:before {
-			font-size: var(--quote--font-size-large);
-			line-height: var(--quote--line-height-large);
-			left: calc(-1 * var(--global--spacing-horizontal));
+			font-size: var(--font-size-xl);
+			// line-height: var(--quote--line-height-large);
+			left: rem(-40px);
 		}
 
 		&.has-text-align-right {
@@ -82,9 +97,9 @@
 			// Align the quote left of the text.
 			p:before {
 				content: "\201D";
-				font-size: var(--quote--font-size-large);
+				font-size: var(--font-size-xl);
 				font-weight: normal;
-				line-height: var(--quote--line-height-large);
+				// line-height: var(--quote--line-height-large);
 				margin-right: 10px;
 			}
 		}
@@ -92,12 +107,12 @@
 		.wp-block-quote__citation,
 		cite,
 		footer {
-			color: var(--global--color-primary);
-			font-size: var(--global--font-size-sm);
+			color: var(--color-1);
+			font-size: var(--font-size-s);
 		}
 
-		@include media(mobile-only) {
-			padding-left: var(--global--spacing-horizontal);
+		@include break-xs {
+			padding-left: rem(40px);
 
 			&:before {
 				left: 0;
@@ -105,7 +120,7 @@
 
 			&.has-text-align-right {
 				padding-left: 0;
-				padding-right: var(--global--spacing-horizontal);
+				padding-right: rem(40px);
 
 				&:before {
 					right: 0;
@@ -116,23 +131,6 @@
 				padding-left: 0;
 				padding-right: 0;
 			}
-		}
-	}
-
-	@include media(mobile-only) {
-
-		&.has-text-align-right {
-			padding-left: 0;
-			padding-right: calc(0.5 * var(--global--spacing-horizontal));
-
-			&:before {
-				right: 0;
-			}
-		}
-
-		&.has-text-align-center {
-			padding-left: 0;
-			padding-right: 0;
 		}
 	}
 }

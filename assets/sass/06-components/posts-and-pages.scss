@@ -3,7 +3,7 @@
 }
 
 .no-results.not-found > *:first-child {
-	margin-bottom: calc(3 * var(--global--spacing-vertical));
+	margin-bottom: rem(96px);
 }
 
 // Styling for wp_link_pages.
@@ -12,10 +12,10 @@
 
 	.post-page-numbers {
 		display: inline-block;
-		margin-left: calc(0.66 * var(--global--spacing-unit));
-		margin-right: calc(0.66 * var(--global--spacing-unit));
-		min-width: 44px;
-		min-height: 44px;
+		margin-left: rem(8px);
+		margin-right: rem(8px);
+		min-width: rem(44px);
+		min-height: rem(44px);
 
 		&:first-child {
 			margin-left: 0;

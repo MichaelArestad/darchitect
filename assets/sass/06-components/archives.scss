@@ -1,19 +1,19 @@
-.page-title {
-	font-size: var(--global--font-size-page-title);
-}
+// .page-title {
+// 	font-size: var(--global--font-size-page-title);
+// }
 
-h1.page-title,
-h2.page-title {
-	font-weight: var(--heading--font-weight-page-title);
-}
+// h1.page-title,
+// h2.page-title {
+// 	font-weight: var(--heading--font-weight-page-title);
+// }
 
-h1.page-title {
-	line-height: var(--heading--line-height-h1);
-}
+// h1.page-title {
+// 	line-height: var(--heading--line-height-h1);
+// }
 
 .page-header {
-	border-bottom: 3px solid var(--global--color-border);
-	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	border-bottom: rem(3px) solid var(--color-1);
+	padding-bottom: rem(64px);
 }
 
 .archive,
@@ -27,7 +27,7 @@ h1.page-title {
 		.format-link {
 
 			.entry-content {
-				font-size: var(--global--font-size-lg);
+				font-size: var(--font-size-l);
 			}
 		}
 
@@ -38,7 +38,7 @@ h1.page-title {
 	.format-video {
 
 		.entry-content {
-			margin-top: calc(2 * var(--global--spacing-vertical));
+			margin-top: rem(64px);
 		}
 	}
 
@@ -55,14 +55,13 @@ h1.page-title {
 		.entry-footer {
 
 			.posted-on {
-				margin-right: calc(0.5 * var(--global--spacing-unit));
+				margin-right: rem(8px);
 			}
 		}
 	}
 }
 
 .archive-description {
-	margin-top: var(--global--spacing-vertical);
-	font-size: var(--global--font-size-xl);
-	line-height: var(--global--line-height-heading);
+	margin-top: rem(32px);
+	font-size: var(--font-size-xxl);
 }

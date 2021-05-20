@@ -1,41 +1,41 @@
 // Footer
 .site-footer {
 	padding-top: 0;
-	padding-bottom: calc(1.7 * var(--global--spacing-vertical));
+	padding-bottom: rem(56px);
 	@extend %responsive-alignwide-width;
 
 	// Increase the top vertical spacing when there is no widget area.
 	.no-widgets & {
-		margin-top: calc(6 * var(--global--spacing-vertical));
+		margin-top: rem(192px);
 	}
 
-	@include media(mobile-only) {
+	@include break-xs {
 
 		.no-widgets & {
-			margin-top: calc(3 * var(--global--spacing-vertical));
+			margin-top: rem(96px);
 		}
 	}
 }
 
 // Footer Branding
 .site-footer > .site-info {
-	padding-top: var(--global--spacing-vertical);
-	color: var(--footer--color-text);
-	font-family: var(--footer--font-family);
-	font-size: var(--footer--font-size);
-	line-height: var(--global--line-height-body);
-	border-top: 3px solid var(--global--color-border);
+	padding-top: rem(32px);
+	// color: var(--footer--color-text);
+	// font-family: var(--footer--font-family);
+	// font-size: var(--footer--font-size);
+	// line-height: var(--global--line-height-body);
+	border-top: rem(3px) solid var(--color-1);
 
-	.site-name {
-		text-transform: var(--branding--title--text-transform);
-		font-size: var(--branding--title--font-size);
-	}
+	// .site-name {
+	// 	text-transform: var(--branding--title--text-transform);
+	// 	font-size: var(--branding--title--font-size);
+	// }
 
 	.powered-by {
-		margin-top: calc(0.5 * var(--global--spacing-vertical));
+		margin-top: rem(16px);
 	}
 
-	@include media(desktop) {
+	@include break-xs {
 		display: flex;
 		align-items: center;
 
@@ -45,30 +45,30 @@
 		}
 	}
 
-	a {
-		color: var(--footer--color-link);
+	// a {
+	// 	color: var(--footer--color-link);
 
-		&:link,
-		&:visited,
-		&:active {
-			color: var(--footer--color-link);
-		}
+	// 	&:link,
+	// 	&:visited,
+	// 	&:active {
+	// 		color: var(--footer--color-link);
+	// 	}
 
-		&:hover {
-			color: var(--footer--color-link-hover);
-		}
+	// 	&:hover {
+	// 		color: var(--footer--color-link-hover);
+	// 	}
 
-		&:focus {
-			color: var(--footer--color-link-hover);
+	// 	&:focus {
+	// 		color: var(--footer--color-link-hover);
 
-			.is-dark-theme & {
-				color: var(--wp--style--color--link, var(--global--color-background));
-			}
+	// 		.is-dark-theme & {
+	// 			color: var(--wp--style--color--link, var(--global--color-background));
+	// 		}
 
-			// Change colors when the body background is white.
-			.has-background-white & {
-				color: var(--wp--style--color--link, var(--global--color-white));
-			}
-		}
-	}
+	// 		// Change colors when the body background is white.
+	// 		.has-background-white & {
+	// 			color: var(--wp--style--color--link, var(--global--color-white));
+	// 		}
+	// 	}
+	// }
 }

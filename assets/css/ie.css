@@ -532,6 +532,69 @@ template {
 }
 
 /**
+ * Reset specific elements to make them easier to style in other contexts.
+ */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+form,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Apply generic border-box to all elements.
+ * See:
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+
+	/* Apply border-box across the entire page. */
+	box-sizing: border-box;
+	font-family: "IBM Plex Serif", Times, serif;
+	line-height: 1.5;
+}
+
+/**
+ * Relax the definition a bit, to allow components to override it manually.
+ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: #000;
+	text-align: left;
+	background-color: #fff;
+}
+
+/**
  * Site Structure
  *
  * - Set vertical margins and responsive widths on
@@ -719,71 +782,40 @@ template {
 	margin-top: 2rem;
 }
 
-/**
- * Reset specific elements to make them easier to style in other contexts.
- */
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-form,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	padding: 0;
-	margin: 0;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+::selection {
+	color: #000 !important;
+	background-color: #f9ff4b !important;
 }
 
-/**
- * Apply generic border-box to all elements.
- * See:
- * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
-html {
-
-	/* Apply border-box across the entire page. */
-	box-sizing: border-box;
-	font-family: "IBM Plex Serif", Times, serif;
-	line-height: 1.5;
+::-moz-selection {
+	color: #000 !important;
+	background-color: #f9ff4b !important;
 }
 
-/**
- * Relax the definition a bit, to allow components to override it manually.
- */
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
+.has-background ::selection,
+.has-secondary-background-color ::selection,
+.has-tertiary-background-color ::selection,
+.has-background-background-color ::selection {
+	color: #000 !important;
+	background-color: #000 !important;
 }
 
-body {
-	font-size: 1.125rem;
-	font-weight: 400;
-	color: #000;
-	text-align: left;
-	background-color: #fff;
+.has-background ::-moz-selection,
+.has-secondary-background-color ::-moz-selection,
+.has-tertiary-background-color ::-moz-selection,
+.has-background-background-color ::-moz-selection {
+	color: #000 !important;
+	background-color: #000 !important;
 }
 
-button {
-	cursor: pointer;
+.has-primary-background-color ::selection {
+	color: #000 !important;
+	background-color: #f9ff4b !important;
+}
+
+.has-primary-background-color ::-moz-selection {
+	color: #000 !important;
+	background-color: #f9ff4b !important;
 }
 
 .clear:before,
@@ -1877,15 +1909,72 @@ a:hover {
 /**
  * Button
  */
-.site .button,
-button,
-input[type=submit],
-input[type=reset],
-.wp-block-search .wp-block-search__button,
-.wp-block-button .wp-block-button__link,
+.site .button {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.125rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+}
+
+button {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.125rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+}
+
+input[type=submit] {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.125rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+}
+
+input[type=reset] {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.125rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+}
+
+.wp-block-search .wp-block-search__button {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.125rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+}
+
+.wp-block-button .wp-block-button__link {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.125rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+}
+
 .wp-block-file a.wp-block-file__button {
 	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
 	cursor: pointer;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.125rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
 }

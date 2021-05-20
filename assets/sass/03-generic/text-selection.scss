@@ -1,0 +1,35 @@
+// Text selection background color
+
+::selection {
+	color: #000 !important;
+	background-color: #f9ff4b !important;
+}
+::-moz-selection {
+	color: #000 !important;
+	background-color: #f9ff4b !important;
+}
+
+.has-background,
+.has-secondary-background-color,
+.has-tertiary-background-color,
+.has-background-background-color {
+	::selection {
+		color: #000 !important;
+		background-color: #000 !important;
+	}
+	::-moz-selection {
+		color: #000 !important;
+		background-color: #000 !important;
+	}
+}
+
+.has-primary-background-color {
+	::selection {
+		color: #000 !important;
+		background-color: #f9ff4b !important;
+	}
+	::-moz-selection {
+		color: #000 !important;
+		background-color: #f9ff4b !important;
+	}
+}

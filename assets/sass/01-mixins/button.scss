@@ -2,11 +2,11 @@
 // - Applies button styles to blocks and elements that share them.
 @mixin button-style() {
 	border: rem(1px) solid transparent;
-	// border-radius: var(--button--border-radius);
+	border-radius: rem(3px);
 	cursor: pointer;
 	// font-weight: var(--button--font-weight);
-	// font-family: var(--button--font-family);
-	// font-size: var(--button--font-size);
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-m);
 	// line-height: var(--button--line-height);
 	padding: rem(8px) rem(12px);
 	text-decoration: none;

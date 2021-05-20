@@ -96,7 +96,6 @@ Darchitect is distributed under the terms of the GNU GPL.
  * A11y.................Screen reader text, prefers reduced motion etc.
  * Color Palette........Classes for the color palette colors.
  * Editor Font Sizes....Editor Font Sizes.
- * Measure..............The width of a line of text, in characters.
  */
 
 /* Categories 00 to 03 are the basics. */
@@ -4839,4 +4838,52 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		transition-delay: 0s !important;
 		transition-duration: 0s !important;
 	}
+}
+
+.is-IE.is-dark-theme {
+	color: #fff;
+}
+
+.is-IE.is-dark-theme *,
+.is-IE.is-dark-theme a,
+.is-IE.is-dark-theme .site-description,
+.is-IE.is-dark-theme .entry-title,
+.is-IE.is-dark-theme .entry-footer,
+.is-IE.is-dark-theme .widget-area,
+.is-IE.is-dark-theme .post-navigation .meta-nav,
+.is-IE.is-dark-theme .footer-navigation-wrapper li a:link,
+.is-IE.is-dark-theme .site-footer > .site-info,
+.is-IE.is-dark-theme .site-footer > .site-info a,
+.is-IE.is-dark-theme .site-footer > .site-info a:visited {
+	color: #fff;
+}
+
+.is-IE.is-dark-theme .sub-menu-toggle svg,
+.is-IE.is-dark-theme .sub-menu-toggle path,
+.is-IE.is-dark-theme .post-navigation .meta-nav svg,
+.is-IE.is-dark-theme .post-navigation .meta-nav path {
+	fill: #fff;
+}
+
+.is-IE.is-dark-theme .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+	background: #000;
+}
+@media (max-width: 479px) {
+
+	.is-IE.is-dark-theme.primary-navigation-open .primary-navigation > .primary-menu-container,
+	.is-IE.is-dark-theme.primary-navigation-open .menu-button-container {
+		background-color: #000;
+	}
+}
+
+.is-IE.is-dark-theme .skip-link:focus {
+	color: #21759b;
+}
+
+.is-IE .navigation .nav-links {
+	display: block;
+}
+
+.is-IE .post-thumbnail .wp-post-image {
+	min-width: auto;
 }

@@ -29,7 +29,7 @@
 		}
 
 		&.primary-navigation-open {
-			@include media(mobile-only) {
+			@media (max-width: 479px) {
 
 				.primary-navigation > .primary-menu-container,
 				.menu-button-container {

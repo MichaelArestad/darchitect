@@ -3,8 +3,8 @@
 :root {
 
 	/* Font Family */
-	--font-family-serif: 'IBM Plex Serif', Times, serif;
-	--font-family-mono: 'IBM Plex Mono', Courier, monospace;
+	--font-family-serif: 'IBM Plex Serif', Times, serif; // 300 i, 400 i, 500 i, 600 i, 700 i
+	--font-family-mono: 'IBM Plex Mono', Courier, monospace; // 300, 400, 500, 600, 700
 	// --global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 	// --global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 
@@ -12,10 +12,11 @@
 	--font-size-xs: #{rem(12px)};
 	--font-size-s: #{rem(14px)};
 	--font-size-m: #{rem(16px)};
-	--font-size-l: #{rem(20px)};
+	--font-size-l: #{rem(24px)};
 	--font-size-xl: #{rem(32px)};
 	--font-size-xxl: #{rem(40px)};
-	--font-size-xxxl: #{rem(80px)};
+	--font-size-xxxl: #{rem(56px)};
+	--font-size-xxxxl: #{rem(80px)};
 	// --font-size-xxxxl: #{rem(104px)};
 	// --font-size-xxxxxl: #{rem(128px)};
 	// --global--font-size-base: 1.25rem; // 20px / 16px

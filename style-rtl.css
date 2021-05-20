@@ -116,10 +116,11 @@ Breakpoint mixin - about as simple as it gets and mobile first
 	--font-size-xs: 0.75rem;
 	--font-size-s: 0.875rem;
 	--font-size-m: 1rem;
-	--font-size-l: 1.25rem;
+	--font-size-l: 1.5rem;
 	--font-size-xl: 2rem;
 	--font-size-xxl: 2.5rem;
-	--font-size-xxxl: 5rem;
+	--font-size-xxxl: 3.5rem;
+	--font-size-xxxxl: 5rem;
 
 	/* Font Weight */
 	--font-weight-normal: 400;
@@ -1818,8 +1819,8 @@ h5,
 h6,
 .h6 {
 	clear: both;
-	font-family: var(--font-family-serif);
-	font-weight: var(--font-weight-strong);
+	font-family: var(--font-family-mono);
+	font-weight: 700;
 }
 
 h1 strong,
@@ -1834,32 +1835,37 @@ h5 strong,
 .h5 strong,
 h6 strong,
 .h6 strong {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 h1,
 .h1 {
-	font-size: var(--font-size-xxxl);
+	font-size: var(--font-size-xxxxl);
+	text-transform: uppercase;
 }
 
 h2,
 .h2 {
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xxxl);
+	text-transform: uppercase;
 }
 
 h3,
 .h3 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-xxl);
+	font-weight: 500;
 }
 
 h4,
 .h4 {
-	font-size: var(--font-size-l);
+	font-size: var(--font-size-xl);
+	font-weight: 500;
 }
 
 h5,
 .h5 {
-	font-size: var(--font-size-m);
+	font-size: var(--font-size-l);
+	font-weight: 500;
 }
 
 h6,

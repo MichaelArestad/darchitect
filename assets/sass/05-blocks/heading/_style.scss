@@ -11,37 +11,42 @@ h5,
 h6,
 .h6 {
 	clear: both;
-	font-family: var(--font-family-serif);
-	font-weight: var(--font-weight-strong);
+	font-family: var(--font-family-mono);
+	font-weight: 700;
 
 	strong {
-		font-weight: 600;
+		font-weight: 700;
 	}
 }
 
 h1,
 .h1 {
-	font-size: var(--font-size-xxxl);
+	font-size: var(--font-size-xxxxl);
+	text-transform: uppercase;
 }
 
 h2,
 .h2 {
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xxxl);
+	text-transform: uppercase;
 }
 
 h3,
 .h3 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-xxl);
+	font-weight: 500;
 }
 
 h4,
 .h4 {
-	font-size: var(--font-size-l);
+	font-size: var(--font-size-xl);
+	font-weight: 500;
 }
 
 h5,
 .h5 {
-	font-size: var(--font-size-m);
+	font-size: var(--font-size-l);
+	font-weight: 500;
 }
 
 h6,

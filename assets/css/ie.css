@@ -1388,7 +1388,7 @@ fieldset {
 }
 
 fieldset legend {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 fieldset input[type=submit] {
@@ -1421,7 +1421,7 @@ fieldset input[type=checkbox] + label {
 }
 
 .post-password-message {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 .post-password-form {
@@ -2362,74 +2362,74 @@ input[type=reset]:focus,
 
 h1 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 .h1 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 h2 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 .h2 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 h3 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 .h3 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 h4 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 .h4 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 h5 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 .h5 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 h6 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 .h6 {
 	clear: both;
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-weight: 700;
 }
 
 h1 strong,
@@ -2444,47 +2444,57 @@ h5 strong,
 .h5 strong,
 h6 strong,
 .h6 strong {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 h1 {
 	font-size: 5rem;
+	text-transform: uppercase;
 }
 
 .h1 {
 	font-size: 5rem;
+	text-transform: uppercase;
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 3.5rem;
+	text-transform: uppercase;
 }
 
 .h2 {
-	font-size: 2.5rem;
+	font-size: 3.5rem;
+	text-transform: uppercase;
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 2.5rem;
+	font-weight: 500;
 }
 
 .h3 {
-	font-size: 2rem;
+	font-size: 2.5rem;
+	font-weight: 500;
 }
 
 h4 {
-	font-size: 1.25rem;
+	font-size: 2rem;
+	font-weight: 500;
 }
 
 .h4 {
-	font-size: 1.25rem;
+	font-size: 2rem;
+	font-weight: 500;
 }
 
 h5 {
-	font-size: 1rem;
+	font-size: 1.5rem;
+	font-weight: 500;
 }
 
 .h5 {
-	font-size: 1rem;
+	font-size: 1.5rem;
+	font-weight: 500;
 }
 
 h6 {
@@ -3791,11 +3801,11 @@ table.wp-calendar-table caption {
 }
 
 :root .is-large-text {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 :root .has-large-font-size {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 :root .is-larger-text {
@@ -3825,12 +3835,12 @@ table.wp-calendar-table caption {
 }
 
 :root .is-gigantic-text {
-	font-size: 5rem;
+	font-size: 3.5rem;
 	font-weight: 500;
 }
 
 :root .has-gigantic-font-size {
-	font-size: 5rem;
+	font-size: 3.5rem;
 	font-weight: 500;
 }
 

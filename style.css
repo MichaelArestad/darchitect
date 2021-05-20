@@ -574,20 +574,20 @@ template {
 .site-main,
 .widget-area,
 .site-footer {
-	padding-top: 2.5rem;
-	padding-bottom: 2.5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .site-header {
-	padding-top: calc(0.75 * 2.5rem);
-	padding-bottom: calc(2 * 2.5rem);
+	padding-top: calc(0.75 * 2rem);
+	padding-bottom: calc(2 * 2rem);
 }
 @media (min-width: 480px) {
 
 	.site-header {
-		padding-bottom: calc(3 * 2.5rem);
+		padding-bottom: calc(3 * 2rem);
 	}
 }
 
@@ -596,8 +596,8 @@ template {
  * - Add double vertical margins here for clearer hierarchy
  */
 .site-main > * {
-	margin-top: calc(3 * 2.5rem);
-	margin-bottom: calc(3 * 2.5rem);
+	margin-top: calc(3 * 2rem);
+	margin-bottom: calc(3 * 2rem);
 }
 
 .site-main > *:first-child {
@@ -629,9 +629,9 @@ template {
 .entry-content,
 .entry-footer,
 .author-bio {
-	margin-top: 2.5rem;
+	margin-top: 2rem;
 	margin-right: auto;
-	margin-bottom: 2.5rem;
+	margin-bottom: 2rem;
 	margin-left: auto;
 }
 
@@ -644,8 +644,8 @@ template {
 .entry-content > *,
 [class*=inner-container] > *,
 .wp-block-template-part > * {
-	margin-top: calc(0.666 * 2.5rem);
-	margin-bottom: calc(0.666 * 2.5rem);
+	margin-top: calc(0.666 * 2rem);
+	margin-bottom: calc(0.666 * 2rem);
 }
 @media (min-width: 480px) {
 
@@ -654,8 +654,8 @@ template {
 	.entry-content > *,
 	[class*=inner-container] > *,
 	.wp-block-template-part > * {
-		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -677,15 +677,15 @@ template {
 
 .site-footer > *,
 .widget-area > * {
-	margin-top: calc(0.666 * 2.5rem);
-	margin-bottom: calc(0.666 * 2.5rem);
+	margin-top: calc(0.666 * 2rem);
+	margin-bottom: calc(0.666 * 2rem);
 }
 @media (min-width: 480px) {
 
 	.site-footer > *,
 	.widget-area > * {
-		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -742,7 +742,7 @@ template {
 
 .entry-content > *.alignfull + .alignleft,
 .entry-content > *.alignfull + .alignright {
-	margin-top: 2.5rem;
+	margin-top: 2rem;
 }
 
 /**
@@ -878,6 +878,8 @@ button {
 /**
 * Extends
 */
+.post-thumbnail,
+.entry-content .wp-audio-shortcode,
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
 *[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
 .default-max-width {
@@ -913,6 +915,8 @@ button {
 	}
 }
 
+.entry-header .post-thumbnail,
+.singular .post-thumbnail,
 .alignfull [class*=inner-container] > .alignwide,
 .alignwide [class*=inner-container] > .alignwide {
 	margin-left: auto;
@@ -1423,7 +1427,7 @@ a {
 }
 
 a:hover {
-	text-decoration-style: dotted;
+	text-decoration-style: wavy;
 	text-decoration-skip-ink: none;
 }
 
@@ -3372,6 +3376,151 @@ table.wp-calendar-table caption {
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .wp-custom-logo .site-header {
 	align-items: center;
+}
+
+.entry-title {
+	text-align: center;
+	overflow-wrap: break-word;
+}
+
+/**
+ * Entry Content
+ */
+.entry-content p {
+	word-wrap: break-word;
+}
+
+.entry-content > iframe[style] {
+	margin: 2rem 0 !important;
+	max-width: 100% !important;
+}
+
+.entry-footer {
+	color: var(--color-1);
+	clear: both;
+	float: none;
+	font-size: var(--font-size-xs);
+	display: block;
+}
+
+.entry-footer > span {
+	display: inline-block;
+}
+
+.entry-footer a {
+	color: currentColor;
+}
+
+.entry-footer a:active {
+	color: currentColor;
+}
+
+.site-main > article > .entry-footer {
+	margin-top: 2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 6rem;
+	border-bottom: 0.0625rem solid var(--color-1);
+}
+
+body:not(.single) .site-main > article:last-of-type .entry-footer {
+	border-bottom: 0.0625rem solid transparent;
+}
+
+.single .site-main > article > .entry-footer {
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+	padding-bottom: 0;
+	padding-top: 1.5rem;
+	border-top: 3px solid var(--color-1);
+	border-bottom: 0.0625rem solid transparent;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 4rem;
+}
+
+.single .site-main > article > .entry-footer .post-taxonomies,
+.single .site-main > article > .entry-footer .full-size-link {
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.single .site-main > article > .entry-footer .full-size-link:first-child:last-child {
+	grid-column: span 2;
+}
+
+.single .site-main > article > .entry-footer .posted-on,
+.single .site-main > article > .entry-footer .byline,
+.single .site-main > article > .entry-footer .cat-links,
+.single .site-main > article > .entry-footer .tags-links {
+	display: block;
+}
+@media (min-width: 480px) {
+
+	.single .site-main > article > .entry-footer {
+		display: block;
+	}
+
+	.single .site-main > article > .entry-footer .full-size-link {
+		display: block;
+	}
+
+	.single .site-main > article > .entry-footer .post-taxonomies,
+	.single .site-main > article > .entry-footer .full-size-link {
+		text-align: left;
+	}
+}
+
+/**
+ * Post Thumbnails
+ */
+.post-thumbnail {
+	text-align: center;
+}
+
+.post-thumbnail .wp-post-image {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4rem;
+}
+
+/**
+ * Author
+ */
+.author-bio {
+	position: relative;
+	font-size: var(--font-size-xs);
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.site-main > article > .author-bio {
+	margin-top: 4rem;
+}
+
+.author-bio.show-avatars .avatar {
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 50%;
+}
+
+.author-bio.show-avatars .author-bio-content {
+	display: inline-block;
+	padding-left: 2.5rem;
+	max-width: calc(var(--responsive--aligndefault-width) - 90px);
+}
+
+.author-bio .author-bio-content .author-title {
+	font-family: var(--entry-author-bio--font-family);
+	font-size: var(--entry-author-bio--font-size);
+	display: inline;
+}
+
+.author-bio .author-bio-content .author-description {
+	font-size: var(--font-size-xs);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */

@@ -1,46 +1,37 @@
 .entry-title {
-
-	color: var(--entry-header--color);
-	font-size: var(--entry-header--font-size);
-	letter-spacing: var(--heading--letter-spacing-h2);
-	line-height: var(--heading--line-height-h2);
+	text-align: center;
 	overflow-wrap: break-word;
 
-	a {
-		color: var(--entry-header--color-link);
-		text-underline-offset: 0.15em;
+	// a {
+	// 	color: var(--entry-header--color-link);
+	// 	text-underline-offset: 0.15em;
 
-		&:hover {
-			color: var(--entry-header--color-hover);
-		}
+	// 	&:hover {
+	// 		color: var(--entry-header--color-hover);
+	// 	}
 
-		&:focus {
-			color: var(--entry-header--color-focus);
-		}
+	// 	&:focus {
+	// 		color: var(--entry-header--color-focus);
+	// 	}
 
-		&:active {
-			color: var(--entry-header--color-link);
-		}
-	}
+	// 	&:active {
+	// 		color: var(--entry-header--color-link);
+	// 	}
+	// }
 }
 
-.singular .entry-title {
-	font-size: var(--global--font-size-page-title);
-}
+// .singular .entry-title {
+// 	font-size: var(--global--font-size-page-title);
+// }
 
-h1.entry-title {
-	line-height: var(--heading--line-height-h1);
-	font-weight: var(--heading--font-weight-page-title);
-}
+// h1.entry-title {
+// 	line-height: var(--heading--line-height-h1);
+// 	font-weight: var(--heading--font-weight-page-title);
+// }
 
 /**
  * Entry Content
  */
-
-.entry-content,
-.entry-summary {
-	font-family: var(--entry-content--font-family);
-}
 
 .entry-content {
 
@@ -51,7 +42,7 @@ h1.entry-title {
 	// Overwrite iframe embeds that have inline styles.
 	> iframe[style] {
 
-		margin: var(--global--spacing-vertical) 0 !important;
+		margin: rem(32px) 0 !important;
 		max-width: 100% !important;
 	}
 
@@ -63,10 +54,10 @@ h1.entry-title {
 
 .entry-footer {
 
-	color: var(--global--color-primary);
+	color: var(--color-1);
 	clear: both;
 	float: none;
-	font-size: var(--global--font-size-xs);
+	font-size: var(--font-size-xs);
 	display: block;
 
 	> span {
@@ -76,10 +67,10 @@ h1.entry-title {
 	a {
 		color: currentColor;
 
-		&:hover,
-		&:focus {
-			color: var(--global--color-primary-hover);
-		}
+		// &:hover,
+		// &:focus {
+		// 	color: var(--color-1-hover);
+		// }
 
 		&:active {
 			color: currentColor;
@@ -89,26 +80,26 @@ h1.entry-title {
 
 // Extra specificity to override rules in _vertical-margins.scss
 .site-main > article > .entry-footer {
-	margin-top: var(--global--spacing-vertical);
-	padding-top: var(--global--spacing-unit);
-	padding-bottom: calc(3 * var(--global--spacing-vertical));
-	border-bottom: var(--separator--height) solid var(--separator--border-color);
+	margin-top: rem(32px);
+	padding-top: rem(8px);
+	padding-bottom: rem(96px);
+	border-bottom: rem(1px) solid var(--color-1);
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
-	border-bottom: var(--separator--height) solid transparent;
+	border-bottom: rem(1px) solid transparent;
 }
 
 .single .site-main > article > .entry-footer {
-	margin-top: calc(3.4 * var(--global--spacing-vertical));
-	margin-bottom: calc(3.4 * var(--global--spacing-vertical));
+	margin-top: rem(112px);
+	margin-bottom: rem(112px);
 	padding-bottom: 0;
-	padding-top: calc(0.8 * var(--global--spacing-vertical));
-	border-top: 3px solid var(--separator--border-color);
-	border-bottom: var(--separator--height) solid transparent;
+	padding-top: rem(24px);
+	border-top: 3px solid var(--color-1);
+	border-bottom: rem(1px) solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	column-gap: calc(2 * var(--global--spacing-horizontal));
+	column-gap: rem(64px);
 
 	.post-taxonomies,
 	.full-size-link {
@@ -127,7 +118,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		display: block;
 	}
 
-	@include media(mobile-only) {
+	@include break-xs {
 		display: block;
 
 		.full-size-link {
@@ -160,7 +151,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: calc(2 * var(--global--spacing-vertical));
+		margin-top: rem(64px);
 	}
 }
 
@@ -170,11 +161,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .author-bio {
 	position: relative;
-	font-size: var(--global--font-size-xs);
+	font-size: var(--font-size-xs);
 	max-width: var(--responsive--aligndefault-width);
 
 	.site-main > article > & {
-		margin-top: calc(2 * var(--global--spacing-vertical));
+		margin-top: rem(64px);
 	}
 
 	// Avatars are optional and can be turned off.
@@ -188,7 +179,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 		.author-bio-content {
 			display: inline-block;
-			padding-left: var(--global--spacing-horizontal);
+			padding-left: rem(40px);
 			max-width: calc(var(--responsive--aligndefault-width) - 90px);
 		}
 	}
@@ -202,9 +193,9 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		}
 
 		.author-description {
-			font-size: var(--global--font-size-xs);
-			margin-top: calc(0.5 * var(--global--spacing-vertical));
-			margin-bottom: calc(0.5 * var(--global--spacing-vertical));
+			font-size: var(--font-size-xs);
+			margin-top: rem(16px);
+			margin-bottom: rem(16px);
 		}
 	}
 }

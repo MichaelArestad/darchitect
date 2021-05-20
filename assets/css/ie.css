@@ -586,7 +586,7 @@ html {
 }
 
 body {
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-weight: 400;
 	color: #000;
 	text-align: left;
@@ -1405,13 +1405,13 @@ fieldset input[type=checkbox] {
 }
 
 fieldset input[type=radio] + label {
-	font-size: 1rem;
+	font-size: 1.125rem;
 	padding-left: 0;
 	margin-bottom: 1rem;
 }
 
 fieldset input[type=checkbox] + label {
-	font-size: 1rem;
+	font-size: 1.125rem;
 	padding-left: 0;
 	margin-bottom: 1rem;
 }
@@ -3781,23 +3781,23 @@ table.wp-calendar-table caption {
 }
 
 :root .is-regular-text {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 :root .has-regular-font-size {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 :root .is-normal-font-size {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 :root .has-normal-font-size {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 :root .has-medium-font-size {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 :root .is-large-text {

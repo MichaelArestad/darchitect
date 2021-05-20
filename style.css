@@ -2245,7 +2245,7 @@ dd {
 }
 
 .wp-block-media-text .wp-block-media-text__content {
-	padding: var(--global--spacing-horizontal);
+	padding: 2.5rem;
 }
 @media (min-width: 600px) {
 
@@ -2344,7 +2344,7 @@ dd {
 	position: absolute;
 	width: 0;
 	top: -10px;
-	left: var(--global--spacing-horizontal);
+	left: 2.5rem;
 	border-style: solid;
 	border-color: var(--color-1) transparent;
 	border-width: 0 7px 10px 7px;
@@ -2996,6 +2996,48 @@ table.wp-calendar-table caption {
 	vertical-align: middle;
 }
 
+:root .is-extra-small-text,
+:root .has-extra-small-font-size {
+	font-size: var(--font-size-xs);
+}
+
+:root .is-small-text,
+:root .has-small-font-size {
+	font-size: var(--font-size-s);
+}
+
+:root .is-regular-text,
+:root .has-regular-font-size,
+:root .is-normal-font-size,
+:root .has-normal-font-size,
+:root .has-medium-font-size {
+	font-size: var(--font-size-m);
+}
+
+:root .is-large-text,
+:root .has-large-font-size {
+	font-size: var(--font-size-l);
+}
+
+:root .is-larger-text,
+:root .has-larger-font-size,
+:root .is-extra-large-text,
+:root .has-extra-large-font-size {
+	font-size: var(--font-size-xl);
+}
+
+:root .is-huge-text,
+:root .has-huge-font-size {
+	font-size: var(--font-size-xxl);
+	font-weight: var(--font-weight-strong);
+}
+
+:root .is-gigantic-text,
+:root .has-gigantic-font-size {
+	font-size: var(--font-size-xxxl);
+	font-weight: var(--font-weight-strong);
+}
+
 /* Block Alignments */
 
 /**
@@ -3024,8 +3066,8 @@ table.wp-calendar-table caption {
 		float: left;
 
 		/*rtl:ignore*/
-		margin-right: var(--global--spacing-horizontal);
-		margin-bottom: var(--global--spacing-vertical);
+		margin-right: 2.5rem;
+		margin-bottom: 2rem;
 	}
 
 	.entry-content > .alignleft {
@@ -3050,7 +3092,7 @@ table.wp-calendar-table caption {
  */
 .alignright {
 	margin-top: 0;
-	margin-bottom: var(--global--spacing-vertical);
+	margin-bottom: 2rem;
 }
 
 .entry-content > .alignright {
@@ -3065,7 +3107,7 @@ table.wp-calendar-table caption {
 		float: right;
 
 		/*rtl:ignore*/
-		margin-left: var(--global--spacing-horizontal);
+		margin-left: 2.5rem;
 	}
 
 	.entry-content > .alignright {

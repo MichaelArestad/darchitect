@@ -2873,7 +2873,7 @@ dd {
 }
 
 .wp-block-media-text .wp-block-media-text__content {
-	padding: undefined;
+	padding: 2.5rem;
 }
 @media (min-width: 600px) {
 
@@ -2971,7 +2971,7 @@ dd {
 	position: absolute;
 	width: 0;
 	top: -10px;
-	left: undefined;
+	left: 2.5rem;
 	border-style: solid;
 	border-color: #000 transparent;
 	border-width: 0 7px 10px 7px;
@@ -2983,7 +2983,7 @@ dd {
 	position: absolute;
 	width: 0;
 	top: -10px;
-	left: undefined;
+	left: 2.5rem;
 	border-style: solid;
 	border-color: #000 transparent;
 	border-width: 0 7px 10px 7px;
@@ -3754,6 +3754,86 @@ table.wp-calendar-table caption {
 	vertical-align: middle;
 }
 
+:root .is-extra-small-text {
+	font-size: 0.75rem;
+}
+
+:root .has-extra-small-font-size {
+	font-size: 0.75rem;
+}
+
+:root .is-small-text {
+	font-size: 0.875rem;
+}
+
+:root .has-small-font-size {
+	font-size: 0.875rem;
+}
+
+:root .is-regular-text {
+	font-size: 1rem;
+}
+
+:root .has-regular-font-size {
+	font-size: 1rem;
+}
+
+:root .is-normal-font-size {
+	font-size: 1rem;
+}
+
+:root .has-normal-font-size {
+	font-size: 1rem;
+}
+
+:root .has-medium-font-size {
+	font-size: 1rem;
+}
+
+:root .is-large-text {
+	font-size: 1.25rem;
+}
+
+:root .has-large-font-size {
+	font-size: 1.25rem;
+}
+
+:root .is-larger-text {
+	font-size: 2rem;
+}
+
+:root .has-larger-font-size {
+	font-size: 2rem;
+}
+
+:root .is-extra-large-text {
+	font-size: 2rem;
+}
+
+:root .has-extra-large-font-size {
+	font-size: 2rem;
+}
+
+:root .is-huge-text {
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+
+:root .has-huge-font-size {
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+
+:root .is-gigantic-text {
+	font-size: 5rem;
+	font-weight: 500;
+}
+
+:root .has-gigantic-font-size {
+	font-size: 5rem;
+	font-weight: 500;
+}
+
 /* Block Alignments */
 
 /**
@@ -3796,8 +3876,8 @@ table.wp-calendar-table caption {
 		float: left;
 
 		/*rtl:ignore*/
-		margin-right: undefined;
-		margin-bottom: undefined;
+		margin-right: 2.5rem;
+		margin-bottom: 2rem;
 	}
 
 	.entry-content > .alignleft {
@@ -3836,7 +3916,7 @@ table.wp-calendar-table caption {
  */
 .alignright {
 	margin-top: 0;
-	margin-bottom: undefined;
+	margin-bottom: 2rem;
 }
 
 .entry-content > .alignright {
@@ -3865,7 +3945,7 @@ table.wp-calendar-table caption {
 		float: right;
 
 		/*rtl:ignore*/
-		margin-left: undefined;
+		margin-left: 2.5rem;
 	}
 
 	.entry-content > .alignright {

@@ -78,7 +78,7 @@
 					position: absolute;
 					width: 0;
 					top: -10px;
-					left: var(--global--spacing-horizontal);
+					left: rem(40px);
 					border-style: solid;
 					border-color: var(--color-1) transparent;
 					border-width: 0 7px 10px 7px;

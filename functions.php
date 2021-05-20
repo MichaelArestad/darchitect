@@ -396,20 +396,21 @@ add_action( 'after_setup_theme', 'darchitect_content_width', 0 );
 function darchitect_scripts() {
 	// Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
+
 	global $is_IE, $wp_scripts;
 	if ( $is_IE ) {
 		// If IE 11 or below, use a flattened stylesheet with static values replacing CSS Variables.
-		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'darchitect-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
 	} else {
 		// If not IE, use the standard stylesheet.
-		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'darchitect-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 	}
 
 	// RTL styles.
-	wp_style_add_data( 'twenty-twenty-one-style', 'rtl', 'replace' );
+	wp_style_add_data( 'darchitect-style', 'rtl', 'replace' );
 
 	// Print styles.
-	wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	wp_enqueue_style( 'darchitect-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
 	// Threaded comment reply styles.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -418,7 +419,7 @@ function darchitect_scripts() {
 
 	// Register the IE11 polyfill file.
 	wp_register_script(
-		'twenty-twenty-one-ie11-polyfills-asset',
+		'darchitect-ie11-polyfills-asset',
 		get_template_directory_uri() . '/assets/js/polyfills.js',
 		array(),
 		wp_get_theme()->get( 'Version' ),
@@ -427,18 +428,18 @@ function darchitect_scripts() {
 
 	// Register the IE11 polyfill loader.
 	wp_register_script(
-		'twenty-twenty-one-ie11-polyfills',
+		'darchitect-ie11-polyfills',
 		null,
 		array(),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 	wp_add_inline_script(
-		'twenty-twenty-one-ie11-polyfills',
+		'darchitect-ie11-polyfills',
 		wp_get_script_polyfill(
 			$wp_scripts,
 			array(
-				'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'twenty-twenty-one-ie11-polyfills-asset',
+				'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'darchitect-ie11-polyfills-asset',
 			)
 		)
 	);
@@ -446,9 +447,9 @@ function darchitect_scripts() {
 	// Main navigation scripts.
 	if ( has_nav_menu( 'primary' ) ) {
 		wp_enqueue_script(
-			'twenty-twenty-one-primary-navigation-script',
+			'darchitect-primary-navigation-script',
 			get_template_directory_uri() . '/assets/js/primary-navigation.js',
-			array( 'twenty-twenty-one-ie11-polyfills' ),
+			array( 'darchitect-ie11-polyfills' ),
 			wp_get_theme()->get( 'Version' ),
 			true
 		);
@@ -456,9 +457,9 @@ function darchitect_scripts() {
 
 	// Responsive embeds script.
 	wp_enqueue_script(
-		'twenty-twenty-one-responsive-embeds-script',
+		'darchitect-responsive-embeds-script',
 		get_template_directory_uri() . '/assets/js/responsive-embeds.js',
-		array( 'twenty-twenty-one-ie11-polyfills' ),
+		array( 'darchitect-ie11-polyfills' ),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
@@ -515,16 +516,16 @@ function darchitect_non_latin_languages() {
 	$custom_css = darchitect_get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
-		wp_add_inline_style( 'twenty-twenty-one-style', $custom_css );
+		wp_add_inline_style( 'darchitect-style', $custom_css );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'darchitect_non_latin_languages' );
 
 // SVG Icons class.
-require get_template_directory() . '/classes/class-twenty-twenty-one-svg-icons.php';
+require get_template_directory() . '/classes/class-darchitect-svg-icons.php';
 
 // Custom color classes.
-require get_template_directory() . '/classes/class-twenty-twenty-one-custom-colors.php';
+require get_template_directory() . '/classes/class-darchitect-custom-colors.php';
 new Darchitect_Custom_Colors();
 
 // Enhance the theme by hooking into WordPress.
@@ -537,7 +538,7 @@ require get_template_directory() . '/inc/menu-functions.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 // Customizer additions.
-require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
+require get_template_directory() . '/classes/class-darchitect-customize.php';
 new Darchitect_Customize();
 
 // Block Patterns.
@@ -547,7 +548,7 @@ require get_template_directory() . '/inc/block-patterns.php';
 require get_template_directory() . '/inc/block-styles.php';
 
 // Dark Mode.
-require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-mode.php';
+require_once get_template_directory() . '/classes/class-darchitect-dark-mode.php';
 new Darchitect_Dark_Mode();
 
 /**

@@ -41,6 +41,8 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 	<?php endif; ?>
 
 	<?php if ( is_front_page() || is_home() ) : ?>
-		<?php get_search_form(); ?>
+		<div id="header-form">
+			<?php get_search_form(); ?>
+		</div>
 	<?php endif; ?>
 </div><!-- .site-branding -->

@@ -1,12 +1,12 @@
 // Text selection background color
 
 ::selection {
-	color: #000 !important;
-	background-color: #f9ff4b !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 ::-moz-selection {
-	color: #000 !important;
-	background-color: #f9ff4b !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 
 .has-background,
@@ -14,22 +14,22 @@
 .has-tertiary-background-color,
 .has-background-background-color {
 	::selection {
-		color: #000 !important;
-		background-color: #000 !important;
+		color: #000;
+		background-color: #f9ff4b;
 	}
 	::-moz-selection {
-		color: #000 !important;
-		background-color: #000 !important;
+		color: #000;
+		background-color: #f9ff4b;
 	}
 }
 
 .has-primary-background-color {
 	::selection {
-		color: #000 !important;
-		background-color: #f9ff4b !important;
+		color: #000;
+		background-color: #f9ff4b;
 	}
 	::-moz-selection {
-		color: #000 !important;
-		background-color: #f9ff4b !important;
+		color: #000;
+		background-color: #f9ff4b;
 	}
 }

@@ -814,39 +814,39 @@ button {
 }
 
 ::selection {
-	color: #000 !important;
-	background-color: #f9ff4b !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 
 ::-moz-selection {
-	color: #000 !important;
-	background-color: #f9ff4b !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 
 .has-background ::selection,
 .has-secondary-background-color ::selection,
 .has-tertiary-background-color ::selection,
 .has-background-background-color ::selection {
-	color: #000 !important;
-	background-color: #000 !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 
 .has-background ::-moz-selection,
 .has-secondary-background-color ::-moz-selection,
 .has-tertiary-background-color ::-moz-selection,
 .has-background-background-color ::-moz-selection {
-	color: #000 !important;
-	background-color: #000 !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 
 .has-primary-background-color ::selection {
-	color: #000 !important;
-	background-color: #f9ff4b !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 
 .has-primary-background-color ::-moz-selection {
-	color: #000 !important;
-	background-color: #f9ff4b !important;
+	color: #000;
+	background-color: #f9ff4b;
 }
 
 .clear:before,
@@ -3414,6 +3414,69 @@ table.wp-calendar-table caption {
 	text-transform: uppercase;
 }
 
+.site-branding .search-form {
+	overflow: hidden;
+	display: flex;
+}
+
+.site-branding .search-form > label {
+	width: 100%;
+	margin-bottom: 0;
+	background-color: var(--color-1);
+	background-image: url("./assets/images/search-light.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	font-size: 0;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	order: 3;
+}
+
+.site-branding .search-form:focus-within > label {
+	width: 0;
+	height: 0;
+}
+
+.site-branding .search-form:focus-within .search-field,
+.site-branding .search-form:focus-within .search-submit {
+	transform: translateX(0);
+}
+
+.site-branding .search-form:focus-within .search-submit {
+	display: block;
+}
+
+.site-branding .search-form .search-field,
+.site-branding .search-form .search-submit {
+	transform: translateX(-150%);
+}
+
+.site-branding .search-form .search-field {
+	order: 1;
+	margin: 0;
+	padding: 0 0.5rem;
+	background: var(--color-1);
+	color: var(--color-2);
+	font-size: 1rem;
+	font-family: var(--font-family-mono);
+}
+
+.site-branding .search-form .search-submit {
+	display: none;
+	order: 2;
+	width: 100%;
+	margin: 0;
+	background-color: var(--color-1);
+	background-image: url("./assets/images/search-light.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 0;
+	font-size: 0;
+	width: 2rem;
+	height: 2rem;
+}
+
 .site-footer {
 	padding-top: 0;
 	padding-bottom: 3.5rem;
@@ -4767,12 +4830,11 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	flex-grow: 1;
 	max-width: inherit;
 	margin-top: 0.5rem;
-	margin-left: 1.5rem;
+	margin-left: 0.5rem;
 }
 
 .search-form .search-submit {
 	margin-top: 0.5rem;
-	margin-right: 10px;
 }
 
 .widget_search > .search-form .search-field {

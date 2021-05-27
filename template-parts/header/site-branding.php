@@ -26,18 +26,21 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 
 	<?php if ( $blog_info ) : ?>
 		<?php if ( is_front_page() && ! is_paged() ) : ?>
-			<h1 class="<?php echo esc_attr( $header_class ); ?>"><?php echo esc_html( $blog_info ); ?></h1>
+			<div class="title-and-search">
+				<h1 class="<?php echo esc_attr( $header_class ); ?>"><?php echo esc_html( $blog_info ); ?></h1>
+				<?php get_search_form(); ?>
+			</div>
 		<?php elseif ( is_front_page() || is_home() ) : ?>
-			<h1 class="<?php echo esc_attr( $header_class ); ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $blog_info ); ?></a></h1>
+			<div class="title-and-search">
+				<h1 class="<?php echo esc_attr( $header_class ); ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $blog_info ); ?></a></h1>
+				<?php get_search_form(); ?>
+			</div>
 		<?php else : ?>
-			<p class="<?php echo esc_attr( $header_class ); ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $blog_info ); ?></a></p>
+			<div class="title-and-search">
+				<p class="<?php echo esc_attr( $header_class ); ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $blog_info ); ?></a></p>
+				<?php get_search_form(); ?>
+			</div>
 		<?php endif; ?>
-	<?php endif; ?>
-
-	<?php if ( $description && true === get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-		<p class="site-description">
-			<?php echo $description; // phpcs:ignore WordPress.Security.EscapeOutput ?>
-		</p>
 	<?php endif; ?>
 
 	<?php if ( is_front_page() || is_home() ) : ?>

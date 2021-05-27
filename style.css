@@ -3425,32 +3425,59 @@ table.wp-calendar-table caption {
 
 .site-branding {
 	text-align: center;
+	margin: var(--page-margin);
 }
 
 .site-title {
+	margin: 0;
+	background: var(--color-1);
+	color: var(--color-2);
 	font-size: var(--font-size-l);
 	font-family: var(--font-family-mono);
-	font-weight: 700;
+	font-weight: 500;
+	line-height: 1;
 	text-transform: uppercase;
+}
+
+.site-title a {
+	color: var(--color-2);
+	font-weight: var(--branding--title--font-weight);
 }
 
 .site-branding .search-form {
 	overflow: hidden;
 	display: flex;
+	align-items: stretch;
+	margin: 0;
+	max-width: none;
+	position: absolute;
+	width: 2rem;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	overflow: hidden;
 }
 
 .site-branding .search-form > label {
-	width: 100%;
 	margin-bottom: 0;
-	background-color: var(--color-1);
-	background-image: url("./assets/images/search-light.svg");
+	background-image: url("./assets/images/search.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	font-size: 0;
 	width: 2rem;
-	height: 2rem;
+	min-height: 2rem;
 	cursor: pointer;
-	order: 3;
+}
+
+.site-branding .search-form > label:hover {
+	background-color: var(--color-1);
+	background-image: url("./assets/images/search-light.svg");
+}
+
+.site-branding .search-form:focus-within {
+	left: 0;
+	width: calc(100% + 2rem);
+	flex-wrap: nowrap;
 }
 
 .site-branding .search-form:focus-within > label {
@@ -3473,8 +3500,9 @@ table.wp-calendar-table caption {
 }
 
 .site-branding .search-form .search-field {
-	order: 1;
 	margin: 0;
+	min-width: 0;
+	max-width: none;
 	padding: 0 0.5rem;
 	background: var(--color-1);
 	color: var(--color-2);
@@ -3484,7 +3512,6 @@ table.wp-calendar-table caption {
 
 .site-branding .search-form .search-submit {
 	display: none;
-	order: 2;
 	width: 100%;
 	margin: 0;
 	background-color: var(--color-1);
@@ -3495,6 +3522,14 @@ table.wp-calendar-table caption {
 	font-size: 0;
 	width: 2rem;
 	height: 2rem;
+}
+
+.title-and-search {
+	position: relative;
+	display: inline-block;
+	line-height: 2;
+	padding: 0.25rem 0.375rem;
+	background: var(--color-1);
 }
 
 .site-footer {

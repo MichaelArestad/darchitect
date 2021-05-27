@@ -4504,6 +4504,14 @@ table.wp-calendar-table caption {
 	margin: 2.5rem;
 }
 
+.title-and-search {
+	position: relative;
+	display: inline-block;
+	line-height: 2;
+	padding: 0.25rem 0.375rem;
+	background: #000;
+}
+
 .site-title {
 	margin: 0;
 	background: #000;
@@ -4517,7 +4525,14 @@ table.wp-calendar-table caption {
 
 .site-title a {
 	color: #fff;
-	font-weight: undefined;
+	text-decoration: none;
+}
+
+.site-title a:focus,
+.site-title a:hover {
+	text-underline-offset: 0.125;
+	text-decoration-style: wavy;
+	text-decoration-skip-ink: none;
 }
 
 .site-branding .search-form {
@@ -4599,14 +4614,6 @@ table.wp-calendar-table caption {
 	height: 2rem;
 }
 
-.title-and-search {
-	position: relative;
-	display: inline-block;
-	line-height: 2;
-	padding: 0.25rem 0.375rem;
-	background: #000;
-}
-
 .site-footer {
 	padding-top: 0;
 	padding-bottom: 3.5rem;
@@ -4644,7 +4651,6 @@ table.wp-calendar-table caption {
 }
 
 .singular .entry-header {
-	border-bottom: 0.1875rem solid #000;
 	padding-bottom: 4rem;
 	margin-bottom: 6rem;
 }

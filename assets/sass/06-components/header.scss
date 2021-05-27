@@ -11,6 +11,14 @@
 	margin: var(--page-margin);
 }
 
+.title-and-search {
+	position: relative;
+	display: inline-block;
+	line-height: 2;
+	padding: rem(4px) rem(6px);
+	background: var(--color-1);
+}
+
 // Site title
 .site-title {
 	margin: 0;
@@ -24,7 +32,14 @@
 
 	a {
 		color: var(--color-2);
-		font-weight: var(--branding--title--font-weight);
+		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			text-underline-offset: 0.125; // 2px/16
+			text-decoration-style: wavy;
+			text-decoration-skip-ink: none;
+		}
 	}
 }
 
@@ -109,14 +124,6 @@
 		width: rem(32px);
 		height: rem(32px);
 	}
-}
-
-.title-and-search {
-	position: relative;
-	display: inline-block;
-	line-height: 2;
-	padding: rem(4px) rem(6px);
-	background: var(--color-1);
 }
 
 .site-title > a {

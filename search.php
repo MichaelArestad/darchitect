@@ -23,6 +23,7 @@ if ( have_posts() ) {
 			);
 			?>
 		</h1>
+		<?php get_search_form(); ?>
 	</header><!-- .page-header -->
 
 	<div class="search-result-count default-max-width">

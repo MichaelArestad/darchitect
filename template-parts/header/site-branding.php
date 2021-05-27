@@ -30,22 +30,6 @@ $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 				<h1 class="<?php echo esc_attr( $header_class ); ?>"><?php echo esc_html( $blog_info ); ?></h1>
 				<?php get_search_form(); ?>
 			</div>
-		<?php elseif ( is_front_page() || is_home() ) : ?>
-			<div class="title-and-search">
-				<h1 class="<?php echo esc_attr( $header_class ); ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $blog_info ); ?></a></h1>
-				<?php get_search_form(); ?>
-			</div>
-		<?php else : ?>
-			<div class="title-and-search">
-				<p class="<?php echo esc_attr( $header_class ); ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( $blog_info ); ?></a></p>
-				<?php get_search_form(); ?>
-			</div>
 		<?php endif; ?>
-	<?php endif; ?>
-
-	<?php if ( is_front_page() || is_home() ) : ?>
-		<div id="header-form">
-			<?php get_search_form(); ?>
-		</div>
 	<?php endif; ?>
 </div><!-- .site-branding -->

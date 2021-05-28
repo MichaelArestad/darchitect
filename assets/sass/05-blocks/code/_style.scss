@@ -1,3 +1,12 @@
+code {
+	display: inline-block;
+	padding: 0 rem(4px);
+	border: rem(1px) solid #848484;
+	border-radius: rem(3px);
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-s);
+}
+
 .wp-block-code {
 	border: rem(1px) solid var(--color-1);
 	color: var(--color-1);
@@ -5,10 +14,9 @@
 	padding: rem(16px);
 	
 	code {
-		font-family: var(--font-family-mono);
-		font-size: var(--font-size-s);
+		border: 0;
+		display: block;
 		white-space: pre;
 		overflow-x: auto;
-		display: block;
 	}
 }

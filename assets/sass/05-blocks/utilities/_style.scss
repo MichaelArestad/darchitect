@@ -134,14 +134,13 @@
 
 // Drop caps
 .has-drop-cap:not(:focus)::first-letter {
-	font-family: var(--font-family-serif);
-	font-weight: var(--font-weight-strong);
-	line-height: 0.66;
+	font-weight: 700;
+	line-height: 1;
 	text-transform: uppercase;
 	font-style: normal;
 	float: left;
-	margin: 0.1em 0.1em 0 0;
-	font-size: var(--font-size-xl);
+	margin: 0.16em 0.16em 0 0;
+	font-size: var(--font-size-xxxl);
 }
 
 .has-drop-cap:not(:focus)::after {

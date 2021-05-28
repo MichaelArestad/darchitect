@@ -2344,6 +2344,15 @@ input[type=reset]:focus,
 	outline: 2px dotted #000;
 }
 
+code {
+	display: inline-block;
+	padding: 0 0.25rem;
+	border: 0.0625rem solid #848484;
+	border-radius: 0.1875rem;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 0.875rem;
+}
+
 .wp-block-code {
 	border: 0.0625rem solid #000;
 	color: #000;
@@ -2352,11 +2361,10 @@ input[type=reset]:focus,
 }
 
 .wp-block-code code {
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 0.875rem;
+	border: 0;
+	display: block;
 	white-space: pre;
 	overflow-x: auto;
-	display: block;
 }
 
 .wp-block-columns:not(.alignwide):not(.alignfull) {
@@ -2916,42 +2924,40 @@ h1 {
 }
 
 h2 {
-	font-size: 3.5rem;
-	text-transform: uppercase;
+	font-size: 2.5rem;
 }
 
 .h2 {
-	font-size: 3.5rem;
-	text-transform: uppercase;
+	font-size: 2.5rem;
 }
 
 h3 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: 500;
 }
 
 .h3 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: 500;
 }
 
 h4 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 }
 
 .h4 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 }
 
 h5 {
-	font-size: 1.5rem;
+	font-size: 1.125rem;
 	font-weight: 500;
 }
 
 .h5 {
-	font-size: 1.5rem;
+	font-size: 1.125rem;
 	font-weight: 500;
 }
 
@@ -4467,14 +4473,13 @@ table.wp-calendar-table caption {
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	font-family: "IBM Plex Serif", Times, serif;
-	font-weight: 500;
-	line-height: 0.66;
+	font-weight: 700;
+	line-height: 1;
 	text-transform: uppercase;
 	font-style: normal;
 	float: left;
-	margin: 0.1em 0.1em 0 0;
-	font-size: 2rem;
+	margin: 0.16em 0.16em 0 0;
+	font-size: 3.5rem;
 }
 
 .has-drop-cap:not(:focus)::after {

@@ -27,25 +27,24 @@ h1,
 
 h2,
 .h2 {
-	font-size: var(--font-size-xxxl);
-	text-transform: uppercase;
+	font-size: var(--font-size-xxl);
 }
 
 h3,
 .h3 {
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xl);
 	font-weight: 500;
 }
 
 h4,
 .h4 {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-l);
 	font-weight: 500;
 }
 
 h5,
 .h5 {
-	font-size: var(--font-size-l);
+	font-size: var(--font-size-m);
 	font-weight: 500;
 }
 

@@ -4726,6 +4726,7 @@ table.wp-calendar-table caption {
 	clear: both;
 	float: none;
 	font-size: 0.75rem;
+	font-family: "IBM Plex Mono", Courier, monospace;
 	display: block;
 }
 
@@ -4774,7 +4775,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	grid-column: span 2;
 }
 
-.single .site-main > article > .entry-footer .posted-on,
 .single .site-main > article > .entry-footer .byline,
 .single .site-main > article > .entry-footer .cat-links,
 .single .site-main > article > .entry-footer .tags-links {

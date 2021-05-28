@@ -123,22 +123,11 @@ if ( ! function_exists( 'darchitect_entry_meta_footer' ) ) {
 			}
 		} else {
 
-			echo '<div class="posted-by">';
+			// echo '<div class="post-meta">';
 			// Posted on.
 			darchitect_posted_on();
 			// Posted by.
-			darchitect_posted_by();
-			// Edit post link.
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'darchitect' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			echo '</div>';
+			// darchitect_posted_by();
 
 			if ( has_category() || has_tag() ) {
 
@@ -165,6 +154,17 @@ if ( ! function_exists( 'darchitect_entry_meta_footer' ) ) {
 				}
 				echo '</div>';
 			}
+			// Edit post link.
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'darchitect' ),
+					'<span class="screen-reader-text">' . get_the_title() . '</span>'
+				),
+				'<span class="edit-link">',
+				'</span>'
+			);
+			// echo '</div>';
 		}
 	}
 }

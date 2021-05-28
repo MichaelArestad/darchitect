@@ -58,6 +58,7 @@
 	clear: both;
 	float: none;
 	font-size: var(--font-size-xs);
+	font-family: var(--font-family-mono);
 	display: block;
 
 	> span {
@@ -111,7 +112,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 		grid-column: span 2;
 	}
 
-	.posted-on,
 	.byline,
 	.cat-links,
 	.tags-links {

@@ -1469,7 +1469,6 @@ a:hover {
 	outline: 2px solid transparent;
 	text-decoration: underline 1px dotted currentColor;
 	text-decoration-skip-ink: none;
-	background: rgba(255, 255, 255, 0.9);
 }
 
 .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link {
@@ -2429,7 +2428,7 @@ figure.wp-caption a:focus img {
 ul,
 ol {
 	margin: 0;
-	padding-right: 5rem;
+	padding-right: 3rem;
 }
 
 ul.aligncenter,
@@ -3227,10 +3226,6 @@ table.wp-calendar-table caption {
 .wp-block-tag-cloud.alignfull {
 	padding-right: 1rem;
 	padding-left: 1rem;
-}
-
-.wp-block-verse {
-	font-family: var(--font-family-mono);
 }
 
 .wp-block-video figcaption {

@@ -1,9 +1,11 @@
 .wp-block-quote {
 	border-left: none;
+	font-size: var(--font-size-l);
+	padding-left: rem(48px);
 
 	&:before {
 		content: "\201C";
-		// font-size: var(--quote--font-size);
+		font-size: var(--font-size-xl);
 		// line-height: var(--quote--line-height);
 		left: 8px;
 	}
@@ -11,6 +13,7 @@
 	.wp-block-quote__citation,
 	cite,
 	footer {
+		font-size: var(--font-size-s);
 
 		.has-background &,
 		[class*="background-color"] &,

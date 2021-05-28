@@ -15,6 +15,9 @@
 
 	<header class="entry-header alignwide">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<div class="rt-byline">
+			<?php echo do_shortcode('[rt_reading_time postfix="minute" postfix_singular="minute"]'); ?> read by <?php darchitect_posted_by(); ?>
+		</div>
 		<?php darchitect_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 

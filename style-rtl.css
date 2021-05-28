@@ -2088,6 +2088,7 @@ h1,
 .h1 {
 	font-size: var(--font-size-xxxxl);
 	text-transform: uppercase;
+	line-height: 1.25;
 }
 
 h2,
@@ -4594,6 +4595,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .navigation .nav-links .nav-previous a {
 	display: flex;
 	flex-direction: column;
+	font-family: var(--font-family-mono);
 }
 
 .navigation .nav-links .dots {
@@ -4995,4 +4997,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .is-IE .post-thumbnail .wp-post-image {
 	min-width: auto;
+}
+
+/* Category 08 is for any plugins with components I felt could use a little love. */
+.rt-byline {
+	text-align: center;
+	font-size: var(--font-size-xs);
+}
+
+.rt-byline .byline {
+	font-weight: 500;
 }

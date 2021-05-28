@@ -2916,11 +2916,13 @@ h6 strong,
 h1 {
 	font-size: 5rem;
 	text-transform: uppercase;
+	line-height: 1.25;
 }
 
 .h1 {
 	font-size: 5rem;
 	text-transform: uppercase;
+	line-height: 1.25;
 }
 
 h2 {
@@ -5809,10 +5811,16 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	min-height: 44px;
 }
 
-.navigation .nav-links .nav-next a,
+.navigation .nav-links .nav-next a {
+	display: flex;
+	flex-direction: column;
+	font-family: "IBM Plex Mono", Courier, monospace;
+}
+
 .navigation .nav-links .nav-previous a {
 	display: flex;
 	flex-direction: column;
+	font-family: "IBM Plex Mono", Courier, monospace;
 }
 
 .navigation .nav-links .dots {
@@ -6254,4 +6262,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .is-IE .post-thumbnail .wp-post-image {
 	min-width: auto;
+}
+
+/* Category 08 is for any plugins with components I felt could use a little love. */
+.rt-byline {
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+.rt-byline .byline {
+	font-weight: 500;
 }

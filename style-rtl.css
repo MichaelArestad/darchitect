@@ -137,6 +137,8 @@ Breakpoint mixin - about as simple as it gets and mobile first
 	/* Colors */
 	--color-1: #000;
 	--color-2: #fff;
+	--color-3: #848484;
+	--color-highlight: #f9ff4b;
 
 	/* Spacing */
 	--page-margin: 2.5rem;
@@ -811,12 +813,12 @@ button {
 
 ::selection {
 	color: #000;
-	background-color: #f9ff4b;
+	background-color: --color-highlight;
 }
 
 ::-moz-selection {
 	color: #000;
-	background-color: #f9ff4b;
+	background-color: --color-highlight;
 }
 
 .has-background ::selection,
@@ -824,7 +826,7 @@ button {
 .has-tertiary-background-color ::selection,
 .has-background-background-color ::selection {
 	color: #000;
-	background-color: #f9ff4b;
+	background-color: --color-highlight;
 }
 
 .has-background ::-moz-selection,
@@ -832,17 +834,17 @@ button {
 .has-tertiary-background-color ::-moz-selection,
 .has-background-background-color ::-moz-selection {
 	color: #000;
-	background-color: #f9ff4b;
+	background-color: --color-highlight;
 }
 
 .has-primary-background-color ::selection {
 	color: #000;
-	background-color: #f9ff4b;
+	background-color: --color-highlight;
 }
 
 .has-primary-background-color ::-moz-selection {
 	color: #000;
-	background-color: #f9ff4b;
+	background-color: --color-highlight;
 }
 
 .clear:before,
@@ -1679,7 +1681,7 @@ input[type=reset]:focus,
 code {
 	display: inline-block;
 	padding: 0 0.25rem;
-	border: 0.0625rem solid #848484;
+	border: 0.0625rem solid var(--color-3);
 	border-radius: 0.1875rem;
 	font-family: var(--font-family-mono);
 	font-size: var(--font-size-s);
@@ -3852,6 +3854,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 /**
  * Comments Wrapper
  */
+.comments-area {
+	border-bottom: 1px dashed var(--color-1);
+}
+
 .comments-area > * {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
@@ -3868,21 +3874,37 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comments-area.show-avatars .avatar {
 	border-radius: 50%;
 	position: absolute;
-	top: 10px;
+	top: 0.0625rem;
 }
 
 .comments-area.show-avatars .fn {
 	display: inline-block;
-	padding-right: 85px;
+	padding-right: 4rem;
 }
 
 .comments-area.show-avatars .comment-metadata {
-	padding: 8px 85px 9px 0;
+	padding: 0 4rem 0.5rem 0;
 }
 
 /**
  * Comment Title
  */
+.comments-title,
+.comment-reply-title {
+	font-size: var(--font-size-l);
+	font-weight: 500;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.comments-title {
+	display: inline-block;
+	margin: 0;
+	padding: 0.25rem 0.5rem;
+	background-color: var(--color-1);
+	color: var(--color-2);
+}
+
 .comment-reply-title {
 	display: flex;
 	justify-content: space-between;
@@ -3906,6 +3928,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comment-list {
 	padding-right: 0;
 	list-style: none;
+	border-top: 1px dashed var(--color-1);
 }
 
 .comment-list > li {
@@ -3934,6 +3957,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 /**
  * Comment Meta
  */
+.comment-meta a {
+	text-decoration: none;
+}
+
+.comment-meta a:hover,
+.comment-meta a:focus,
+.comment-meta a:active {
+	text-decoration: 1px underline;
+	text-decoration-style: wavy;
+}
+
 .comment-meta .comment-author {
 	margin-bottom: 0.25rem;
 }
@@ -3946,20 +3980,21 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-meta .comment-author .fn {
-	font-size: var(--font-size-l);
+	font-family: var(--font-family-mono);
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
 }
 
 .comment-meta .comment-metadata {
-	color: var(--color-1);
+	font-family: var(--font-family-mono);
 	font-size: var(--font-size-xs);
-	padding: 0.5rem 0 0.5625rem 0;
+	padding: 0 0 0.5rem 0;
 }
 
 .comment-meta .comment-metadata .edit-link {
-	margin-right: 2.5rem;
+	margin-right: 1rem;
+	font-weight: 500;
 }
 @media (min-width: 480px) {
 
@@ -3972,8 +4007,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	}
 }
 
-.reply {
+.reply a {
+	display: inline-block;
+	padding: 0 0.25rem;
+	border: 1px solid var(--color-1);
+	border-radius: 0.1875rem;
+	font-family: var(--font-family-mono);
 	font-size: var(--font-size-s);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.reply a:focus,
+.reply a:hover,
+.reply a:active {
+	background-color: var(--color-1);
+	color: var(--color-2);
 }
 
 .bypostauthor {
@@ -3987,6 +4036,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comment-body {
 	position: relative;
 	margin-bottom: 2.5rem;
+	border-bottom: 1px dashed var(--color-1);
 }
 
 .comment-body > * {
@@ -3996,10 +4046,18 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-body .reply {
 	margin: 0;
+	margin-bottom: 2.5rem;
 }
 
 .comment-content {
 	word-wrap: break-word;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-s);
+	line-height: 1.3;
+}
+
+.comment-content br {
+	margin-bottom: var(--font-size-s);
 }
 
 .pingback .comment-body,
@@ -4027,14 +4085,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-respond > *:last-child.comment-form {
 	margin-bottom: 2rem;
-}
-
-.comment-author {
-	padding-top: 3px;
-}
-
-.comment-author .url {
-	color: currentColor;
 }
 
 .comment-form {

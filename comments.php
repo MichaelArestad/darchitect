@@ -48,7 +48,7 @@ $darchitect_comment_count = get_comments_number();
 			<?php
 			wp_list_comments(
 				array(
-					'avatar_size' => 60,
+					'avatar_size' => 48,
 					'style'       => 'ol',
 					'short_ping'  => true,
 				)

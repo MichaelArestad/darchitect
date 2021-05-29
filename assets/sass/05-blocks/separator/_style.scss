@@ -27,11 +27,14 @@ hr {
 		/**
 		 * Block Options
 		 */
-		&.is-style-twentytwentyone-separator-thick {
-			border-bottom-width: rem(6px);
+		&.is-style-darchitect-separator-thick {
+			border-bottom-width: rem(32px);
 		}
 
 		&.is-style-dots {
+			&:before {
+				content: '×××';
+			}
 
 			&.has-background,
 			&.has-text-color {

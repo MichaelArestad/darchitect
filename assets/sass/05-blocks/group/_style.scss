@@ -51,14 +51,14 @@
 	}
 
 	// Block Styles
-	&.is-style-twentytwentyone-border {
+	&.is-style-darchitect-border {
 		border: rem(3px) solid var(--color-1);
 		padding: rem(32px);
 	}
 
 	// Adjust alignfull items to account for left and right padding.
 	&.has-background,
-	&.is-style-twentytwentyone-border {
+	&.is-style-darchitect-border {
 
 		.wp-block-group__inner-container > .alignfull,
 		.wp-block-group__inner-container > hr.wp-block-separator:not(.is-style-dots):not(.alignwide).alignfull {

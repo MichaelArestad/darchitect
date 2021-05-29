@@ -2,9 +2,8 @@
 	@extend %responsive-alignwide-width;
 	margin-top: rem(192px);
 	padding-bottom: rem(8px);
-	// color: var(--color-1);
-	// font-size: var(--footer--font-size);
-	// font-family: var(--footer--font-family);
+	font-size: var(--font-size-s);
+	font-family: var(--font-family-mono);
 
 	@include break-m {
 		display: grid;
@@ -24,9 +23,9 @@
 		list-style-type: none;
 		padding: 0;
 
-		// li {
-		// 	line-height: var(--widget--line-height-list);
-		// }
+		li:not(:first-child) {
+			margin-top: rem(8px);
+		}
 
 		&.sub-menu,
 		&.children {
@@ -77,6 +76,7 @@
 
 .widget-title {
 	font-size: var(--font-size-s);
+	text-transform: uppercase;
 }
 
 // Search widget styles

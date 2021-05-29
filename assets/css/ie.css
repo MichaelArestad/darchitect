@@ -6071,6 +6071,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .widget-area {
 	margin-top: 12rem;
 	padding-bottom: 0.5rem;
+	font-size: 0.875rem;
+	font-family: "IBM Plex Mono", Courier, monospace;
 }
 @media (min-width: 782px) {
 
@@ -6096,6 +6098,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .widget-area ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+.widget-area ul li:not(:first-child) {
+	margin-top: 0.5rem;
 }
 
 .widget-area ul.sub-menu,
@@ -6148,6 +6154,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .widget-title {
 	font-size: 0.875rem;
+	text-transform: uppercase;
 }
 
 .search-form {

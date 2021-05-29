@@ -4875,6 +4875,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .widget-area {
 	margin-top: 12rem;
 	padding-bottom: 0.5rem;
+	font-size: var(--font-size-s);
+	font-family: var(--font-family-mono);
 }
 @media (min-width: 782px) {
 
@@ -4900,6 +4902,10 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .widget-area ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+.widget-area ul li:not(:first-child) {
+	margin-top: 0.5rem;
 }
 
 .widget-area ul.sub-menu,
@@ -4946,6 +4952,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .widget-title {
 	font-size: var(--font-size-s);
+	text-transform: uppercase;
 }
 
 .search-form {

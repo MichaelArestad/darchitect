@@ -1,5 +1,18 @@
 .wp-block-file {
 
+	a:not(.wp-block-file__button) {
+		display: inline-block;
+		font-family: var(--font-family-mono);
+		border-top-left-radius: rem(3px);
+		border-bottom-left-radius: rem(3px);
+
+		@include break-m {
+			border: 1px solid var(--color-1);
+			border-right: 0;
+			padding: rem(8px) rem(12px);
+		}
+	}
+
 	// Undo Gutenberg hover defaults
 	a.wp-block-file__button:active,
 	a.wp-block-file__button:focus,
@@ -9,5 +22,11 @@
 
 	a.wp-block-file__button {
 		display: inline-block;
+		
+		@include break-m {
+			margin-left: 0;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
 	}
 }

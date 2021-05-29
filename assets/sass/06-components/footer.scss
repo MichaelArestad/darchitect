@@ -1,18 +1,17 @@
 // Footer
 .site-footer {
-	padding-top: 0;
-	padding-bottom: rem(56px);
-	@extend %responsive-alignwide-width;
+	margin-top: rem(64px);
+	padding: 0 rem(16px) rem(16px);
 
 	// Increase the top vertical spacing when there is no widget area.
 	.no-widgets & {
-		margin-top: rem(192px);
+		margin-top: rem(64px);
 	}
 
 	@include break-xs {
 
 		.no-widgets & {
-			margin-top: rem(96px);
+			margin-top: rem(192px);
 		}
 	}
 }
@@ -20,55 +19,11 @@
 // Footer Branding
 .site-footer > .site-info {
 	padding-top: rem(32px);
-	// color: var(--footer--color-text);
-	// font-family: var(--footer--font-family);
-	// font-size: var(--footer--font-size);
-	// line-height: var(--global--line-height-body);
-	border-top: rem(3px) solid var(--color-1);
-
-	// .site-name {
-	// 	text-transform: var(--branding--title--text-transform);
-	// 	font-size: var(--branding--title--font-size);
-	// }
 
 	.powered-by {
+		text-align: right;
+		font-size: var(--font-size-xs);
+		font-family: var(--font-family-mono);
 		margin-top: rem(16px);
 	}
-
-	@include break-xs {
-		display: flex;
-		align-items: center;
-
-		.powered-by {
-			margin-top: initial;
-			margin-left: auto;
-		}
-	}
-
-	// a {
-	// 	color: var(--footer--color-link);
-
-	// 	&:link,
-	// 	&:visited,
-	// 	&:active {
-	// 		color: var(--footer--color-link);
-	// 	}
-
-	// 	&:hover {
-	// 		color: var(--footer--color-link-hover);
-	// 	}
-
-	// 	&:focus {
-	// 		color: var(--footer--color-link-hover);
-
-	// 		.is-dark-theme & {
-	// 			color: var(--wp--style--color--link, var(--global--color-background));
-	// 		}
-
-	// 		// Change colors when the body background is white.
-	// 		.has-background-white & {
-	// 			color: var(--wp--style--color--link, var(--global--color-white));
-	// 		}
-	// 	}
-	// }
 }

@@ -8,7 +8,7 @@
  */
 
 /**
- * Top Level Wrappers (header, main, footer)
+ * Top Level Wrappers (header, main)
  * - Set vertical padding and horizontal margins
  */
 
@@ -17,8 +17,7 @@ $spacing-vertical: #{rem(32px)};
 
 .site-header,
 .site-main,
-.widget-area,
-.site-footer {
+.widget-area {
 	padding-top: $spacing-vertical;
 	padding-bottom: $spacing-vertical;
 	margin-left: auto;
@@ -80,7 +79,6 @@ $spacing-vertical: #{rem(32px)};
 .entry-header,
 .post-thumbnail,
 .entry-content,
-.entry-footer,
 .author-bio {
 	margin-top: $spacing-vertical;
 	margin-right: auto;
@@ -115,7 +113,6 @@ $spacing-vertical: #{rem(32px)};
 	}
 }
 
-.site-footer > *,
 .widget-area > * {
 	margin-top: calc(0.666 * #{$spacing-vertical});
 	margin-bottom: calc(0.666 * #{$spacing-vertical});

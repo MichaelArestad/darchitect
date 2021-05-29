@@ -9,33 +9,33 @@
 	}
 
 	.wp-block-search__label {
-		// font-size: var(--form--font-size);
-		// font-weight: var(--form--label-weight);
+		font-weight: 500;
 		margin-bottom: rem(8px);
 	}
 
 	.wp-block-search__input {
 		border: rem(1px) solid var(--color-1);
 		border-radius: rem(3px);
-		// color: var(--form--color-text);
-		// line-height: var(--form--line-height);
 		max-width: inherit;
-		margin-right: rem(1px);
-		padding: rem(8px)
-
-		// &:focus {
-		// 	color: var(--form--color-text);
-		// 	border-color: var(--color-1);
-		// }
-
-		// .has-background & {
-		// 	border-color: var(--local--color-primary, var(--global--color-primary)) !important;
-		// }
+		margin-right: rem(4px);
+		padding: rem(16px);
+		
+		@include break-m {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			margin-right: 0;
+		}
 	}
 
 	button.wp-block-search__button {
 		margin-left: 0;
 		line-height: 1;
+		
+
+		@include break-m {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
 
 		&.has-icon {
 			padding: rem(6px) rem(12px);
@@ -46,19 +46,6 @@
 				fill: currentColor;
 			}
 		}
-
-		// &:hover,
-		// &:active {
-
-		// 	.has-background & {
-		// 		background-color: var(--local--color-background, var(--global--color-background)) !important;
-		// 		color: var(--local--color-primary, var(--global--color-primary)) !important;
-		// 	}
-
-		// 	.has-text-color & {
-		// 		color: var(--local--color-primary, var(--global--color-primary)) !important;
-		// 	}
-		// }
 	}
 
 	&.wp-block-search__button-inside {
@@ -67,7 +54,7 @@
 			background-color: var(--color-2);
 			border: rem(1px) solid var(--color-1);
 			border-radius: rem(3px);
-			padding: rem(1px);
+			padding: rem(3px);
 
 			.has-background & {
 				border-color: var(--color-1) !important;
@@ -76,18 +63,22 @@
 			.wp-block-search__input {
 				margin-left: 0;
 				margin-right: 0;
-				padding-left: rem(8px);
+				padding: rem(16px);
 
 				// Add outline for focus styles to override default
 				&:focus {
 					color: var(--color-1);
-					outline-offset: -2px;
-					outline: 2px dotted var(--color-1);
+					outline-offset: rem(-2px);
+					outline: rem(2px) dotted var(--color-1);
 				}
 			}
 
 			button.wp-block-search__button {
 				padding: rem(8px) rem(12px);
+
+				@include break-m {
+					border-radius: rem(3px);
+				}
 
 				// Search button always needs black contrast against white form background
 				&:hover {
@@ -104,8 +95,16 @@
 				}
 
 				&.has-icon {
-					padding: 6px rem(12px);
+					padding: 0 rem(6px);
 				}
+			}
+		}
+	}
+
+	&.wp-block-search__no-button {
+		.wp-block-search__input {
+			@include break-m {
+				border-radius: rem(3px);
 			}
 		}
 	}

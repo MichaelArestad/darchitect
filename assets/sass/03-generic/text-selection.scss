@@ -2,11 +2,11 @@
 
 ::selection {
 	color: #000;
-	background-color: --color-highlight;
+	background-color: #f9ff4b;
 }
 ::-moz-selection {
 	color: #000;
-	background-color: --color-highlight;
+	background-color: #f9ff4b;
 }
 
 .has-background,
@@ -15,21 +15,21 @@
 .has-background-background-color {
 	::selection {
 		color: #000;
-		background-color: --color-highlight;
+		background-color: #f9ff4b;
 	}
 	::-moz-selection {
 		color: #000;
-		background-color: --color-highlight;
+		background-color: #f9ff4b;
 	}
 }
 
 .has-primary-background-color {
 	::selection {
 		color: #000;
-		background-color: --color-highlight;
+		background-color: #f9ff4b;
 	}
 	::-moz-selection {
 		color: #000;
-		background-color: --color-highlight;
+		background-color: #f9ff4b;
 	}
 }

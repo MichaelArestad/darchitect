@@ -1846,7 +1846,8 @@ video {
 
 /* Media captions */
 figcaption {
-	color: currentColor;
+	color: #000;
+	font-family: "IBM Plex Mono", Courier, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -1854,7 +1855,8 @@ figcaption {
 }
 
 .wp-caption {
-	color: currentColor;
+	color: #000;
+	font-family: "IBM Plex Mono", Courier, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -1862,7 +1864,8 @@ figcaption {
 }
 
 .wp-caption-text {
-	color: currentColor;
+	color: #000;
+	font-family: "IBM Plex Mono", Courier, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -1870,7 +1873,8 @@ figcaption {
 }
 
 .wp-block-embed figcaption {
-	color: currentColor;
+	color: #000;
+	font-family: "IBM Plex Mono", Courier, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -1976,6 +1980,11 @@ a:hover {
 .wp-block-audio audio:focus {
 	outline-offset: 5px;
 	outline: 2px solid #000;
+}
+
+.wp-block-audio figcaption {
+	color: #000;
+	font-size: 0.75rem;
 }
 
 /**
@@ -2720,6 +2729,11 @@ code {
 .wp-block-gallery .blocks-gallery-image a:focus img,
 .wp-block-gallery .blocks-gallery-item a:focus img {
 	outline-offset: 2px;
+}
+
+.wp-block-gallery figcaption {
+	color: #000;
+	font-size: 0.75rem;
 }
 
 .wp-block-group {
@@ -5083,7 +5097,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 	.comment-list .depth-2,
 	.comment-list .depth-3 {
-		padding-left: 5rem;
+		padding-left: 4rem;
 	}
 }
 

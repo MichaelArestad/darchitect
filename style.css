@@ -1407,7 +1407,8 @@ figcaption,
 .wp-caption,
 .wp-caption-text,
 .wp-block-embed figcaption {
-	color: currentColor;
+	color: var(--color-1);
+	font-family: var(--font-family-mono);
 	font-size: var(--font-size-xs);
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -1507,6 +1508,11 @@ a:hover {
 .wp-block-audio audio:focus {
 	outline-offset: 5px;
 	outline: 2px solid var(--color-1);
+}
+
+.wp-block-audio figcaption {
+	color: var(--color-1);
+	font-size: var(--font-size-xs);
 }
 
 /**
@@ -1994,6 +2000,11 @@ code {
 .wp-block-gallery .blocks-gallery-image a:focus img,
 .wp-block-gallery .blocks-gallery-item a:focus img {
 	outline-offset: 2px;
+}
+
+.wp-block-gallery figcaption {
+	color: var(--color-1);
+	font-size: var(--font-size-xs);
 }
 
 .wp-block-group {
@@ -3971,7 +3982,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 	.comment-list .depth-2,
 	.comment-list .depth-3 {
-		padding-left: 5rem;
+		padding-left: 4rem;
 	}
 }
 

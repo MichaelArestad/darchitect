@@ -22,7 +22,8 @@ figcaption,
 .wp-caption,
 .wp-caption-text,
 .wp-block-embed figcaption {
-	color: currentColor;
+	color: var(--color-1);
+	font-family: var(--font-family-mono);
 	font-size: var(--font-size-xs);
 	margin-top: rem(16px);
 	margin-bottom: rem(16px);

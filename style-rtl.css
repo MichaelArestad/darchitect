@@ -3795,6 +3795,66 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	font-size: var(--font-size-xxl);
 }
 
+.blog .site-main .post {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+.blog .entry-header {
+	position: relative;
+	max-width: 12.5rem;
+	margin: 0 auto;
+}
+
+.blog .entry-title {
+	text-align: right;
+	margin: 0;
+	font-size: 1rem;
+	font-family: var(--font-family-mono);
+	font-weight: 400;
+}
+
+.blog .entry-title a {
+	display: block;
+	text-decoration: none;
+}
+
+.blog .entry-title a:hover,
+.blog .entry-title a:focus,
+.blog .entry-title a:active {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
+
+.blog .entry-content,
+.blog .entry-footer {
+	display: none;
+}
+
+.blog .post-thumbnail {
+	display: none;
+}
+
+.blog .post-thumbnail a,
+.blog .post-thumbnail img {
+	margin: 0;
+}
+
+.blog .post-thumbnail img {
+	height: auto !important;
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin: 0;
+	transform: translateY(-50%);
+}
+@media (min-width: 782px) {
+
+	.blog .post:hover .post-thumbnail {
+		display: block;
+	}
+}
+
 .error404 main p {
 	font-size: var(--font-size-l);
 	margin-bottom: 2.5rem;

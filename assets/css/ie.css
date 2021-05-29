@@ -854,6 +854,24 @@ body {
 /**
 * Extends
 */
+.post-navigation {
+	max-width: calc(100vw - rem(40px));
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: 480px) {
+
+	.post-navigation {
+		max-width: min(calc(100vw - 10rem), 610px);
+	}
+}
+@media (min-width: 960px) {
+
+	.post-navigation {
+		max-width: min(calc(100vw - 20rem), 610px);
+	}
+}
+
 .post-thumbnail {
 	max-width: calc(100vw - rem(40px));
 	margin-left: auto;
@@ -1000,26 +1018,6 @@ body {
 @media (min-width: 960px) {
 
 	.comments-pagination {
-		max-width: min(calc(100vw - 20rem), 1240px);
-	}
-}
-
-.post-navigation {
-	max-width: calc(100vw - rem(40px));
-	margin-left: auto;
-	margin-right: auto;
-}
-
-@media (min-width: 480px) {
-
-	.post-navigation {
-		max-width: calc(100vw - 10rem);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.post-navigation {
 		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
@@ -5843,20 +5841,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .navigation .nav-links > * {
-	min-width: 44px;
-	min-height: 44px;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
 }
 
 .navigation .nav-links .nav-next a {
 	display: flex;
 	flex-direction: column;
 	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 0.875rem;
 }
 
 .navigation .nav-links .nav-previous a {
 	display: flex;
 	flex-direction: column;
 	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 0.875rem;
 }
 
 .navigation .nav-links .dots {
@@ -5912,13 +5912,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	}
 }
 
+.post-navigation .meta-nav {
+	font-weight: 600;
+}
+
 .post-navigation .post-title {
 	display: inline-block;
 }
-@media (min-width: 960px) {
+@media (min-width: 600px) {
 
 	.post-navigation .post-title {
-		margin: 0.3125rem 1.75rem 0;
+		margin: 0 1.75rem 0;
 	}
 }
 @media (min-width: 480px) {
@@ -5942,6 +5946,19 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .post-navigation .nav-next:last-child,
 .post-navigation .nav-previous:last-child {
 	margin-bottom: 0;
+}
+@media (min-width: 480px) {
+
+	.post-navigation .nav-next,
+	.post-navigation .nav-previous {
+		margin-left: -1.75rem;
+	}
+}
+@media (min-width: 480px) {
+
+	.post-navigation .nav-next {
+		margin-right: -1.75rem;
+	}
 }
 
 .pagination {

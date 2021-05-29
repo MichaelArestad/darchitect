@@ -3857,7 +3857,8 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 @media (min-width: 782px) {
 
-	.blog .post:hover .post-thumbnail {
+	.blog .post .entry-title:hover + .post-thumbnail,
+	.blog .post-thumbnail:hover {
 		display: block;
 	}
 }

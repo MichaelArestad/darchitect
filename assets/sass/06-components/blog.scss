@@ -54,10 +54,9 @@
   }
 
   @include break-m {
-    .post:hover {
-      .post-thumbnail {
-        display: block;
-      }
+    .post .entry-title:hover + .post-thumbnail,
+    .post-thumbnail:hover {
+      display: block;
     }
   }
 }

@@ -4065,8 +4065,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: 2.5rem;
 }
 
+.search-no-results .page-header.page-header {
+	margin-bottom: 0;
+}
+
 .search-no-results .page-content {
-	margin-top: 6rem;
+	margin-top: 2rem;
+}
+
+.search-no-results .page-content p {
+	font-size: var(--font-size-l);
+	margin-bottom: 3rem;
 }
 
 .search-results .page-header {

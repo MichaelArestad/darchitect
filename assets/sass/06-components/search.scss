@@ -1,17 +1,21 @@
 .search-no-results {
+	.page-header.page-header {
+		margin-bottom: 0;
+	}
+
 	.page-content {
-		margin-top: rem(96px);
+		margin-top: rem(32px);
+
+		p {
+			font-size: var(--font-size-l);
+			margin-bottom: rem(48px);
+		}
 	}
 }
 
 .search-results {
 	.page-header {
 		margin-bottom: 0;
-
-		// .search-form {
-		// 	text-align: left;
-		// 	margin-top: rem(40px);
-		// }
 	}
 }
 

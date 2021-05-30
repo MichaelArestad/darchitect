@@ -58,25 +58,26 @@
 	// Post title
 	> li > a {
 		display: inline-block;
-		// font-family: var(--font-family-mono);
-		font-size: var(--font-size-xl);
+		font-family: var(--font-family-mono);
+		font-size: var(--font-size-l);
 		font-weight: var(--font-weight-strong);
-		// line-height: var(--global--line-height-heading);
-		margin-bottom: rem(32px);
+		margin-bottom: 0;
 	}
 
 	// Post author
-	// .wp-block-latest-posts__post-author {
-		// color: var(--global--color-primary);
-		// font-size: var(--font-size-m);
-		// line-height: var(--global--line-height-body);
-	// }
-
+	.wp-block-latest-posts__post-author {
+		margin: 0;
+		color: var(--color-1);
+		font-size: var(--font-size-s);
+		font-family: var(--font-family-mono);
+	}
+	
 	// Post date
 	.wp-block-latest-posts__post-date {
-		// color: var(--global--color-primary);
+		margin: 0;
+		color: var(--color-1);
 		font-size: var(--font-size-s);
-		// line-height: var(--global--line-height-body);
+		font-family: var(--font-family-mono);
 
 		[class*="inner-container"] &,
 		.has-background & {
@@ -87,9 +88,6 @@
 	// Post content
 	.wp-block-latest-posts__post-excerpt,
 	.wp-block-latest-posts__post-full-content {
-		// font-family: var(--latest-posts--description-font-family);
-		// font-size: var(--latest-posts--description-font-size);
-		// line-height: var(--global--line-height-body);
 		margin-top: rem(16px);
 	}
 
@@ -107,13 +105,13 @@
 
 	// Block Styles
 	&.is-style-darchitect-latest-posts-dividers {
-		border-top: rem(1px) solid var(--color-1);
-		border-bottom: rem(1px) solid var(--color-1);
+		border-top: rem(8px) solid var(--color-1);
+		border-bottom: rem(8px) solid var(--color-1);
 
 		&:not(.is-grid) > li,
 		> li {
 			padding-bottom: rem(32px);
-			border-bottom: rem(1px) solid var(--color-1);
+			border-bottom: rem(1px) dashed var(--color-1);
 			margin-top: rem(32px);
 			margin-bottom: rem(32px);
 
@@ -153,7 +151,7 @@
 	&.is-style-darchitect-latest-posts-borders {
 
 		li {
-			border: rem(1px) solid var(--color-1);
+			border: rem(1px) dashed var(--color-1);
 			padding: rem(32px) rem(40px);
 
 			&:last-child {

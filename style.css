@@ -2332,13 +2332,24 @@ h6,
 
 .wp-block-latest-posts > li > a {
 	display: inline-block;
-	font-size: var(--font-size-xl);
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-l);
 	font-weight: var(--font-weight-strong);
-	margin-bottom: 2rem;
+	margin-bottom: 0;
+}
+
+.wp-block-latest-posts .wp-block-latest-posts__post-author {
+	margin: 0;
+	color: var(--color-1);
+	font-size: var(--font-size-s);
+	font-family: var(--font-family-mono);
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
+	margin: 0;
+	color: var(--color-1);
 	font-size: var(--font-size-s);
+	font-family: var(--font-family-mono);
 }
 
 [class*=inner-container] .wp-block-latest-posts .wp-block-latest-posts__post-date,
@@ -2363,14 +2374,14 @@ h6,
 }
 
 .wp-block-latest-posts.is-style-darchitect-latest-posts-dividers {
-	border-top: 0.0625rem solid var(--color-1);
-	border-bottom: 0.0625rem solid var(--color-1);
+	border-top: 0.5rem solid var(--color-1);
+	border-bottom: 0.5rem solid var(--color-1);
 }
 
 .wp-block-latest-posts.is-style-darchitect-latest-posts-dividers:not(.is-grid) > li,
 .wp-block-latest-posts.is-style-darchitect-latest-posts-dividers > li {
 	padding-bottom: 2rem;
-	border-bottom: 0.0625rem solid var(--color-1);
+	border-bottom: 0.0625rem dashed var(--color-1);
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
@@ -2419,7 +2430,7 @@ h6,
 }
 
 .wp-block-latest-posts.is-style-darchitect-latest-posts-borders li {
-	border: 0.0625rem solid var(--color-1);
+	border: 0.0625rem dashed var(--color-1);
 	padding: 2rem 2.5rem;
 }
 

@@ -1,3 +1,29 @@
-.search-no-results .page-content {
-	margin-top: rem(96px);
+.search-no-results {
+	.page-content {
+		margin-top: rem(96px);
+	}
+}
+
+.search-results {
+	.page-header {
+		margin-bottom: 0;
+
+		// .search-form {
+		// 	text-align: left;
+		// 	margin-top: rem(40px);
+		// }
+	}
+}
+
+.search-result-count {
+	background-color: var(--color-1);
+	margin-bottom: rem(192px);
+	padding: 0 rem(16px);
+	color: var(--color-2);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: var(--font-size-xl);
+	font-family: var(--font-family-mono);
+	font-weight: var(--font-weight-heavy);
+	margin-top: 0;
 }

@@ -12,8 +12,15 @@
 // }
 
 .page-header {
-	border-bottom: rem(3px) solid var(--color-1);
 	padding-bottom: rem(64px);
+	text-align: center;
+}
+
+.archive,
+.search {
+	.entry-title {
+		text-align: left;
+	}
 }
 
 .archive,

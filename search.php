@@ -23,7 +23,6 @@ if ( have_posts() ) {
 			);
 			?>
 		</h1>
-		<?php get_search_form(); ?>
 	</header><!-- .page-header -->
 
 	<div class="search-result-count default-max-width">
@@ -32,8 +31,8 @@ if ( have_posts() ) {
 			esc_html(
 				/* translators: %d: The number of search results. */
 				_n(
-					'We found %d result for your search.',
-					'We found %d results for your search.',
+					'%d total result',
+					'%d total results',
 					(int) $wp_query->found_posts,
 					'darchitect'
 				)

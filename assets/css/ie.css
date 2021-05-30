@@ -5617,7 +5617,7 @@ table.wp-calendar-table caption {
 	margin-top: 2rem;
 	padding-top: 0.5rem;
 	padding-bottom: 6rem;
-	border-bottom: 0.0625rem solid #000;
+	border-bottom: 0.0625rem dotted #000;
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
@@ -5733,8 +5733,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-header {
-	border-bottom: 0.1875rem solid #000;
 	padding-bottom: 4rem;
+	text-align: center;
+}
+
+.archive .entry-title,
+.search .entry-title {
+	text-align: left;
 }
 
 .archive .content-area .format-aside .entry-content {
@@ -5956,6 +5961,30 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .search-no-results .page-content {
 	margin-top: 6rem;
+}
+
+.search-results .page-header {
+	margin-bottom: 0;
+}
+
+.search-result-count {
+	background-color: #000;
+	margin-bottom: 12rem;
+	padding: 0 1rem;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-weight: 700;
+	margin-top: 0;
+}
+
+@media (min-width: 782px) {
+
+	.search-result-count {
+		font-size: 2rem;
+	}
 }
 
 /**

@@ -3866,7 +3866,7 @@ table.wp-calendar-table caption {
 	margin-top: 2rem;
 	padding-top: 0.5rem;
 	padding-bottom: 6rem;
-	border-bottom: 0.0625rem solid var(--color-1);
+	border-bottom: 0.0625rem dotted var(--color-1);
 }
 
 body:not(.single) .site-main > article:last-of-type .entry-footer {
@@ -3946,8 +3946,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .page-header {
-	border-bottom: 0.1875rem solid var(--color-1);
 	padding-bottom: 4rem;
+	text-align: center;
+}
+
+.archive .entry-title,
+.search .entry-title {
+	text-align: right;
 }
 
 .archive .content-area .format-aside .entry-content,
@@ -4062,6 +4067,23 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .search-no-results .page-content {
 	margin-top: 6rem;
+}
+
+.search-results .page-header {
+	margin-bottom: 0;
+}
+
+.search-result-count {
+	background-color: var(--color-1);
+	margin-bottom: 12rem;
+	padding: 0 1rem;
+	color: var(--color-2);
+	text-align: center;
+	text-transform: uppercase;
+	font-size: var(--font-size-xl);
+	font-family: var(--font-family-mono);
+	font-weight: var(--font-weight-heavy);
+	margin-top: 0;
 }
 
 /**

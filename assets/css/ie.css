@@ -2254,31 +2254,31 @@ input[type=reset] {
 }
 
 .site .button:not(:hover):not(:active):not(.has-text-color) {
-	color: #fff;
+	color: #000;
 }
 
 button:not(:hover):not(:active):not(.has-text-color) {
-	color: #fff;
+	color: #000;
 }
 
 input[type=submit]:not(:hover):not(:active):not(.has-text-color) {
-	color: #fff;
+	color: #000;
 }
 
 input[type=reset]:not(:hover):not(:active):not(.has-text-color) {
-	color: #fff;
+	color: #000;
 }
 
 .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-text-color) {
-	color: #fff;
+	color: #000;
 }
 
 .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
-	color: #fff;
+	color: #000;
 }
 
 .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
-	color: #fff;
+	color: #000;
 }
 
 .has-background .site .button:not(:hover):not(:active):not(.has-text-color) {
@@ -7124,6 +7124,16 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	font-weight: 700;
 }
 
+.post-navigation .meta-nav .svg-icon {
+	display: none;
+}
+@media (min-width: 600px) {
+
+	.post-navigation .meta-nav .svg-icon {
+		display: inline-block;
+	}
+}
+
 .post-navigation .post-title {
 	display: inline-block;
 }
@@ -7547,10 +7557,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 /* Category 08 is for any plugins with components I felt could use a little love. */
+.sharedaddy {
+	margin-top: 3rem;
+}
+
 .rt-byline {
 	text-align: center;
 	font-size: 0.75rem;
 }
+
 @media (min-width: 782px) {
 
 	.rt-byline {

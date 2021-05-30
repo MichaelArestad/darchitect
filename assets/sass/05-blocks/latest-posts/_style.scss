@@ -110,10 +110,16 @@
 
 		&:not(.is-grid) > li,
 		> li {
-			padding-bottom: rem(32px);
+			padding-bottom: rem(20px);
 			border-bottom: rem(1px) dashed var(--color-1);
-			margin-top: rem(32px);
-			margin-bottom: rem(32px);
+			margin-top: rem(16px);
+			margin-bottom: rem(20px);
+			
+			@include break-m {
+				padding-bottom: rem(32px);
+				margin-top: rem(32px);
+				margin-bottom: rem(32px);
+			}
 
 			&:last-child {
 				padding-bottom: 0;
@@ -152,16 +158,29 @@
 
 		li {
 			border: rem(1px) dashed var(--color-1);
-			padding: rem(32px) rem(40px);
+			padding: rem(16px) rem(16px);
+
+			@include break-m {
+				padding: rem(32px) rem(40px);
+			}
 
 			&:last-child {
-				padding-bottom: rem(32px);
+				padding-bottom: rem(16px);
+				
+				@include break-m {
+					padding-bottom: rem(32px);
+				}
 			}
 		}
 
 		&:not(.is-grid) li {
-			margin-top: rem(40px);
-			margin-bottom: rem(40px);
+			margin-top: rem(16px);
+			margin-bottom: rem(16px);
+
+			@include break-m {
+				margin-top: rem(40px);
+				margin-bottom: rem(40px);
+			}
 		}
 	}
 }

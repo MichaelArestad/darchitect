@@ -98,37 +98,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	padding-top: rem(24px);
 	border-top: 1px dashed var(--color-1);
 	border-bottom: rem(1px) solid transparent;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: rem(64px);
+	display: block;
 
 	.post-taxonomies,
 	.full-size-link {
-		justify-content: flex-end;
-		text-align: right;
-	}
-
-	.full-size-link:first-child:last-child {
-		grid-column: span 2;
+		display: block;
 	}
 
 	.byline,
 	.cat-links,
 	.tags-links {
 		display: block;
-	}
-
-	@include break-xs {
-		display: block;
-
-		.full-size-link {
-			display: block;
-		}
-
-		.post-taxonomies,
-		.full-size-link {
-			text-align: left;
-		}
 	}
 }
 

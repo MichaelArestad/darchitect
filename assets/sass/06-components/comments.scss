@@ -311,10 +311,14 @@
 		display: flex;
 	}
 
+	&.comment-form-author {
+		margin-right: rem(8px);
+	}
+
 	@include break-xs {
 
 		&.comment-form-author {
-			margin-right: rem(60px);
+			margin-right: 0;
 		}
 
 		&.comment-notes,

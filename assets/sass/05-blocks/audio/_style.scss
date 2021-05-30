@@ -1,8 +1,8 @@
 .wp-block-audio {
 
 	audio:focus {
-		outline-offset: 5px;
-		outline: 2px solid var(--color-1);
+		outline-offset: rem(5px);
+		outline: rem(2px) solid var(--color-1);
 	}
 
 	figcaption {

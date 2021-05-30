@@ -1506,8 +1506,8 @@ a:hover {
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
 .wp-block-audio audio:focus {
-	outline-offset: 5px;
-	outline: 2px solid var(--color-1);
+	outline-offset: 0.3125rem;
+	outline: 0.125rem solid var(--color-1);
 }
 
 .wp-block-audio figcaption {
@@ -3182,16 +3182,18 @@ hr.wp-block-separator.is-style-dots:before {
 	border-color: currentColor;
 }
 
-.wp-block-social-links a:focus {
+.wp-block-social-links.wp-block-social-links.wp-block-social-links a:focus {
+	outline-offset: 0.3125rem;
+	outline: 0.125rem solid var(--color-1);
+	border-radius: 6.25rem;
+}
+
+.wp-block-social-links.wp-block-social-links.wp-block-social-links.is-style-darchitect-social-icons-color a {
 	color: var(--color-1);
 }
 
-.wp-block-social-links.is-style-darchitect-social-icons-color a {
-	color: var(--color-1);
-}
-
-.wp-block-social-links.is-style-darchitect-social-icons-color .wp-social-link,
-.wp-block-social-links.is-style-darchitect-social-icons-color.has-icon-background-color.has-icon-background-color .wp-social-link {
+.wp-block-social-links.wp-block-social-links.wp-block-social-links.is-style-darchitect-social-icons-color .wp-social-link,
+.wp-block-social-links.wp-block-social-links.wp-block-social-links.is-style-darchitect-social-icons-color.has-icon-background-color.has-icon-background-color .wp-social-link {
 	background: none;
 }
 
@@ -3302,8 +3304,8 @@ table.wp-calendar-table caption {
 }
 
 .wp-block-video video:focus {
-	outline-offset: 5px;
-	outline: 2px solid var(--color-1);
+	outline-offset: 0.3125rem;
+	outline: 0.125rem solid var(--color-1);
 }
 
 .wp-block-video figcaption {

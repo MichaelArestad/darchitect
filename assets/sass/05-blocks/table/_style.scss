@@ -3,15 +3,17 @@ table,
 	width: 100%;
 	min-width: rem(240px);
 	border-collapse: collapse;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-xs);
 
 	thead,
 	tfoot {
 		text-align: center;
 	}
 
-	// th {
-	// 	font-family: var(--heading--font-family);
-	// }
+	th {
+		font-weight: 700;
+	}
 
 	td,
 	th {
@@ -21,28 +23,27 @@ table,
 
 	figcaption {
 		color: var(--color-1);
-		// font-size: var(--global--font-size-xs);
+		font-size: var(--font-size-xs);
 	}
 
-	// &.is-style-regular .has-background,
-	// &.is-style-stripes .has-background,
-	// &.is-style-stripes .has-background thead tr,
-	// &.is-style-stripes .has-background tfoot tr,
-	// &.is-style-stripes .has-background tbody tr {
-	// 	color: var(--table--has-background-text-color);
-	// }
-
 	&.is-style-stripes {
-		border-color: var(--color-1);
+		border: 0;
 
 		th,
 		td {
 			border-width: 0;
 		}
 
-		// tbody tr:nth-child(odd) {
-		// 	background-color: var(--table--stripes-background-color);
-		// }
+		thead {
+			background-color: var(--color-1);
+			color: var(--color-2);
+			border-color: var(--color-2);
+		}
+
+		tbody tr:nth-child(odd) {
+			background-color: var(--color-1);
+			color: var(--color-2);
+		}
 
 		.has-background tbody tr:nth-child(odd) {
 			background-color: var(--color-2);

@@ -4155,11 +4155,20 @@ hr.wp-block-separator.is-style-dots:before {
 	}
 }
 
-table,
+table {
+	width: 100%;
+	min-width: 15rem;
+	border-collapse: collapse;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 0.75rem;
+}
+
 .wp-block-table {
 	width: 100%;
 	min-width: 15rem;
 	border-collapse: collapse;
+	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 0.75rem;
 }
 
 table thead,
@@ -4167,6 +4176,11 @@ table tfoot,
 .wp-block-table thead,
 .wp-block-table tfoot {
 	text-align: center;
+}
+
+table th,
+.wp-block-table th {
+	font-weight: 700;
 }
 
 table td,
@@ -4179,18 +4193,17 @@ table th,
 
 table figcaption {
 	color: #000;
+	font-size: 0.75rem;
 }
 
 .wp-block-table figcaption {
 	color: #000;
+	font-size: 0.75rem;
 }
 
-table.is-style-stripes {
-	border-color: #000;
-}
-
+table.is-style-stripes,
 .wp-block-table.is-style-stripes {
-	border-color: #000;
+	border: 0;
 }
 
 table.is-style-stripes th,
@@ -4198,6 +4211,28 @@ table.is-style-stripes td,
 .wp-block-table.is-style-stripes th,
 .wp-block-table.is-style-stripes td {
 	border-width: 0;
+}
+
+table.is-style-stripes thead {
+	background-color: #000;
+	color: #fff;
+	border-color: #fff;
+}
+
+.wp-block-table.is-style-stripes thead {
+	background-color: #000;
+	color: #fff;
+	border-color: #fff;
+}
+
+table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #000;
+	color: #fff;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #000;
+	color: #fff;
 }
 
 table.is-style-stripes .has-background tbody tr:nth-child(odd) {

@@ -3214,6 +3214,8 @@ table,
 	width: 100%;
 	min-width: 15rem;
 	border-collapse: collapse;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-xs);
 }
 
 table thead,
@@ -3221,6 +3223,11 @@ table tfoot,
 .wp-block-table thead,
 .wp-block-table tfoot {
 	text-align: center;
+}
+
+table th,
+.wp-block-table th {
+	font-weight: 700;
 }
 
 table td,
@@ -3234,11 +3241,12 @@ table th,
 table figcaption,
 .wp-block-table figcaption {
 	color: var(--color-1);
+	font-size: var(--font-size-xs);
 }
 
 table.is-style-stripes,
 .wp-block-table.is-style-stripes {
-	border-color: var(--color-1);
+	border: 0;
 }
 
 table.is-style-stripes th,
@@ -3246,6 +3254,19 @@ table.is-style-stripes td,
 .wp-block-table.is-style-stripes th,
 .wp-block-table.is-style-stripes td {
 	border-width: 0;
+}
+
+table.is-style-stripes thead,
+.wp-block-table.is-style-stripes thead {
+	background-color: var(--color-1);
+	color: var(--color-2);
+	border-color: var(--color-2);
+}
+
+table.is-style-stripes tbody tr:nth-child(odd),
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: var(--color-1);
+	color: var(--color-2);
 }
 
 table.is-style-stripes .has-background tbody tr:nth-child(odd),

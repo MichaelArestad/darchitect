@@ -2,7 +2,11 @@ ul,
 ol {
 	// font-family: var(--list--font-family);
 	margin: 0;
-	padding-left: rem(48px);
+	padding-left: rem(24px);
+
+	@include break-m {
+		padding-left: rem(48px);
+	}
 
 	// Utility classes
 	&.aligncenter {

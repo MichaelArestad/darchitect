@@ -38,8 +38,13 @@ $spacing-vertical: #{rem(32px)};
  * - Add double vertical margins here for clearer hierarchy
  */
 .site-main > * {
-	margin-top: calc(3 * #{$spacing-vertical});
-	margin-bottom: calc(3 * #{$spacing-vertical});
+	margin-top: $spacing-vertical;
+	margin-bottom: $spacing-vertical;
+
+	@include break-m {
+		margin-top: calc(3 * #{$spacing-vertical});
+		margin-bottom: calc(3 * #{$spacing-vertical});
+	}
 
 	&:first-child {
 		margin-top: 0;

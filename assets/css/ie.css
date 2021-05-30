@@ -618,8 +618,15 @@ body {
  * - Add double vertical margins here for clearer hierarchy
  */
 .site-main > * {
-	margin-top: 6rem;
-	margin-bottom: 6rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+@media (min-width: 782px) {
+
+	.site-main > * {
+		margin-top: 6rem;
+		margin-bottom: 6rem;
+	}
 }
 
 .site-main > *:first-child {
@@ -3673,7 +3680,14 @@ figure.wp-caption a:focus img {
 ul,
 ol {
 	margin: 0;
-	padding-left: 3rem;
+	padding-left: 1.5rem;
+}
+@media (min-width: 782px) {
+
+	ul,
+	ol {
+		padding-left: 3rem;
+	}
 }
 
 ul.aligncenter,
@@ -5415,8 +5429,15 @@ table.wp-calendar-table caption {
 }
 
 .singular .entry-header {
-	padding-bottom: 4rem;
-	margin-bottom: 6rem;
+	padding-bottom: 1.5rem;
+	margin-bottom: 3.5rem;
+}
+@media (min-width: 782px) {
+
+	.singular .entry-header {
+		padding-bottom: 4rem;
+		margin-bottom: 6rem;
+	}
 }
 
 .home .entry-header {

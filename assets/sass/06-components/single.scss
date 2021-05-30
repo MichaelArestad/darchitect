@@ -1,6 +1,11 @@
 .singular .entry-header {
-	padding-bottom: rem(64px);
+	padding-bottom: rem(24px);
+	margin-bottom: rem(56px);
+
+	@include break-m {
+		padding-bottom: rem(64px);
 	margin-bottom: rem(96px);
+	}
 }
 
 .home .entry-header {

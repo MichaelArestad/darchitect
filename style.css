@@ -3646,11 +3646,17 @@ table.wp-calendar-table caption {
 	margin: 0;
 	max-width: none;
 	position: absolute;
-	width: 2rem;
+	width: 1.75rem;
 	top: 0;
 	bottom: 0;
 	left: 100%;
 	overflow: hidden;
+}
+@media (min-width: 782px) {
+
+	.site-branding .search-form {
+		width: 2rem;
+	}
 }
 
 .site-branding .search-form > label {
@@ -3659,9 +3665,16 @@ table.wp-calendar-table caption {
 	background-repeat: no-repeat;
 	background-position: center center;
 	font-size: 0;
-	width: 2rem;
-	min-height: 2rem;
+	width: 1.75rem;
+	min-height: 1.75rem;
 	cursor: pointer;
+}
+@media (min-width: 782px) {
+
+	.site-branding .search-form > label {
+		width: 2rem;
+		height: 2rem;
+	}
 }
 
 .site-branding .search-form > label:hover {
@@ -3671,8 +3684,14 @@ table.wp-calendar-table caption {
 
 .site-branding .search-form:focus-within {
 	left: 0;
-	width: calc(100% + 2rem);
+	width: calc(100% + 1.75rem);
 	flex-wrap: nowrap;
+}
+@media (min-width: 782px) {
+
+	.site-branding .search-form:focus-within {
+		width: calc(100% + 2rem);
+	}
 }
 
 .site-branding .search-form:focus-within > label {
@@ -3683,10 +3702,6 @@ table.wp-calendar-table caption {
 .site-branding .search-form:focus-within .search-field,
 .site-branding .search-form:focus-within .search-submit {
 	transform: translateX(0);
-}
-
-.site-branding .search-form:focus-within .search-submit {
-	display: block;
 }
 
 .site-branding .search-form .search-field,
@@ -3706,7 +3721,6 @@ table.wp-calendar-table caption {
 }
 
 .site-branding .search-form .search-submit {
-	display: none;
 	width: 100%;
 	margin: 0;
 	background-color: var(--color-1);
@@ -3715,8 +3729,15 @@ table.wp-calendar-table caption {
 	background-position: center center;
 	border-radius: 0;
 	font-size: 0;
-	width: 2rem;
-	height: 2rem;
+	width: 1.75rem;
+	height: 1.75rem;
+}
+@media (min-width: 782px) {
+
+	.site-branding .search-form .search-submit {
+		width: 2rem;
+		height: 2rem;
+	}
 }
 
 .site-footer {

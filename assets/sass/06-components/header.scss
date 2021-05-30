@@ -50,11 +50,15 @@
 	margin: 0;
 	max-width: none;
 	position: absolute;
-	width: rem(32px);
+	width: rem(28px);
 	top: 0;
 	bottom: 0;
 	left: 100%;
 	overflow: hidden;
+
+	@include break-m {
+		width: rem(32px);
+	}
 
 	> label {
 		margin-bottom: 0;
@@ -62,9 +66,14 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		font-size: 0;
-		width: rem(32px);
-		min-height: rem(32px);
+		width: rem(28px);
+		min-height: rem(28px);
 		cursor: pointer;
+
+		@include break-m {
+			width: rem(32px);
+			height: rem(32px);
+		}
 		
 		&:hover {
 			background-color: var(--color-1);
@@ -74,8 +83,12 @@
 
 	&:focus-within {
 		left: 0;
-		width: calc(100% + 2rem);
+		width: calc(100% + #{rem(28px)});
 		flex-wrap: nowrap;
+		
+		@include break-m {
+			width: calc(100% + 2rem);
+		}
 
 		> label {
 			width: 0;
@@ -85,11 +98,6 @@
 		.search-field,
 		.search-submit {
 			transform: translateX(0);
-
-		}
-
-		.search-submit {
-			display: block;
 		}
 	}
 
@@ -112,7 +120,6 @@
 	}
 
 	.search-submit {
-		display: none;
 		width: 100%;
 		margin: 0;
 		background-color: var(--color-1);
@@ -121,8 +128,13 @@
 		background-position: center center;
 		border-radius: 0;
 		font-size: 0;
-		width: rem(32px);
-		height: rem(32px);
+		width: rem(28px);
+		height: rem(28px);
+
+		@include break-m {
+			width: rem(32px);
+			height: rem(32px);
+		}
 	}
 }
 

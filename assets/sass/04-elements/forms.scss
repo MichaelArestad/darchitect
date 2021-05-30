@@ -14,13 +14,16 @@ input[type="datetime-local"],
 input[type="color"],
 .site textarea {
 	border: rem(1px) solid var(--color-1);
-	// border-radius: var(--form--border-radius);
+	background-color: var(--color-2);
 	color: var(--color-1);
-	// line-height: var(--line-height-body);
-	padding: rem(16px);
+	padding: rem(8px);
 	// Gives a little more space for the outline offset.
 	// margin: 0 rem(2px);
 	max-width: 100%;
+
+	@include break-m {
+		padding: rem(16px);
+	}
 
 	&:focus {
 		color: var(--color-1);
@@ -31,10 +34,6 @@ input[type="color"],
 	&:disabled {
 		opacity: 0.7;
 	}
-
-	// .is-dark-theme & {
-	// 	background: var(--global--color-white-90);
-	// }
 }
 
 // Reset the negative offset from normalize to make the thicker "border" work on focus.
@@ -103,6 +102,7 @@ License: MIT.
 
 	input[type="checkbox"],
 	input[type="radio"] {
+		cursor: pointer;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		position: relative;

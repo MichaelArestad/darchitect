@@ -81,6 +81,16 @@
 		}
 	}
 
+	.is-dark-theme & {
+		> label {
+			background-image: url('./assets/images/search-light.svg');
+
+			&:hover {
+				background-image: url('./assets/images/search.svg');
+			}
+		}
+	}
+
 	&:focus-within {
 		left: 0;
 		width: calc(100% + #{rem(28px)});
@@ -134,6 +144,12 @@
 		@include break-m {
 			width: rem(32px);
 			height: rem(32px);
+		}
+	}
+
+	.is-dark-theme & {
+		.search-submit {
+			background-image: url('./assets/images/search.svg');
 		}
 	}
 }

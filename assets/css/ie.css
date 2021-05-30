@@ -1360,107 +1360,141 @@ blockquote footer {
 
 input[type=text] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=email] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=url] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=password] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=search] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=number] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=tel] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=date] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=month] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=week] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=time] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=datetime] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=datetime-local] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
 }
 
 input[type=color] {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
 	max-width: 100%;
 }
 
 .site textarea {
 	border: 0.0625rem solid #000;
+	background-color: #fff;
 	color: #000;
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
+}
+@media (min-width: 782px) {
+
+	input[type=text],
+	input[type=email],
+	input[type=url],
+	input[type=password],
+	input[type=search],
+	input[type=number],
+	input[type=tel],
+	input[type=date],
+	input[type=month],
+	input[type=week],
+	input[type=time],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=color],
+	.site textarea {
+		padding: 1rem;
+	}
 }
 
 input[type=text]:focus {
@@ -1629,6 +1663,7 @@ License: MIT.
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
 
 	input[type=checkbox] {
+		cursor: pointer;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		position: relative;
@@ -1639,6 +1674,7 @@ License: MIT.
 	}
 
 	input[type=radio] {
+		cursor: pointer;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		position: relative;
@@ -5387,6 +5423,14 @@ table.wp-calendar-table caption {
 	background-image: url("./assets/images/search-light.svg");
 }
 
+.is-dark-theme .site-branding .search-form > label {
+	background-image: url("./assets/images/search-light.svg");
+}
+
+.is-dark-theme .site-branding .search-form > label:hover {
+	background-image: url("./assets/images/search.svg");
+}
+
 .site-branding .search-form:focus-within {
 	left: 0;
 	width: calc(100% + 2rem);
@@ -5443,6 +5487,10 @@ table.wp-calendar-table caption {
 		width: 2rem;
 		height: 2rem;
 	}
+}
+
+.is-dark-theme .site-branding .search-form .search-submit {
+	background-image: url("./assets/images/search.svg");
 }
 
 .site-footer {

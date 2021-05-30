@@ -1067,9 +1067,30 @@ input[type=datetime-local],
 input[type=color],
 .site textarea {
 	border: 0.0625rem solid var(--color-1);
+	background-color: var(--color-2);
 	color: var(--color-1);
-	padding: 1rem;
+	padding: 0.5rem;
 	max-width: 100%;
+}
+@media (min-width: 782px) {
+
+	input[type=text],
+	input[type=email],
+	input[type=url],
+	input[type=password],
+	input[type=search],
+	input[type=number],
+	input[type=tel],
+	input[type=date],
+	input[type=month],
+	input[type=week],
+	input[type=time],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=color],
+	.site textarea {
+		padding: 1rem;
+	}
 }
 
 input[type=text]:focus,
@@ -1162,6 +1183,7 @@ License: MIT.
 
 	input[type=checkbox],
 	input[type=radio] {
+		cursor: pointer;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		position: relative;
@@ -3682,6 +3704,14 @@ table.wp-calendar-table caption {
 	background-image: url("./assets/images/search-light.svg");
 }
 
+.is-dark-theme .site-branding .search-form > label {
+	background-image: url("./assets/images/search-light.svg");
+}
+
+.is-dark-theme .site-branding .search-form > label:hover {
+	background-image: url("./assets/images/search.svg");
+}
+
 .site-branding .search-form:focus-within {
 	left: 0;
 	width: calc(100% + 1.75rem);
@@ -3738,6 +3768,10 @@ table.wp-calendar-table caption {
 		width: 2rem;
 		height: 2rem;
 	}
+}
+
+.is-dark-theme .site-branding .search-form .search-submit {
+	background-image: url("./assets/images/search.svg");
 }
 
 .site-footer {

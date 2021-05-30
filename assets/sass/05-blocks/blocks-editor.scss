@@ -18,7 +18,7 @@
 @import "latest-posts/style";
 @import "legacy/editor"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
 @import "list/style";
-// @import "media-text/editor";
+@import "media-text/editor";
 // @import "navigation/editor";
 @import "paragraph/editor";
 @import "preformatted/style";
@@ -27,9 +27,9 @@
 // @import "rss/editor";
 @import "search/editor";
 @import "separator/style";
-// @import "social-icons/editor";
-// @import "table/editor";
+@import "social-icons/editor";
+@import "table/style";
 @import "tag-clould/style";
-// @import "verse/editor";
+@import "verse/editor";
 @import "utilities/font-sizes";
 @import "utilities/editor"; // Import LAST to cascade properly

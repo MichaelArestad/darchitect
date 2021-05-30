@@ -2201,6 +2201,32 @@ dd {
 	padding-left: 5rem;
 }
 
+[data-align=full] .wp-block-media-text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-media-text > .wp-block-media-text__content > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-media-text > .wp-block-media-text__content > *:last-child:not(.block-list-appender) {
+	margin-bottom: 0;
+}
+
+.wp-block-media-text.has-child-selected > .wp-block-media-text__content > *:nth-last-child(2),
+.wp-block-media-text.is-selected > .wp-block-media-text__content > *:nth-last-child(2) {
+	margin-bottom: 0;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding: 2.5rem;
+}
+
+.wp-block-media-text.is-style-darchitect-border {
+	border: 0.0625rem solid #000;
+}
+
 p.has-background {
 	padding: 1rem;
 }
@@ -2988,6 +3014,181 @@ hr.wp-block-separator.is-style-dots:before {
 [style*=background-color] hr.wp-block-separator,
 .wp-block-cover[style*=background-image] hr.wp-block-separator {
 	border-color: currentColor;
+}
+
+.wp-block-social-links [data-block] {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-social-links.is-style-darchitect-social-icons-color button {
+	color: #000;
+}
+
+.wp-block-social-links.is-style-darchitect-social-icons-color .wp-social-link {
+	background: none;
+}
+
+table {
+	width: 100%;
+	min-width: 15rem;
+	border-collapse: collapse;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 0.75rem;
+}
+
+@media (min-width: 782px) {
+
+	table {
+		font-size: 0.75rem;
+	}
+}
+
+.wp-block-table {
+	width: 100%;
+	min-width: 15rem;
+	border-collapse: collapse;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 0.75rem;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-table {
+		font-size: 0.75rem;
+	}
+}
+
+table thead,
+table tfoot,
+.wp-block-table thead,
+.wp-block-table tfoot {
+	text-align: center;
+}
+
+table th {
+	font-weight: 700;
+}
+
+.wp-block-table th {
+	font-weight: 700;
+}
+
+table td,
+table th,
+.wp-block-table td,
+.wp-block-table th {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid;
+}
+
+table figcaption {
+	color: #000;
+	font-size: 0.75rem;
+}
+@media (min-width: 782px) {
+
+	table figcaption {
+		font-size: 0.75rem;
+	}
+}
+
+.wp-block-table figcaption {
+	color: #000;
+	font-size: 0.75rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-table figcaption {
+		font-size: 0.75rem;
+	}
+}
+
+table.is-style-stripes,
+.wp-block-table.is-style-stripes {
+	border: 0;
+}
+
+table.is-style-stripes th,
+table.is-style-stripes td,
+.wp-block-table.is-style-stripes th,
+.wp-block-table.is-style-stripes td {
+	border-width: 0;
+}
+
+table.is-style-stripes thead {
+	background-color: #000;
+	color: #fff;
+	border-color: #fff;
+}
+
+.wp-block-table.is-style-stripes thead {
+	background-color: #000;
+	color: #fff;
+	border-color: #fff;
+}
+
+table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #000;
+	color: #fff;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #000;
+	color: #fff;
+}
+
+table.is-style-stripes .has-background tbody tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+.wp-block-table.is-style-stripes .has-background tbody tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+table.wp-calendar-table td,
+table.wp-calendar-table th {
+	background: transparent;
+	border: 0;
+	text-align: center;
+	line-height: 2;
+	vertical-align: middle;
+	word-break: normal;
+}
+
+table.wp-calendar-table th {
+	font-weight: bold;
+}
+
+table.wp-calendar-table thead,
+table.wp-calendar-table tbody {
+	color: currentColor;
+	border: 1px solid;
+}
+
+table.wp-calendar-table caption {
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 1rem;
+	color: currentColor;
+}
+
+.wp-calendar-nav {
+	text-align: left;
+	margin-top: 0.5rem;
+}
+
+.wp-calendar-nav svg {
+	height: 1em;
+	vertical-align: middle;
+}
+
+.wp-calendar-nav svg path {
+	fill: currentColor;
+}
+
+.wp-calendar-nav .wp-calendar-nav-next {
+	float: right;
 }
 
 .wp-block-tag-cloud {

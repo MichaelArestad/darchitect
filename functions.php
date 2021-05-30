@@ -211,107 +211,107 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 		$yellow    = '#EEEADD';
 		$white     = '#FFFFFF';
 
-		add_theme_support(
-			'editor-color-palette',
-			array(
-				array(
-					'name'  => esc_html__( 'Black', 'darchitect' ),
-					'slug'  => 'black',
-					'color' => $black,
-				),
-				array(
-					'name'  => esc_html__( 'Dark gray', 'darchitect' ),
-					'slug'  => 'dark-gray',
-					'color' => $dark_gray,
-				),
-				array(
-					'name'  => esc_html__( 'Gray', 'darchitect' ),
-					'slug'  => 'gray',
-					'color' => $gray,
-				),
-				array(
-					'name'  => esc_html__( 'Green', 'darchitect' ),
-					'slug'  => 'green',
-					'color' => $green,
-				),
-				array(
-					'name'  => esc_html__( 'Blue', 'darchitect' ),
-					'slug'  => 'blue',
-					'color' => $blue,
-				),
-				array(
-					'name'  => esc_html__( 'Purple', 'darchitect' ),
-					'slug'  => 'purple',
-					'color' => $purple,
-				),
-				array(
-					'name'  => esc_html__( 'Red', 'darchitect' ),
-					'slug'  => 'red',
-					'color' => $red,
-				),
-				array(
-					'name'  => esc_html__( 'Orange', 'darchitect' ),
-					'slug'  => 'orange',
-					'color' => $orange,
-				),
-				array(
-					'name'  => esc_html__( 'Yellow', 'darchitect' ),
-					'slug'  => 'yellow',
-					'color' => $yellow,
-				),
-				array(
-					'name'  => esc_html__( 'White', 'darchitect' ),
-					'slug'  => 'white',
-					'color' => $white,
-				),
-			)
-		);
+		// add_theme_support(
+		// 	'editor-color-palette',
+		// 	array(
+		// 		array(
+		// 			'name'  => esc_html__( 'Black', 'darchitect' ),
+		// 			'slug'  => 'black',
+		// 			'color' => $black,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Dark gray', 'darchitect' ),
+		// 			'slug'  => 'dark-gray',
+		// 			'color' => $dark_gray,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Gray', 'darchitect' ),
+		// 			'slug'  => 'gray',
+		// 			'color' => $gray,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Green', 'darchitect' ),
+		// 			'slug'  => 'green',
+		// 			'color' => $green,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Blue', 'darchitect' ),
+		// 			'slug'  => 'blue',
+		// 			'color' => $blue,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Purple', 'darchitect' ),
+		// 			'slug'  => 'purple',
+		// 			'color' => $purple,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Red', 'darchitect' ),
+		// 			'slug'  => 'red',
+		// 			'color' => $red,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Orange', 'darchitect' ),
+		// 			'slug'  => 'orange',
+		// 			'color' => $orange,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'Yellow', 'darchitect' ),
+		// 			'slug'  => 'yellow',
+		// 			'color' => $yellow,
+		// 		),
+		// 		array(
+		// 			'name'  => esc_html__( 'White', 'darchitect' ),
+		// 			'slug'  => 'white',
+		// 			'color' => $white,
+		// 		),
+		// 	)
+		// );
 
-		add_theme_support(
-			'editor-gradient-presets',
-			array(
-				array(
-					'name'     => esc_html__( 'Purple to yellow', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $yellow . ' 100%)',
-					'slug'     => 'purple-to-yellow',
-				),
-				array(
-					'name'     => esc_html__( 'Yellow to purple', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $purple . ' 100%)',
-					'slug'     => 'yellow-to-purple',
-				),
-				array(
-					'name'     => esc_html__( 'Green to yellow', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $yellow . ' 100%)',
-					'slug'     => 'green-to-yellow',
-				),
-				array(
-					'name'     => esc_html__( 'Yellow to green', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $green . ' 100%)',
-					'slug'     => 'yellow-to-green',
-				),
-				array(
-					'name'     => esc_html__( 'Red to yellow', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $yellow . ' 100%)',
-					'slug'     => 'red-to-yellow',
-				),
-				array(
-					'name'     => esc_html__( 'Yellow to red', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $red . ' 100%)',
-					'slug'     => 'yellow-to-red',
-				),
-				array(
-					'name'     => esc_html__( 'Purple to red', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $red . ' 100%)',
-					'slug'     => 'purple-to-red',
-				),
-				array(
-					'name'     => esc_html__( 'Red to purple', 'darchitect' ),
-					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $purple . ' 100%)',
-					'slug'     => 'red-to-purple',
-				),
-			)
-		);
+		// add_theme_support(
+		// 	'editor-gradient-presets',
+		// 	array(
+		// 		array(
+		// 			'name'     => esc_html__( 'Purple to yellow', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $yellow . ' 100%)',
+		// 			'slug'     => 'purple-to-yellow',
+		// 		),
+		// 		array(
+		// 			'name'     => esc_html__( 'Yellow to purple', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $purple . ' 100%)',
+		// 			'slug'     => 'yellow-to-purple',
+		// 		),
+		// 		array(
+		// 			'name'     => esc_html__( 'Green to yellow', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $yellow . ' 100%)',
+		// 			'slug'     => 'green-to-yellow',
+		// 		),
+		// 		array(
+		// 			'name'     => esc_html__( 'Yellow to green', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $green . ' 100%)',
+		// 			'slug'     => 'yellow-to-green',
+		// 		),
+		// 		array(
+		// 			'name'     => esc_html__( 'Red to yellow', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $yellow . ' 100%)',
+		// 			'slug'     => 'red-to-yellow',
+		// 		),
+		// 		array(
+		// 			'name'     => esc_html__( 'Yellow to red', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $red . ' 100%)',
+		// 			'slug'     => 'yellow-to-red',
+		// 		),
+		// 		array(
+		// 			'name'     => esc_html__( 'Purple to red', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $red . ' 100%)',
+		// 			'slug'     => 'purple-to-red',
+		// 		),
+		// 		array(
+		// 			'name'     => esc_html__( 'Red to purple', 'darchitect' ),
+		// 			'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $purple . ' 100%)',
+		// 			'slug'     => 'red-to-purple',
+		// 		),
+		// 	)
+		// );
 
 		/*
 		* Adds starter content to highlight the theme on fresh sites.

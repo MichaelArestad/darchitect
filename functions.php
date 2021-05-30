@@ -63,6 +63,20 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 			)
 		);
 
+		/**
+		 * Jetpack infinite scroll.
+		 */
+		// add_theme_support( 'infinite-scroll', array(
+		// 	'container' => 'main',
+		//  ) );
+
+		add_theme_support( 'infinite-scroll', array(
+			'type' => 'click',
+			'footer_widgets' => false,
+			'container' => 'main',
+			'wrapper' => 'false',
+			'render' => 'darchitect_infinite_scroll_render'
+		) );
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -347,6 +361,15 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 	}
 }
 add_action( 'after_setup_theme', 'darchitect_setup' );
+
+
+function darchitect_infinite_scroll_render() {
+	while (have_posts()) {
+		the_post();
+		get_template_part('template-parts/content/content-excerpt', get_post_format());
+	}
+}
+
 
 /**
  * Register widget area.

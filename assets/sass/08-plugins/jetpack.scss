@@ -1,3 +1,63 @@
 .sharedaddy {
-  margin-top: rem(48px);
+	margin-top: rem(48px);
+}
+
+// Infinite scroll
+[class*="infinite-view"] {
+	margin: 0;
+}
+
+#infinite-handle#infinite-handle {
+	text-align: center;
+
+	span {
+		@include button-style();
+		padding: rem(4px) rem(8px);
+		font-size: var(--font-size-xs);
+		
+		&:not(:hover):not(:active):not(.has-background) {
+			border-color: currentColor;
+			background-color: var(--color-2);
+			color: var(--color-1);
+	 }
+
+		&:focus,
+		&:hover {
+			background-color: var(--color-1);
+			color: var(--color-2);
+		}
+	}
+}
+
+// Related Posts
+#jp-relatedposts#jp-relatedposts {
+	margin: 0 auto;
+}
+
+#jp-relatedposts#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
+	font-family: var(--font-family-mono);
+}
+
+#jp-relatedposts#jp-relatedposts .jp-relatedposts-items p,
+#jp-relatedpost#jp-relatedpostss .jp-relatedposts-items time, 
+#jp-relatedposts#jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+	font-size: var(--font-size-xs);
+}
+
+#jp-relatedposts#jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a {
+	font-weight: var(--font-weight-heavy);
+}
+
+.jp-relatedposts-post-img.jp-relatedposts-post-img {
+	margin-bottom: rem(8px);
+}
+
+#jp-relatedposts#jp-relatedposts h3.jp-relatedposts-headline {
+	font-family: var(--font-family-mono);
+}
+
+// Comments
+
+#jetpack_remote_comment {
+	margin-top: rem(8px);
 }

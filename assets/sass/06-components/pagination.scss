@@ -145,19 +145,19 @@
 .pagination,
 .comments-pagination {
 
-	border-top: rem(3px) solid var(--color-1);
+	border-top: rem(1px) dashed var(--color-1);
 	padding-top: rem(32px);
-	margin: rem(32px) auto;
+	@extend %responsive-aligndefault-width;
 
 	@include break-l {
-		margin: rem(32px) auto;
+		margin: rem(192px) auto rem(32px);
 	}
-
-	@extend %responsive-alignwide-width;
 
 	// Resets the top margin added to the .nav-links items below.
 	.nav-links {
 		margin-top: rem(-32px);
+		font-family: var(--font-family-mono);
+		font-size: var(--font-size-xs);
 
 		.has-background-white & {
 
@@ -169,10 +169,24 @@
 		}
 	}
 
+	.svg-icon.svg-icon {
+		width: rem(16px);
+		height: rem(16px);
+		margin: 0;
+	}
+
+	.home & {
+		max-width: rem(240px);
+
+		.page-numbers:not(.prev):not(.next) {
+			display: none;
+		}
+	}
+
 	.nav-links > * {
 		margin-top: rem(32px);
-		margin-left: rem(16px);
-		margin-right: rem(16px);
+		margin-left: rem(4px);
+		margin-right: rem(4px);
 
 		&.current {
 			text-decoration: underline;
@@ -225,12 +239,17 @@
 	}
 }
 
+.infinite-scroll .pagination {
+	display: none;
+}
+
 // Comments pagination
 .comments-pagination {
+	border-top: 0;
 	padding-top: rem(16px);
-	margin: rem(64px) auto;
+	margin: 0 auto rem(64px);
 
 	@include break-l {
-		margin: rem(64px) auto rem(72px) auto;
+		margin: 0 auto rem(72px) auto;
 	}
 }

@@ -31,6 +31,12 @@ $spacing-vertical: #{rem(32px)};
 	@include break-xs {
 		padding-bottom: calc(3 * #{$spacing-vertical});
 	}
+
+	.home & {
+		@include break-xs {
+			padding-top: rem(96px);
+		}
+	}
 }
 
 /**

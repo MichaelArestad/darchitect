@@ -9,7 +9,6 @@
 	}
 
 	@include break-xs {
-
 		.no-widgets & {
 			margin-top: rem(192px);
 		}
@@ -19,6 +18,11 @@
 // Footer Branding
 .site-footer > .site-info {
 	padding-top: rem(32px);
+	padding-bottom: rem(24px);
+
+	@include break-xs {
+		padding-bottom: rem(8px);
+	}
 
 	.powered-by {
 		text-align: right;

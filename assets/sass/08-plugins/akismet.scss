@@ -1,8 +1,8 @@
 // Akismet comments
 /* stylelint-disable */
-.akismet_comment_form_privacy_notice {
+.akismet_comment_form_privacy_notice.akismet_comment_form_privacy_notice {
 	font-family: var(--font-family-mono);
 	font-size: var(--font-size-xs);
-	margin-bottom: 40px;
+	margin-bottom: rem(40px);
 }
 /* stylelint-enable */

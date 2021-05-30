@@ -3,7 +3,17 @@
 		"stylelint-config-wordpress"
 	],
 	"rules": {
-		"indentation": "tab",
+		"no-missing-end-of-source-newline": null,
+		"selector-id-pattern": null,
+		"length-zero-no-unit": null,
+		"block-opening-brace-space-before": null,
+		"function-whitespace-after": null,
+		"value-keyword-case": null,
+		"no-eol-whitespace": null,
+		"selector-list-comma-newline-after": null,
+		"comment-empty-line-before": null,
+		"rule-empty-line-before": null,
+		"indentation": null,
 		"no-duplicate-selectors": null,
 		"function-url-quotes": null,
 		"selector-attribute-quotes": null,
@@ -23,7 +33,6 @@
 			{
 				"ignoreFontFamilies": ["undefined"]
 			}
-		],
-		"length-zero-no-unit": [true, {"ignore": ["custom-properties"]}]
+		]
 	}
 }

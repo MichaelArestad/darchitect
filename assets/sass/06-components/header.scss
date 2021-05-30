@@ -8,7 +8,6 @@
 // Site branding
 .site-branding {
 	text-align: center;
-	margin: var(--page-margin);
 }
 
 .title-and-search {
@@ -26,7 +25,7 @@
 	color: var(--color-2);
 	font-size: var(--font-size-l);
 	font-family: var(--font-family-mono);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 	line-height: 1;
 	text-transform: uppercase;
 

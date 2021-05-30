@@ -62,6 +62,7 @@ html {
 
 // body resets
 body {
+	padding: var(--page-margin);
 	font-size: var(--font-size-m);
 	font-weight: var(--font-weight-normal);
 	color: var(--color-1);

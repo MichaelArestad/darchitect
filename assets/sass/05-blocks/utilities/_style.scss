@@ -134,7 +134,7 @@
 
 // Drop caps
 .has-drop-cap:not(:focus)::first-letter {
-	font-weight: 700;
+	font-weight: var(--font-weight-heavy);
 	line-height: 1;
 	text-transform: uppercase;
 	font-style: normal;

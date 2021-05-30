@@ -13,9 +13,9 @@
   .entry-title {
     text-align: left;
     margin: 0;
-    font-size: rem(16px);
+    font-size: var(--font-size-root);
     font-family: var(--font-family-mono);
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
 
     a {
       display: block;

@@ -12,10 +12,10 @@ h6,
 .h6 {
 	clear: both;
 	font-family: var(--font-family-mono);
-	font-weight: 700;
+	font-weight: var(--font-weight-heavy);
 
 	strong {
-		font-weight: 700;
+		font-weight: var(--font-weight-heavy);
 	}
 }
 
@@ -34,19 +34,19 @@ h2,
 h3,
 .h3 {
 	font-size: var(--font-size-xl);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }
 
 h4,
 .h4 {
 	font-size: var(--font-size-l);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }
 
 h5,
 .h5 {
 	font-size: var(--font-size-m);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }
 
 h6,

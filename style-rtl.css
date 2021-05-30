@@ -103,36 +103,34 @@ Darchitect is distributed under the terms of the GNU GPL.
 /*
 Breakpoint mixin - about as simple as it gets and mobile first
 */
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500,600,700|IBM+Plex+Serif:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
 /* Variables */
 :root {
 
 	/* Font Family */
-	--font-family-serif: "IBM Plex Serif", times, serif;
-	--font-family-mono: "IBM Plex Mono", courier, monospace;
+	--font-family-serif: "IBM Plex Serif", garamond, serif;
+	--font-family-mono: "IBM Plex Mono", "Lucida Console", monaco, monospace;
 
 	/* Font Size */
+	--font-size-root: 0.875rem;
 	--font-size-xs: 0.75rem;
 	--font-size-s: 0.875rem;
-	--font-size-m: 1.125rem;
-	--font-size-l: 1.5rem;
-	--font-size-xl: 2rem;
-	--font-size-xxl: 2.5rem;
-	--font-size-xxxl: 3.5rem;
-	--font-size-xxxxl: 5rem;
+	--font-size-m: 1rem;
+	--font-size-l: 1.25rem;
+	--font-size-xl: 1.5rem;
+	--font-size-xxl: 1.75rem;
+	--font-size-xxxl: 2rem;
+	--font-size-xxxxl: 2.5rem;
 
 	/* Font Weight */
 	--font-weight-normal: 400;
 	--font-weight-strong: 500;
+	--font-weight-heavy: 700;
 
 	/* Line Height */
 	--line-height-body: 1.5;
 	--line-height-headings: 1.3;
-
-	/* Headings */
-
-	/* Block: Latest posts */
 
 	/* Colors */
 	--color-1: #000;
@@ -140,34 +138,30 @@ Breakpoint mixin - about as simple as it gets and mobile first
 	--color-3: #848484;
 
 	/* Spacing */
-	--page-margin: 2.5rem;
-
-	/* Elevation */
-
-	/* Forms */
-
-	/* Cover block */
-
-	/* Buttons */
-
-	/* entry */
-
-	/* Header */
-
-	/* Main navigation */
-
-	/* Pagination */
-
-	/* Footer */
-
-	/* Block: Pull quote */
-
-	/* Block: Table */
-
-	/* Widgets */
+	--page-margin: 1.5rem;
 
 	/* Admin-bar height */
 	--global--admin-bar--height: 0px;
+}
+@media (min-width: 782px) {
+
+	:root {
+		--font-size-root: 1rem;
+		--font-size-xs: 0.75rem;
+		--font-size-s: 0.875rem;
+		--font-size-m: 1.125rem;
+		--font-size-l: 1.5rem;
+		--font-size-xl: 2rem;
+		--font-size-xxl: 2.5rem;
+		--font-size-xxxl: 3.5rem;
+		--font-size-xxxxl: 5rem;
+	}
+}
+@media (min-width: 480px) {
+
+	:root {
+		--page-margin: 2.5rem;
+	}
 }
 
 .admin-bar {
@@ -615,6 +609,7 @@ html {
 }
 
 body {
+	padding: var(--page-margin);
 	font-size: var(--font-size-m);
 	font-weight: var(--font-weight-normal);
 	color: var(--color-1);
@@ -1137,7 +1132,7 @@ textarea {
 label {
 	font-size: var(--font-size-s);
 	font-family: var(--font-family-mono);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 	margin-bottom: 0.5rem;
 }
 
@@ -2096,7 +2091,7 @@ h6,
 .h6 {
 	clear: both;
 	font-family: var(--font-family-mono);
-	font-weight: 700;
+	font-weight: var(--font-weight-heavy);
 }
 
 h1 strong,
@@ -2111,7 +2106,7 @@ h5 strong,
 .h5 strong,
 h6 strong,
 .h6 strong {
-	font-weight: 700;
+	font-weight: var(--font-weight-heavy);
 }
 
 h1,
@@ -2129,19 +2124,19 @@ h2,
 h3,
 .h3 {
 	font-size: var(--font-size-xl);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }
 
 h4,
 .h4 {
 	font-size: var(--font-size-l);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }
 
 h5,
 .h5 {
 	font-size: var(--font-size-m);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }
 
 h6,
@@ -2711,7 +2706,7 @@ pre.wp-block-preformatted {
 	position: relative;
 	right: 0;
 	font-size: 3rem;
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 	line-height: 1;
 }
 
@@ -3044,7 +3039,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-search .wp-block-search__label {
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 	margin-bottom: 0.5rem;
 }
 
@@ -3249,7 +3244,7 @@ table tfoot,
 
 table th,
 .wp-block-table th {
-	font-weight: 700;
+	font-weight: var(--font-weight-heavy);
 }
 
 table td,
@@ -3510,7 +3505,7 @@ table.wp-calendar-table caption {
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	font-weight: 700;
+	font-weight: var(--font-weight-heavy);
 	line-height: 1;
 	text-transform: uppercase;
 	font-style: normal;
@@ -3543,7 +3538,6 @@ table.wp-calendar-table caption {
 
 .site-branding {
 	text-align: center;
-	margin: var(--page-margin);
 }
 
 .title-and-search {
@@ -3560,7 +3554,7 @@ table.wp-calendar-table caption {
 	color: var(--color-2);
 	font-size: var(--font-size-l);
 	font-family: var(--font-family-mono);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 	line-height: 1;
 	text-transform: uppercase;
 }
@@ -3926,9 +3920,9 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .blog .entry-title {
 	text-align: right;
 	margin: 0;
-	font-size: 1rem;
+	font-size: var(--font-size-root);
 	font-family: var(--font-family-mono);
-	font-weight: 400;
+	font-weight: var(--font-weight-normal);
 }
 
 .blog .entry-title a {
@@ -4024,7 +4018,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comments-title,
 .comment-reply-title {
 	font-size: var(--font-size-l);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 	line-height: 1;
 	text-transform: uppercase;
 }
@@ -4126,7 +4120,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-meta .comment-metadata .edit-link {
 	margin-right: 1rem;
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }
 @media (min-width: 480px) {
 
@@ -4351,7 +4345,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .primary-navigation-open .menu-button-container {
 	width: 100%;
-	z-index: 500;
+	z-index: var(--font-weight-strong);
 	background-color: var(--color-2);
 }
 
@@ -4884,7 +4878,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .post-navigation .meta-nav {
-	font-weight: 600;
+	font-weight: var(--font-weight-heavy);
 }
 
 .post-navigation .post-title {
@@ -5183,7 +5177,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	color: #21759b;
 	display: block;
 	font-size: 0.875rem;
-	font-weight: 700;
+	font-weight: var(--font-weight-heavy);
 	height: auto;
 	right: 5px;
 	line-height: normal;
@@ -5262,5 +5256,5 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .rt-byline .byline {
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 }

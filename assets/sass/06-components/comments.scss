@@ -45,7 +45,7 @@
 .comments-title,
 .comment-reply-title {
 	font-size: var(--font-size-l);
-	font-weight: 500;
+	font-weight: var(--font-weight-strong);
 	line-height: 1;
 	text-transform: uppercase;
 }
@@ -150,7 +150,7 @@
 
 		.edit-link {
 			margin-left: rem(16px);
-			font-weight: 500;
+			font-weight: var(--font-weight-strong);
 		}
 	}
 

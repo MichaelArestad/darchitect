@@ -103,7 +103,7 @@ Darchitect is distributed under the terms of the GNU GPL.
 /*
 Breakpoint mixin - about as simple as it gets and mobile first
 */
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500,600,700|IBM+Plex+Serif:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
 /* Variables */
 :root {
@@ -116,37 +116,9 @@ Breakpoint mixin - about as simple as it gets and mobile first
 
 	/* Line Height */
 
-	/* Headings */
-
-	/* Block: Latest posts */
-
 	/* Colors */
 
 	/* Spacing */
-
-	/* Elevation */
-
-	/* Forms */
-
-	/* Cover block */
-
-	/* Buttons */
-
-	/* entry */
-
-	/* Header */
-
-	/* Main navigation */
-
-	/* Pagination */
-
-	/* Footer */
-
-	/* Block: Pull quote */
-
-	/* Block: Table */
-
-	/* Widgets */
 
 	/* Admin-bar height */
 }
@@ -572,7 +544,7 @@ html {
 
 	/* Apply border-box across the entire page. */
 	box-sizing: border-box;
-	font-family: "IBM Plex Serif", Times, serif;
+	font-family: "IBM Plex Serif", Garamond, serif;
 	line-height: 1.5;
 }
 
@@ -586,11 +558,26 @@ html {
 }
 
 body {
-	font-size: 1.125rem;
+	padding: 1.5rem;
+	font-size: 1rem;
 	font-weight: 400;
 	color: #000;
 	text-align: left;
 	background-color: #fff;
+}
+
+@media (min-width: 782px) {
+
+	body {
+		font-size: 1.125rem;
+	}
+}
+
+@media (min-width: 480px) {
+
+	body {
+		padding: 2.5rem;
+	}
 }
 
 /**
@@ -859,16 +846,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+@media (min-width: 960px) {
+
+	.post-navigation {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	.post-navigation {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-@media (min-width: 960px) {
-
-	.post-navigation {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -877,16 +864,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+@media (min-width: 960px) {
+
+	.post-thumbnail {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	.post-thumbnail {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-@media (min-width: 960px) {
-
-	.post-thumbnail {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -895,16 +882,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+@media (min-width: 960px) {
+
+	.entry-content .wp-audio-shortcode {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	.entry-content .wp-audio-shortcode {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-@media (min-width: 960px) {
-
-	.entry-content .wp-audio-shortcode {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -913,16 +900,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+@media (min-width: 960px) {
+
+	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-@media (min-width: 960px) {
-
-	.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -931,16 +918,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+@media (min-width: 960px) {
+
+	*[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	*[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-@media (min-width: 960px) {
-
-	*[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -949,16 +936,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+@media (min-width: 960px) {
+
+	.default-max-width {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	.default-max-width {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-@media (min-width: 960px) {
-
-	.default-max-width {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -968,17 +955,17 @@ body {
 	margin-right: auto;
 }
 
+@media (min-width: 960px) {
+
+	.widget-area {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.widget-area {
 		max-width: calc(100vw - 10rem);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.widget-area {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -988,17 +975,17 @@ body {
 	margin-right: auto;
 }
 
+@media (min-width: 960px) {
+
+	.pagination {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.pagination {
 		max-width: calc(100vw - 10rem);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.pagination {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1008,17 +995,17 @@ body {
 	margin-right: auto;
 }
 
+@media (min-width: 960px) {
+
+	.comments-pagination {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.comments-pagination {
 		max-width: calc(100vw - 10rem);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.comments-pagination {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1028,17 +1015,17 @@ body {
 	margin-right: auto;
 }
 
+@media (min-width: 960px) {
+
+	.alignwide {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.alignwide {
 		max-width: calc(100vw - 10rem);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.alignwide {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1048,17 +1035,17 @@ body {
 	margin-right: auto;
 }
 
+@media (min-width: 960px) {
+
+	.wide-max-width {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.wide-max-width {
 		max-width: calc(100vw - 10rem);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.wide-max-width {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1106,16 +1093,16 @@ body {
 	width: calc(100vw - rem(40px));
 	max-width: 100%;
 }
+@media (min-width: 960px) {
+
+	.entry-header .post-thumbnail {
+		width: min(calc(100vw - 12rem), 1240px);
+	}
+}
 @media (min-width: 480px) {
 
 	.entry-header .post-thumbnail {
 		width: calc(100vw - 10rem);
-	}
-}
-@media (min-width: 960px) {
-
-	.entry-header .post-thumbnail {
-		width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1125,16 +1112,16 @@ body {
 	width: calc(100vw - rem(40px));
 	max-width: 100%;
 }
+@media (min-width: 960px) {
+
+	.singular .post-thumbnail {
+		width: min(calc(100vw - 12rem), 1240px);
+	}
+}
 @media (min-width: 480px) {
 
 	.singular .post-thumbnail {
 		width: calc(100vw - 10rem);
-	}
-}
-@media (min-width: 960px) {
-
-	.singular .post-thumbnail {
-		width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1144,16 +1131,16 @@ body {
 	width: calc(100vw - rem(40px));
 	max-width: 100%;
 }
+@media (min-width: 960px) {
+
+	.alignfull [class*=inner-container] > .alignwide {
+		width: min(calc(100vw - 12rem), 1240px);
+	}
+}
 @media (min-width: 480px) {
 
 	.alignfull [class*=inner-container] > .alignwide {
 		width: calc(100vw - 10rem);
-	}
-}
-@media (min-width: 960px) {
-
-	.alignfull [class*=inner-container] > .alignwide {
-		width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1163,16 +1150,16 @@ body {
 	width: calc(100vw - rem(40px));
 	max-width: 100%;
 }
+@media (min-width: 960px) {
+
+	.alignwide [class*=inner-container] > .alignwide {
+		width: min(calc(100vw - 12rem), 1240px);
+	}
+}
 @media (min-width: 480px) {
 
 	.alignwide [class*=inner-container] > .alignwide {
 		width: calc(100vw - 10rem);
-	}
-}
-@media (min-width: 960px) {
-
-	.alignwide [class*=inner-container] > .alignwide {
-		width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -1185,6 +1172,12 @@ body {
 
 		/*rtl:ignore*/
 		margin-right: 2.5rem;
+	}
+	@media (min-width: 480px) {
+
+		.entry-content > .alignleft {
+			margin-right: 2.5rem;
+		}
 	}
 	@media (min-width: 480px) {
 
@@ -1219,6 +1212,12 @@ body {
 
 		.entry-content > .alignright {
 			margin-right: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px) *1);
+		}
+	}
+	@media (min-width: 480px) {
+
+		.entry-content > .alignright {
+			margin-left: 2.5rem;
 		}
 	}
 }
@@ -1265,17 +1264,41 @@ blockquote.alignright p {
 blockquote.alignleft cite {
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	blockquote.alignleft cite {
+		font-size: 0.875rem;
+	}
+}
 
 blockquote.alignleft footer {
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	blockquote.alignleft footer {
+		font-size: 0.875rem;
+	}
 }
 
 blockquote.alignright cite {
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	blockquote.alignright cite {
+		font-size: 0.875rem;
+	}
+}
 
 blockquote.alignright footer {
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	blockquote.alignright footer {
+		font-size: 0.875rem;
+	}
 }
 
 blockquote strong {
@@ -1284,24 +1307,48 @@ blockquote strong {
 
 blockquote:before {
 	content: "“";
-	font-size: 2rem;
+	font-size: 1.5rem;
 	position: absolute;
 	left: 0.5rem;
+}
+@media (min-width: 782px) {
+
+	blockquote:before {
+		font-size: 2rem;
+	}
 }
 
 blockquote .wp-block-quote__citation {
 	color: #000;
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	blockquote .wp-block-quote__citation {
+		font-size: 0.875rem;
+	}
+}
 
 blockquote cite {
 	color: #000;
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	blockquote cite {
+		font-size: 0.875rem;
+	}
+}
 
 blockquote footer {
 	color: #000;
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	blockquote footer {
+		font-size: 0.875rem;
+	}
 }
 
 input[type=text] {
@@ -1555,9 +1602,16 @@ textarea {
 
 label {
 	font-size: 0.875rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 500;
 	margin-bottom: 0.5rem;
+}
+
+@media (min-width: 782px) {
+
+	label {
+		font-size: 0.875rem;
+	}
 }
 
 /**
@@ -1662,12 +1716,24 @@ input[type=checkbox] + label {
 	font-size: 0.875rem;
 	vertical-align: top;
 }
+@media (min-width: 782px) {
+
+	input[type=checkbox] + label {
+		font-size: 0.875rem;
+	}
+}
 
 input[type=radio] + label {
 	display: inline-block;
 	padding-left: 0.625rem;
 	font-size: 0.875rem;
 	vertical-align: top;
+}
+@media (min-width: 782px) {
+
+	input[type=radio] + label {
+		font-size: 0.875rem;
+	}
 }
 
 /**
@@ -1750,7 +1816,13 @@ fieldset {
 }
 
 fieldset legend {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+@media (min-width: 782px) {
+
+	fieldset legend {
+		font-size: 1.5rem;
+	}
 }
 
 fieldset input[type=submit] {
@@ -1767,15 +1839,27 @@ fieldset input[type=checkbox] {
 }
 
 fieldset input[type=radio] + label {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	padding-left: 0;
 	margin-bottom: 1rem;
 }
+@media (min-width: 782px) {
+
+	fieldset input[type=radio] + label {
+		font-size: 1.125rem;
+	}
+}
 
 fieldset input[type=checkbox] + label {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	padding-left: 0;
 	margin-bottom: 1rem;
+}
+@media (min-width: 782px) {
+
+	fieldset input[type=checkbox] + label {
+		font-size: 1.125rem;
+	}
 }
 
 ::-moz-placeholder {
@@ -1783,7 +1867,14 @@ fieldset input[type=checkbox] + label {
 }
 
 .post-password-message {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.post-password-message {
+		font-size: 1.5rem;
+	}
 }
 
 .post-password-form {
@@ -1834,38 +1925,62 @@ video {
 /* Media captions */
 figcaption {
 	color: #000;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
+}
+@media (min-width: 782px) {
+
+	figcaption {
+		font-size: 0.75rem;
+	}
 }
 
 .wp-caption {
 	color: #000;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
+}
+@media (min-width: 782px) {
+
+	.wp-caption {
+		font-size: 0.75rem;
+	}
 }
 
 .wp-caption-text {
 	color: #000;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
 }
+@media (min-width: 782px) {
+
+	.wp-caption-text {
+		font-size: 0.75rem;
+	}
+}
 
 .wp-block-embed figcaption {
 	color: #000;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.75rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
+}
+@media (min-width: 782px) {
+
+	.wp-block-embed figcaption {
+		font-size: 0.75rem;
+	}
 }
 
 .alignleft figcaption,
@@ -1973,6 +2088,12 @@ a:hover {
 	color: #000;
 	font-size: 0.75rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-audio figcaption {
+		font-size: 0.75rem;
+	}
+}
 
 /**
  * Button
@@ -1981,70 +2102,112 @@ a:hover {
 	border: 0.0625rem solid transparent;
 	border-radius: 0.1875rem;
 	cursor: pointer;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.125rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
+}
+@media (min-width: 782px) {
+
+	.site .button {
+		font-size: 1.125rem;
+	}
 }
 
 button {
 	border: 0.0625rem solid transparent;
 	border-radius: 0.1875rem;
 	cursor: pointer;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.125rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
+}
+@media (min-width: 782px) {
+
+	button {
+		font-size: 1.125rem;
+	}
 }
 
 input[type=submit] {
 	border: 0.0625rem solid transparent;
 	border-radius: 0.1875rem;
 	cursor: pointer;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.125rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
+}
+@media (min-width: 782px) {
+
+	input[type=submit] {
+		font-size: 1.125rem;
+	}
 }
 
 input[type=reset] {
 	border: 0.0625rem solid transparent;
 	border-radius: 0.1875rem;
 	cursor: pointer;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.125rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
+}
+@media (min-width: 782px) {
+
+	input[type=reset] {
+		font-size: 1.125rem;
+	}
 }
 
 .wp-block-search .wp-block-search__button {
 	border: 0.0625rem solid transparent;
 	border-radius: 0.1875rem;
 	cursor: pointer;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.125rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
+}
+@media (min-width: 782px) {
+
+	.wp-block-search .wp-block-search__button {
+		font-size: 1.125rem;
+	}
 }
 
 .wp-block-button .wp-block-button__link {
 	border: 0.0625rem solid transparent;
 	border-radius: 0.1875rem;
 	cursor: pointer;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.125rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
+}
+@media (min-width: 782px) {
+
+	.wp-block-button .wp-block-button__link {
+		font-size: 1.125rem;
+	}
 }
 
 .wp-block-file a.wp-block-file__button {
 	border: 0.0625rem solid transparent;
 	border-radius: 0.1875rem;
 	cursor: pointer;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.125rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
 	padding: 0.5rem 0.75rem;
 	text-decoration: none;
+}
+@media (min-width: 782px) {
+
+	.wp-block-file a.wp-block-file__button {
+		font-size: 1.125rem;
+	}
 }
 
 .site .button:not(:hover):not(:active):not(.has-text-color) {
@@ -2318,8 +2481,15 @@ code {
 	padding: 0 0.25rem;
 	border: 0.0625rem solid #848484;
 	border-radius: 0.1875rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.875rem;
+}
+
+@media (min-width: 782px) {
+
+	code {
+		font-size: 0.875rem;
+	}
 }
 
 .wp-block-code {
@@ -2664,7 +2834,7 @@ code {
 
 .wp-block-file a:not(.wp-block-file__button) {
 	display: inline-block;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	border-top-left-radius: 0.1875rem;
 	border-bottom-left-radius: 0.1875rem;
 }
@@ -2709,11 +2879,23 @@ code {
 	color: #fff;
 	font-size: 0.75rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-gallery .blocks-gallery-image figcaption {
+		font-size: 0.75rem;
+	}
+}
 
 .wp-block-gallery .blocks-gallery-item figcaption {
 	margin: 0;
 	color: #fff;
 	font-size: 0.75rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-gallery .blocks-gallery-item figcaption {
+		font-size: 0.75rem;
+	}
 }
 
 .wp-block-gallery .blocks-gallery-image figcaption a {
@@ -2744,6 +2926,12 @@ code {
 .wp-block-gallery figcaption {
 	color: #000;
 	font-size: 0.75rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-gallery figcaption {
+		font-size: 0.75rem;
+	}
 }
 
 .wp-block-group {
@@ -2825,139 +3013,242 @@ code {
 
 h1 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 .h1 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 h2 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 .h2 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 h3 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 .h3 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 h4 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 .h4 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 h5 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 .h5 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 h6 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
 .h6 {
 	clear: both;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
 }
 
-h1 strong,
-.h1 strong,
-h2 strong,
-.h2 strong,
-h3 strong,
-.h3 strong,
-h4 strong,
-.h4 strong,
-h5 strong,
-.h5 strong,
-h6 strong,
+h1 strong {
+	font-weight: 700;
+}
+
+.h1 strong {
+	font-weight: 700;
+}
+
+h2 strong {
+	font-weight: 700;
+}
+
+.h2 strong {
+	font-weight: 700;
+}
+
+h3 strong {
+	font-weight: 700;
+}
+
+.h3 strong {
+	font-weight: 700;
+}
+
+h4 strong {
+	font-weight: 700;
+}
+
+.h4 strong {
+	font-weight: 700;
+}
+
+h5 strong {
+	font-weight: 700;
+}
+
+.h5 strong {
+	font-weight: 700;
+}
+
+h6 strong {
+	font-weight: 700;
+}
+
 .h6 strong {
 	font-weight: 700;
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 2.5rem;
 	text-transform: uppercase;
 	line-height: 1.25;
+}
+
+@media (min-width: 782px) {
+
+	h1 {
+		font-size: 5rem;
+	}
 }
 
 .h1 {
-	font-size: 5rem;
+	font-size: 2.5rem;
 	text-transform: uppercase;
 	line-height: 1.25;
 }
 
+@media (min-width: 782px) {
+
+	.h1 {
+		font-size: 5rem;
+	}
+}
+
 h2 {
-	font-size: 2.5rem;
+	font-size: 1.75rem;
+}
+
+@media (min-width: 782px) {
+
+	h2 {
+		font-size: 2.5rem;
+	}
 }
 
 .h2 {
-	font-size: 2.5rem;
+	font-size: 1.75rem;
+}
+
+@media (min-width: 782px) {
+
+	.h2 {
+		font-size: 2.5rem;
+	}
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	h3 {
+		font-size: 2rem;
+	}
 }
 
 .h3 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	.h3 {
+		font-size: 2rem;
+	}
 }
 
 h4 {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	h4 {
+		font-size: 1.5rem;
+	}
 }
 
 .h4 {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	.h4 {
+		font-size: 1.5rem;
+	}
 }
 
 h5 {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: 500;
 }
 
+@media (min-width: 782px) {
+
+	h5 {
+		font-size: 1.125rem;
+	}
+}
+
 .h5 {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	.h5 {
+		font-size: 1.125rem;
+	}
 }
 
 h6 {
@@ -2965,9 +3256,23 @@ h6 {
 	text-transform: uppercase;
 }
 
+@media (min-width: 782px) {
+
+	h6 {
+		font-size: 0.875rem;
+	}
+}
+
 .h6 {
 	font-size: 0.875rem;
 	text-transform: uppercase;
+}
+
+@media (min-width: 782px) {
+
+	.h6 {
+		font-size: 0.875rem;
+	}
 }
 
 .wp-block-image {
@@ -2980,6 +3285,12 @@ h6 {
 	margin-top: 1.5rem;
 	margin-bottom: 2.5rem;
 	text-align: center;
+}
+@media (min-width: 782px) {
+
+	.wp-block-image figcaption {
+		font-size: 0.75rem;
+	}
 }
 
 .wp-block-image .alignright {
@@ -3044,6 +3355,12 @@ h6 {
 	border-top: 0.0625rem dashed #000;
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-latest-comments .wp-block-latest-comments__comment {
+		font-size: 0.875rem;
+	}
+}
 
 .wp-block-latest-comments .wp-block-latest-comments__comment:first-child {
 	border-top: 0;
@@ -3054,7 +3371,7 @@ h6 {
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta {
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	padding-top: 0.125rem;
 }
 
@@ -3062,16 +3379,28 @@ h6 {
 	color: #000;
 	font-size: 0.75rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-latest-comments .wp-block-latest-comments__comment-date {
+		font-size: 0.75rem;
+	}
+}
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt {
 	margin-top: 1rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 }
 
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
 	font-size: 0.875rem;
 	line-height: 1.3;
 	margin: 0;
+}
+@media (min-width: 782px) {
+
+	.wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
+		font-size: 0.875rem;
+	}
 }
 
 .wp-block-latest-comments .avatar {
@@ -3151,24 +3480,42 @@ h6 {
 
 .wp-block-latest-posts > li > a {
 	display: inline-block;
-	font-family: "IBM Plex Mono", Courier, monospace;
-	font-size: 1.5rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1.25rem;
 	font-weight: 500;
 	margin-bottom: 0;
+}
+@media (min-width: 782px) {
+
+	.wp-block-latest-posts > li > a {
+		font-size: 1.5rem;
+	}
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-author {
 	margin: 0;
 	color: #000;
 	font-size: 0.875rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+}
+@media (min-width: 782px) {
+
+	.wp-block-latest-posts .wp-block-latest-posts__post-author {
+		font-size: 0.875rem;
+	}
 }
 
 .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	margin: 0;
 	color: #000;
 	font-size: 0.875rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+}
+@media (min-width: 782px) {
+
+	.wp-block-latest-posts .wp-block-latest-posts__post-date {
+		font-size: 0.875rem;
+	}
 }
 
 [class*=inner-container] .wp-block-latest-posts .wp-block-latest-posts__post-date,
@@ -3575,6 +3922,12 @@ pre.wp-block-preformatted {
 	font-size: 0.75rem;
 	text-transform: none;
 }
+@media (min-width: 782px) {
+
+	.wp-block-pullquote .wp-block-pullquote__citation {
+		font-size: 0.75rem;
+	}
+}
 
 .wp-block-pullquote cite {
 	color: currentColor;
@@ -3582,12 +3935,24 @@ pre.wp-block-preformatted {
 	font-size: 0.75rem;
 	text-transform: none;
 }
+@media (min-width: 782px) {
+
+	.wp-block-pullquote cite {
+		font-size: 0.75rem;
+	}
+}
 
 .wp-block-pullquote footer {
 	color: currentColor;
 	display: block;
 	font-size: 0.75rem;
 	text-transform: none;
+}
+@media (min-width: 782px) {
+
+	.wp-block-pullquote footer {
+		font-size: 0.75rem;
+	}
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) {
@@ -3602,32 +3967,32 @@ pre.wp-block-preformatted {
 .wp-block-pullquote.alignwide > p {
 	max-width: calc(100vw - rem(40px));
 }
+@media (min-width: 960px) {
+
+	.wp-block-pullquote.alignwide > p {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
+}
 @media (min-width: 480px) {
 
 	.wp-block-pullquote.alignwide > p {
 		max-width: calc(100vw - 10rem);
-	}
-}
-@media (min-width: 960px) {
-
-	.wp-block-pullquote.alignwide > p {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
 .wp-block-pullquote.alignwide blockquote {
 	max-width: calc(100vw - rem(40px));
 }
+@media (min-width: 960px) {
+
+	.wp-block-pullquote.alignwide blockquote {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
+}
 @media (min-width: 480px) {
 
 	.wp-block-pullquote.alignwide blockquote {
 		max-width: calc(100vw - 10rem);
-	}
-}
-@media (min-width: 960px) {
-
-	.wp-block-pullquote.alignwide blockquote {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -3677,7 +4042,7 @@ pre.wp-block-preformatted {
 
 .wp-block-quote {
 	border-left: none;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	padding-left: 3rem;
 
 	/**
@@ -3685,22 +4050,53 @@ pre.wp-block-preformatted {
    */
 }
 
+@media (min-width: 782px) {
+
+	.wp-block-quote {
+		font-size: 1.5rem;
+	}
+}
+
 .wp-block-quote:before {
 	content: "“";
-	font-size: 2rem;
+	font-size: 1.5rem;
 	left: 8px;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote:before {
+		font-size: 2rem;
+	}
 }
 
 .wp-block-quote .wp-block-quote__citation {
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-quote .wp-block-quote__citation {
+		font-size: 0.875rem;
+	}
+}
 
 .wp-block-quote cite {
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-quote cite {
+		font-size: 0.875rem;
+	}
+}
 
 .wp-block-quote footer {
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote footer {
+		font-size: 0.875rem;
+	}
 }
 
 .has-background .wp-block-quote .wp-block-quote__citation,
@@ -3774,21 +4170,45 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote.is-large p {
-	font-size: 2rem;
+	font-size: 1.5rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-large p {
+		font-size: 2rem;
+	}
 }
 
 .wp-block-quote.is-style-large p {
-	font-size: 2rem;
+	font-size: 1.5rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-style-large p {
+		font-size: 2rem;
+	}
 }
 
 .wp-block-quote.is-large:before {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	left: -2.5rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-large:before {
+		font-size: 2rem;
+	}
 }
 
 .wp-block-quote.is-style-large:before {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	left: -2.5rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-style-large:before {
+		font-size: 2rem;
+	}
 }
 
 .wp-block-quote.is-large.has-text-align-right:before,
@@ -3798,46 +4218,94 @@ pre.wp-block-preformatted {
 
 .wp-block-quote.is-large.has-text-align-right p:before {
 	content: "”";
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: normal;
 	margin-right: 10px;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-large.has-text-align-right p:before {
+		font-size: 2rem;
+	}
 }
 
 .wp-block-quote.is-style-large.has-text-align-right p:before {
 	content: "”";
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: normal;
 	margin-right: 10px;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-style-large.has-text-align-right p:before {
+		font-size: 2rem;
+	}
 }
 
 .wp-block-quote.is-large .wp-block-quote__citation {
 	color: #000;
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-large .wp-block-quote__citation {
+		font-size: 0.875rem;
+	}
+}
 
 .wp-block-quote.is-large cite {
 	color: #000;
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-large cite {
+		font-size: 0.875rem;
+	}
 }
 
 .wp-block-quote.is-large footer {
 	color: #000;
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-large footer {
+		font-size: 0.875rem;
+	}
+}
 
 .wp-block-quote.is-style-large .wp-block-quote__citation {
 	color: #000;
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-style-large .wp-block-quote__citation {
+		font-size: 0.875rem;
+	}
 }
 
 .wp-block-quote.is-style-large cite {
 	color: #000;
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-style-large cite {
+		font-size: 0.875rem;
+	}
+}
 
 .wp-block-quote.is-style-large footer {
 	color: #000;
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-quote.is-style-large footer {
+		font-size: 0.875rem;
+	}
 }
 @media (min-width: 480px) {
 
@@ -3937,6 +4405,12 @@ pre.wp-block-preformatted {
 	color: #000;
 	font-size: 0.75rem;
 }
+@media (min-width: 782px) {
+
+	.wp-block-rss .wp-block-rss__item-publish-date {
+		font-size: 0.75rem;
+	}
+}
 
 [class*=inner-container] .wp-block-rss .wp-block-rss__item-publish-date,
 .has-background .wp-block-rss .wp-block-rss__item-publish-date {
@@ -3963,17 +4437,17 @@ pre.wp-block-preformatted {
 	max-width: calc(100vw - rem(40px));
 }
 
+@media (min-width: 960px) {
+
+	.wp-block-search {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.wp-block-search {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.wp-block-search {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -4104,32 +4578,32 @@ hr.wp-block-separator {
 hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 	max-width: calc(100vw - rem(40px));
 }
+@media (min-width: 960px) {
+
+	hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 		max-width: min(calc(100vw - 10rem), 610px);
 	}
 }
-@media (min-width: 960px) {
-
-	hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
-		max-width: min(calc(100vw - 20rem), 610px);
-	}
-}
 
 hr.wp-block-separator:not(.is-style-dots).alignwide {
 	max-width: calc(100vw - rem(40px));
+}
+@media (min-width: 960px) {
+
+	hr.wp-block-separator:not(.is-style-dots).alignwide {
+		max-width: min(calc(100vw - 12rem), 1240px);
+	}
 }
 @media (min-width: 480px) {
 
 	hr.wp-block-separator:not(.is-style-dots).alignwide {
 		max-width: calc(100vw - 10rem);
-	}
-}
-@media (min-width: 960px) {
-
-	hr.wp-block-separator:not(.is-style-dots).alignwide {
-		max-width: min(calc(100vw - 20rem), 1240px);
 	}
 }
 
@@ -4197,16 +4671,30 @@ table {
 	width: 100%;
 	min-width: 15rem;
 	border-collapse: collapse;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.75rem;
+}
+
+@media (min-width: 782px) {
+
+	table {
+		font-size: 0.75rem;
+	}
 }
 
 .wp-block-table {
 	width: 100%;
 	min-width: 15rem;
 	border-collapse: collapse;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.75rem;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-table {
+		font-size: 0.75rem;
+	}
 }
 
 table thead,
@@ -4216,7 +4704,10 @@ table tfoot,
 	text-align: center;
 }
 
-table th,
+table th {
+	font-weight: 700;
+}
+
 .wp-block-table th {
 	font-weight: 700;
 }
@@ -4233,10 +4724,22 @@ table figcaption {
 	color: #000;
 	font-size: 0.75rem;
 }
+@media (min-width: 782px) {
+
+	table figcaption {
+		font-size: 0.75rem;
+	}
+}
 
 .wp-block-table figcaption {
 	color: #000;
 	font-size: 0.75rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-table figcaption {
+		font-size: 0.75rem;
+	}
 }
 
 table.is-style-stripes,
@@ -4327,7 +4830,7 @@ table.wp-calendar-table caption {
 }
 
 .wp-block-tag-cloud {
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 }
 
 .wp-block-tag-cloud.alignfull {
@@ -4347,6 +4850,12 @@ table.wp-calendar-table caption {
 	margin-bottom: 1rem;
 	text-align: center;
 }
+@media (min-width: 782px) {
+
+	.wp-block-video figcaption {
+		font-size: 0.75rem;
+	}
+}
 
 * > figure > video {
 	max-width: unset;
@@ -4358,80 +4867,196 @@ table.wp-calendar-table caption {
 	font-size: 0.75rem;
 }
 
+@media (min-width: 782px) {
+
+	:root .is-extra-small-text {
+		font-size: 0.75rem;
+	}
+}
+
 :root .has-extra-small-font-size {
 	font-size: 0.75rem;
+}
+
+@media (min-width: 782px) {
+
+	:root .has-extra-small-font-size {
+		font-size: 0.75rem;
+	}
 }
 
 :root .is-small-text {
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	:root .is-small-text {
+		font-size: 0.875rem;
+	}
+}
 
 :root .has-small-font-size {
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	:root .has-small-font-size {
+		font-size: 0.875rem;
+	}
 }
 
 :root .is-regular-text {
 	font-size: 1.125rem;
 }
+@media (min-width: 782px) {
+
+	:root .is-regular-text {
+		font-size: 1.125rem;
+	}
+}
 
 :root .has-regular-font-size {
 	font-size: 1.125rem;
+}
+@media (min-width: 782px) {
+
+	:root .has-regular-font-size {
+		font-size: 1.125rem;
+	}
 }
 
 :root .is-normal-font-size {
 	font-size: 1.125rem;
 }
+@media (min-width: 782px) {
+
+	:root .is-normal-font-size {
+		font-size: 1.125rem;
+	}
+}
 
 :root .has-normal-font-size {
 	font-size: 1.125rem;
+}
+@media (min-width: 782px) {
+
+	:root .has-normal-font-size {
+		font-size: 1.125rem;
+	}
 }
 
 :root .has-medium-font-size {
 	font-size: 1.125rem;
 }
+@media (min-width: 782px) {
+
+	:root .has-medium-font-size {
+		font-size: 1.125rem;
+	}
+}
 
 :root .is-large-text {
 	font-size: 1.5rem;
+}
+@media (min-width: 782px) {
+
+	:root .is-large-text {
+		font-size: 1.5rem;
+	}
 }
 
 :root .has-large-font-size {
 	font-size: 1.5rem;
 }
+@media (min-width: 782px) {
+
+	:root .has-large-font-size {
+		font-size: 1.5rem;
+	}
+}
 
 :root .is-larger-text {
 	font-size: 2rem;
+}
+@media (min-width: 782px) {
+
+	:root .is-larger-text {
+		font-size: 2rem;
+	}
 }
 
 :root .has-larger-font-size {
 	font-size: 2rem;
 }
+@media (min-width: 782px) {
+
+	:root .has-larger-font-size {
+		font-size: 2rem;
+	}
+}
 
 :root .is-extra-large-text {
 	font-size: 2rem;
 }
+@media (min-width: 782px) {
+
+	:root .is-extra-large-text {
+		font-size: 2rem;
+	}
+}
 
 :root .has-extra-large-font-size {
 	font-size: 2rem;
+}
+@media (min-width: 782px) {
+
+	:root .has-extra-large-font-size {
+		font-size: 2rem;
+	}
 }
 
 :root .is-huge-text {
 	font-size: 2.5rem;
 	font-weight: 500;
 }
+@media (min-width: 782px) {
+
+	:root .is-huge-text {
+		font-size: 2.5rem;
+	}
+}
 
 :root .has-huge-font-size {
 	font-size: 2.5rem;
 	font-weight: 500;
+}
+@media (min-width: 782px) {
+
+	:root .has-huge-font-size {
+		font-size: 2.5rem;
+	}
 }
 
 :root .is-gigantic-text {
 	font-size: 3.5rem;
 	font-weight: 500;
 }
+@media (min-width: 782px) {
+
+	:root .is-gigantic-text {
+		font-size: 3.5rem;
+	}
+}
 
 :root .has-gigantic-font-size {
 	font-size: 3.5rem;
 	font-weight: 500;
+}
+@media (min-width: 782px) {
+
+	:root .has-gigantic-font-size {
+		font-size: 3.5rem;
+	}
 }
 
 /* Block Alignments */
@@ -4454,17 +5079,17 @@ table.wp-calendar-table caption {
 	max-width: calc(100vw - rem(40px));
 }
 
+@media (min-width: 960px) {
+
+	.entry-content > .alignleft {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.entry-content > .alignleft {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.entry-content > .alignleft {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -4523,17 +5148,17 @@ table.wp-calendar-table caption {
 	max-width: calc(100vw - rem(40px));
 }
 
+@media (min-width: 960px) {
+
+	.entry-content > .alignright {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.entry-content > .alignright {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.entry-content > .alignright {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -4605,7 +5230,14 @@ table.wp-calendar-table caption {
 	font-style: normal;
 	float: left;
 	margin: 0.16em 0.16em 0 0;
-	font-size: 3.5rem;
+	font-size: 2rem;
+}
+
+@media (min-width: 782px) {
+
+	.has-drop-cap:not(:focus)::first-letter {
+		font-size: 3.5rem;
+	}
 }
 
 .has-drop-cap:not(:focus)::after {
@@ -4632,7 +5264,6 @@ table.wp-calendar-table caption {
 
 .site-branding {
 	text-align: center;
-	margin: 2.5rem;
 }
 
 .title-and-search {
@@ -4647,11 +5278,18 @@ table.wp-calendar-table caption {
 	margin: 0;
 	background: #000;
 	color: #fff;
-	font-size: 1.5rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 1.25rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 500;
 	line-height: 1;
 	text-transform: uppercase;
+}
+
+@media (min-width: 782px) {
+
+	.site-title {
+		font-size: 1.5rem;
+	}
 }
 
 .site-title a {
@@ -4728,7 +5366,7 @@ table.wp-calendar-table caption {
 	background: #000;
 	color: #fff;
 	font-size: 1rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 }
 
 .site-branding .search-form .search-submit {
@@ -4767,8 +5405,14 @@ table.wp-calendar-table caption {
 .site-footer > .site-info .powered-by {
 	text-align: right;
 	font-size: 0.75rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	margin-top: 1rem;
+}
+@media (min-width: 782px) {
+
+	.site-footer > .site-info .powered-by {
+		font-size: 0.75rem;
+	}
 }
 
 .singular .entry-header {
@@ -4830,8 +5474,14 @@ table.wp-calendar-table caption {
 	clear: both;
 	float: none;
 	font-size: 0.75rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	display: block;
+}
+@media (min-width: 782px) {
+
+	.entry-footer {
+		font-size: 0.75rem;
+	}
 }
 
 .entry-footer > span {
@@ -4924,16 +5574,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	font-size: 0.75rem;
 	max-width: calc(100vw - rem(40px));
 }
+@media (min-width: 960px) {
+
+	.author-bio {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
 @media (min-width: 480px) {
 
 	.author-bio {
 		max-width: min(calc(100vw - 10rem), 610px);
 	}
 }
-@media (min-width: 960px) {
+@media (min-width: 782px) {
 
 	.author-bio {
-		max-width: min(calc(100vw - 20rem), 610px);
+		font-size: 0.75rem;
 	}
 }
 
@@ -4952,16 +5608,16 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	padding-left: 2.5rem;
 	max-width: calc(100vw - rem(40px) - 90px);
 }
+@media (min-width: 960px) {
+
+	.author-bio.show-avatars .author-bio-content {
+		max-width: calc(min(calc(100vw - 8 * 1.5rem), 610px) - 90px);
+	}
+}
 @media (min-width: 480px) {
 
 	.author-bio.show-avatars .author-bio-content {
 		max-width: calc(min(calc(100vw - 4 * 2.5rem), 610px) - 90px);
-	}
-}
-@media (min-width: 960px) {
-
-	.author-bio.show-avatars .author-bio-content {
-		max-width: calc(min(calc(100vw - 8 * 2.5rem), 610px) - 90px);
 	}
 }
 
@@ -4974,6 +5630,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
+@media (min-width: 782px) {
+
+	.author-bio .author-bio-content .author-description {
+		font-size: 0.75rem;
+	}
+}
 
 .page-header {
 	border-bottom: 0.1875rem solid #000;
@@ -4981,39 +5643,102 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .archive .content-area .format-aside .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.archive .content-area .format-aside .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .archive .content-area .format-status .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.archive .content-area .format-status .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .archive .content-area .format-link .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.archive .content-area .format-link .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .search .content-area .format-aside .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.search .content-area .format-aside .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .search .content-area .format-status .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.search .content-area .format-status .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .search .content-area .format-link .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.search .content-area .format-link .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .blog .content-area .format-aside .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.blog .content-area .format-aside .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .blog .content-area .format-status .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.blog .content-area .format-status .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .blog .content-area .format-link .entry-content {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 782px) {
+
+	.blog .content-area .format-link .entry-content {
+		font-size: 1.5rem;
+	}
 }
 
 .archive .format-image .entry-content,
@@ -5045,7 +5770,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .archive-description {
 	margin-top: 2rem;
-	font-size: 2.5rem;
+	font-size: 1.75rem;
+}
+
+@media (min-width: 782px) {
+
+	.archive-description {
+		font-size: 2.5rem;
+	}
 }
 
 .blog .site-main .post {
@@ -5062,9 +5794,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .blog .entry-title {
 	text-align: left;
 	margin: 0;
-	font-size: 1rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-size: 0.875rem;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 400;
+}
+@media (min-width: 782px) {
+
+	.blog .entry-title {
+		font-size: 1rem;
+	}
 }
 
 .blog .entry-title a {
@@ -5110,8 +5848,15 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .error404 main p {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	margin-bottom: 2.5rem;
+}
+
+@media (min-width: 782px) {
+
+	.error404 main p {
+		font-size: 1.5rem;
+	}
 }
 
 .search-no-results .page-content {
@@ -5158,17 +5903,29 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  * Comment Title
  */
 .comments-title {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 1;
 	text-transform: uppercase;
 }
+@media (min-width: 782px) {
+
+	.comments-title {
+		font-size: 1.5rem;
+	}
+}
 
 .comment-reply-title {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 1;
 	text-transform: uppercase;
+}
+@media (min-width: 782px) {
+
+	.comment-reply-title {
+		font-size: 1.5rem;
+	}
 }
 
 .comments-title {
@@ -5190,10 +5947,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	font-weight: normal;
 	letter-spacing: normal;
 }
+@media (min-width: 782px) {
+
+	.comment-reply-title small a {
+		font-size: 0.75rem;
+	}
+}
 
 /* Nested comment reply title*/
 .comment .comment-respond .comment-reply-title {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+}
+@media (min-width: 782px) {
+
+	.comment .comment-respond .comment-reply-title {
+		font-size: 1.5rem;
+	}
 }
 
 /**
@@ -5254,16 +6023,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .comment-meta .comment-author .fn {
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	hyphens: auto;
 	word-wrap: break-word;
 	word-break: break-word;
 }
 
 .comment-meta .comment-metadata {
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.75rem;
 	padding: 0 0 0.5rem 0;
+}
+@media (min-width: 782px) {
+
+	.comment-meta .comment-metadata {
+		font-size: 0.75rem;
+	}
 }
 
 .comment-meta .comment-metadata .edit-link {
@@ -5286,10 +6061,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	padding: 0 0.25rem;
 	border: 1px solid #000;
 	border-radius: 0.1875rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.875rem;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+@media (min-width: 782px) {
+
+	.reply a {
+		font-size: 0.875rem;
+	}
 }
 
 .reply a:focus {
@@ -5333,13 +6115,26 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 
 .comment-content {
 	word-wrap: break-word;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.875rem;
 	line-height: 1.3;
 }
 
+@media (min-width: 782px) {
+
+	.comment-content {
+		font-size: 0.875rem;
+	}
+}
+
 .comment-content br {
 	margin-bottom: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	.comment-content br {
+		margin-bottom: 0.875rem;
+	}
 }
 
 .pingback .comment-body,
@@ -5381,6 +6176,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .comment-form .comment-notes {
 	font-size: 0.875rem;
 }
+@media (min-width: 782px) {
+
+	.comment-form .comment-notes {
+		font-size: 0.875rem;
+	}
+}
 
 .comment-form .comment-form-url,
 .comment-form .comment-form-comment {
@@ -5404,10 +6205,22 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	font-size: 0.75rem;
 	font-weight: normal;
 }
+@media (min-width: 782px) {
+
+	.comment-form .comment-form-cookies-consent > label {
+		font-size: 0.75rem;
+	}
+}
 
 .comment-form .comment-notes {
 	font-size: 0.75rem;
 	font-weight: normal;
+}
+@media (min-width: 782px) {
+
+	.comment-form .comment-notes {
+		font-size: 0.75rem;
+	}
 }
 
 .comment-form > p {
@@ -5429,6 +6242,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	width: 100%;
 	font-weight: 500;
 }
+@media (min-width: 782px) {
+
+	.comment-form > p label {
+		font-size: 0.875rem;
+	}
+}
 
 .comment-form > p input[type=email] {
 	display: block;
@@ -5436,6 +6255,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: 0.5rem;
 	width: 100%;
 	font-weight: 500;
+}
+@media (min-width: 782px) {
+
+	.comment-form > p input[type=email] {
+		font-size: 0.875rem;
+	}
 }
 
 .comment-form > p input[type=text] {
@@ -5445,6 +6270,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	width: 100%;
 	font-weight: 500;
 }
+@media (min-width: 782px) {
+
+	.comment-form > p input[type=text] {
+		font-size: 0.875rem;
+	}
+}
 
 .comment-form > p input[type=url] {
 	display: block;
@@ -5453,6 +6284,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	width: 100%;
 	font-weight: 500;
 }
+@media (min-width: 782px) {
+
+	.comment-form > p input[type=url] {
+		font-size: 0.875rem;
+	}
+}
 
 .comment-form > p textarea {
 	display: block;
@@ -5460,6 +6297,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-bottom: 0.5rem;
 	width: 100%;
 	font-weight: 500;
+}
+@media (min-width: 782px) {
+
+	.comment-form > p textarea {
+		font-size: 0.875rem;
+	}
 }
 
 .comment-form > p.comment-form-cookies-consent {
@@ -5940,6 +6783,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-transform: none;
 	line-height: 1.7;
 }
+@media (min-width: 782px) {
+
+	.primary-navigation .menu-item-description {
+		font-size: 0.75rem;
+	}
+}
 
 .primary-navigation .menu-item-description > span {
 	display: inline-block;
@@ -6052,15 +6901,27 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .navigation .nav-links .nav-next a {
 	display: flex;
 	flex-direction: column;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	.navigation .nav-links .nav-next a {
+		font-size: 0.875rem;
+	}
 }
 
 .navigation .nav-links .nav-previous a {
 	display: flex;
 	flex-direction: column;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-size: 0.875rem;
+}
+@media (min-width: 782px) {
+
+	.navigation .nav-links .nav-previous a {
+		font-size: 0.875rem;
+	}
 }
 
 .navigation .nav-links .dots {
@@ -6117,7 +6978,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 }
 
 .post-navigation .meta-nav {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .post-navigation .post-title {
@@ -6293,7 +7154,14 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-top: 12rem;
 	padding-bottom: 0.5rem;
 	font-size: 0.875rem;
-	font-family: "IBM Plex Mono", Courier, monospace;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+}
+
+@media (min-width: 782px) {
+
+	.widget-area {
+		font-size: 0.875rem;
+	}
 }
 @media (min-width: 782px) {
 
@@ -6378,6 +7246,13 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	text-transform: uppercase;
 }
 
+@media (min-width: 782px) {
+
+	.widget-title {
+		font-size: 0.875rem;
+	}
+}
+
 .search-form {
 	display: flex;
 	flex-wrap: wrap;
@@ -6385,17 +7260,17 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	max-width: calc(100vw - rem(40px));
 }
 
+@media (min-width: 960px) {
+
+	.search-form {
+		max-width: min(calc(100vw - 12rem), 610px);
+	}
+}
+
 @media (min-width: 480px) {
 
 	.search-form {
 		max-width: min(calc(100vw - 10rem), 610px);
-	}
-}
-
-@media (min-width: 960px) {
-
-	.search-form {
-		max-width: min(calc(100vw - 20rem), 610px);
 	}
 }
 
@@ -6532,6 +7407,12 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 .rt-byline {
 	text-align: center;
 	font-size: 0.75rem;
+}
+@media (min-width: 782px) {
+
+	.rt-byline {
+		font-size: 0.75rem;
+	}
 }
 
 .rt-byline .byline {

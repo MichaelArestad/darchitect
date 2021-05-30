@@ -14,6 +14,7 @@
 	.wp-block-file__button {
 		// Extend button style
 		@include button-style();
+		background: red !important;
 		display: inline-block;
 		
 		// Remove :focus styles in the editor

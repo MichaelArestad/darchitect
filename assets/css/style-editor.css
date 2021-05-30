@@ -1,3 +1,1761 @@
+@charset "UTF-8";
+
 /**
  * These styles should be loaded by the Block Editor only
  */
+
+/*
+Breakpoint mixin - about as simple as it gets and mobile first
+*/
+
+/* Variables */
+:root {
+
+	/* Font Family */
+	--font-family-serif: "IBM Plex Serif", garamond, serif;
+	--font-family-mono: "IBM Plex Mono", "Lucida Console", monaco, monospace;
+
+	/* Font Size */
+	--font-size-root: 0.875rem;
+	--font-size-xs: 0.75rem;
+	--font-size-s: 0.875rem;
+	--font-size-m: 1rem;
+	--font-size-l: 1.25rem;
+	--font-size-xl: 1.5rem;
+	--font-size-xxl: 1.75rem;
+	--font-size-xxxl: 2rem;
+	--font-size-xxxxl: 2.5rem;
+
+	/* Font Weight */
+	--font-weight-normal: 400;
+	--font-weight-strong: 500;
+	--font-weight-heavy: 700;
+
+	/* Line Height */
+	--line-height-body: 1.5;
+	--line-height-headings: 1.3;
+
+	/* Colors */
+	--color-1: #000;
+	--color-2: #fff;
+	--color-3: #848484;
+
+	/* Spacing */
+	--page-margin: 1.5rem;
+
+	/* Admin-bar height */
+	--global--admin-bar--height: 0px;
+}
+@media (min-width: 782px) {
+
+	:root {
+		--font-size-root: 1rem;
+		--font-size-xs: 0.75rem;
+		--font-size-s: 0.875rem;
+		--font-size-m: 1.125rem;
+		--font-size-l: 1.5rem;
+		--font-size-xl: 2rem;
+		--font-size-xxl: 2.5rem;
+		--font-size-xxxl: 3.5rem;
+		--font-size-xxxxl: 5rem;
+	}
+}
+@media (min-width: 480px) {
+
+	:root {
+		--page-margin: 2.5rem;
+	}
+}
+
+.admin-bar {
+	--global--admin-bar--height: 32px;
+}
+@media only screen and (max-width: 782px) {
+
+	.admin-bar {
+		--global--admin-bar--height: 46px;
+	}
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+	line-height: 1.15;
+
+	/* 1 */
+	-webkit-text-size-adjust: 100%;
+
+	/* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+	margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+	display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+	box-sizing: content-box;
+
+	/* 1 */
+	height: 0;
+
+	/* 1 */
+	overflow: visible;
+
+	/* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+	font-family: monospace;
+
+	/* 1 */
+	font-size: 1em;
+
+	/* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+	background-color: transparent;
+	text-decoration-thickness: 1px;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+	border-bottom: none;
+
+	/* 1 */
+	text-decoration: underline;
+
+	/* 2 */
+	text-decoration-style: dotted;
+
+	/* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+	font-family: monospace;
+
+	/* 1 */
+	font-size: 1em;
+
+	/* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+	border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+
+	/* 1 */
+	font-size: 100%;
+
+	/* 1 */
+	line-height: 1.15;
+
+	/* 1 */
+	margin: 0;
+
+	/* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+
+	/* 1 */
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+
+	/* 1 */
+	text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+	-webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+	box-sizing: border-box;
+
+	/* 1 */
+	color: inherit;
+
+	/* 2 */
+	display: table;
+
+	/* 1 */
+	max-width: 100%;
+
+	/* 1 */
+	padding: 0;
+
+	/* 3 */
+	white-space: normal;
+
+	/* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+	vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+	box-sizing: border-box;
+
+	/* 1 */
+	padding: 0;
+
+	/* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+	-webkit-appearance: textfield;
+
+	/* 1 */
+	outline-offset: -2px;
+
+	/* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+
+	/* 1 */
+	font: inherit;
+
+	/* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+	display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+	display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+	display: none;
+}
+
+/**
+ * Reset specific elements to make them easier to style in other contexts.
+ */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+form,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Apply generic border-box to all elements.
+ * See:
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+
+	/* Apply border-box across the entire page. */
+	box-sizing: border-box;
+	font-family: var(--font-family-serif);
+	line-height: var(--line-height-body);
+}
+
+/**
+ * Relax the definition a bit, to allow components to override it manually.
+ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	padding: var(--page-margin);
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-normal);
+	color: var(--color-1);
+	text-align: left;
+	background-color: var(--color-2);
+}
+
+button {
+	cursor: pointer;
+}
+
+/**
+ * Site Structure
+ *
+ * - Set vertical margins and responsive widths on
+ *   top-level wrappers and content wrappers
+ * - `--global--width-content` is a responsive variable
+ * - See: globals/_global-width-responsive.scss
+ */
+
+/**
+ * Top Level Wrappers (header, main)
+ * - Set vertical padding and horizontal margins
+ */
+.site-header,
+.site-main,
+.widget-area {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site-header {
+	padding-top: calc(0.75 * 2rem);
+	padding-bottom: calc(2 * 2rem);
+}
+@media (min-width: 480px) {
+
+	.site-header {
+		padding-bottom: calc(3 * 2rem);
+	}
+}
+
+/**
+ * Site-main children wrappers
+ * - Add double vertical margins here for clearer hierarchy
+ */
+.site-main > * {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+@media (min-width: 782px) {
+
+	.site-main > * {
+		margin-top: calc(3 * 2rem);
+		margin-bottom: calc(3 * 2rem);
+	}
+}
+
+.site-main > *:first-child {
+	margin-top: 0;
+}
+
+.site-main > *:last-child {
+	margin-bottom: 0;
+}
+
+/**
+ * Set the default maximum responsive content-width
+ */
+
+/**
+ * Set the wide maximum responsive content-width
+ */
+
+/**
+ * Set the full maximum responsive content-width
+ */
+
+/*
+ * Block & non-gutenberg content wrappers
+ * - Set margins
+ */
+.entry-header,
+.post-thumbnail,
+.entry-content,
+.author-bio {
+	margin-top: 2rem;
+	margin-right: auto;
+	margin-bottom: 2rem;
+	margin-left: auto;
+}
+
+/*
+ * Block & non-gutenberg content wrapper children
+ * - Sets spacing-vertical margin logic
+ */
+.site-main > article > *,
+.site-main > .not-found > *,
+.entry-content > *,
+[class*=inner-container] > *,
+.wp-block-template-part > * {
+	margin-top: calc(0.666 * 2rem);
+	margin-bottom: calc(0.666 * 2rem);
+}
+@media (min-width: 480px) {
+
+	.site-main > article > *,
+	.site-main > .not-found > *,
+	.entry-content > *,
+	[class*=inner-container] > *,
+	.wp-block-template-part > * {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.site-main > article > *:first-child,
+.site-main > .not-found > *:first-child,
+.entry-content > *:first-child,
+[class*=inner-container] > *:first-child,
+.wp-block-template-part > *:first-child {
+	margin-top: 0;
+}
+
+.site-main > article > *:last-child,
+.site-main > .not-found > *:last-child,
+.entry-content > *:last-child,
+[class*=inner-container] > *:last-child,
+.wp-block-template-part > *:last-child {
+	margin-bottom: 0;
+}
+
+.widget-area > * {
+	margin-top: calc(0.666 * 2rem);
+	margin-bottom: calc(0.666 * 2rem);
+}
+@media (min-width: 480px) {
+
+	.widget-area > * {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+/*
+ * Block & non-gutenberg content wrapper children
+ * - Sets spacing-unit margins
+ */
+.entry-header > *,
+.post-thumbnail > *,
+.page-content > *,
+.comment-content > *,
+.widget > * {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.entry-header > *:first-child,
+.post-thumbnail > *:first-child,
+.page-content > *:first-child,
+.comment-content > *:first-child,
+.widget > *:first-child {
+	margin-top: 0;
+}
+
+.entry-header > *:last-child,
+.post-thumbnail > *:last-child,
+.page-content > *:last-child,
+.comment-content > *:last-child,
+.widget > *:last-child {
+	margin-bottom: 0;
+}
+
+/*
+ * .entry-content children specific controls
+ * - Adds special margin overrides for alignment utility classes
+ */
+.entry-content > * {
+
+	/* Reset alignleft and alignright margins after alignfull */
+}
+
+.entry-content > *.alignleft,
+.entry-content > *.alignright,
+.entry-content > *.alignleft:first-child + *,
+.entry-content > *.alignright:first-child + *,
+.entry-content > *.alignfull.has-background {
+	margin-top: 0;
+}
+
+.entry-content > *:last-child,
+.entry-content > *.alignfull.has-background {
+	margin-bottom: 0;
+}
+
+.entry-content > *.alignfull + .alignleft,
+.entry-content > *.alignfull + .alignright {
+	margin-top: 2rem;
+}
+
+::selection {
+	color: #000;
+	background-color: #f9ff4b;
+}
+
+::-moz-selection {
+	color: #000;
+	background-color: #f9ff4b;
+}
+
+.has-background ::selection,
+.has-secondary-background-color ::selection,
+.has-tertiary-background-color ::selection,
+.has-background-background-color ::selection {
+	color: #000;
+	background-color: #f9ff4b;
+}
+
+.has-background ::-moz-selection,
+.has-secondary-background-color ::-moz-selection,
+.has-tertiary-background-color ::-moz-selection,
+.has-background-background-color ::-moz-selection {
+	color: #000;
+	background-color: #f9ff4b;
+}
+
+.has-primary-background-color ::selection {
+	color: #000;
+	background-color: #f9ff4b;
+}
+
+.has-primary-background-color ::-moz-selection {
+	color: #000;
+	background-color: #f9ff4b;
+}
+
+/**
+ * Responsive Styles
+ */
+
+/**
+ * Required Variables
+ */
+
+/**
+* Root Media Query Variables
+*/
+:root {
+	--responsive--spacing-horizontal: rem(40px);
+	--responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
+	--responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
+	--responsive--alignfull-width: 100%;
+	--responsive--alignright-margin: var(--page-margin);
+	--responsive--alignleft-margin: var(--page-margin);
+}
+
+@media (min-width: 480px) {
+
+	:root {
+		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--page-margin)), 610px);
+		--responsive--alignwide-width: calc(100vw - 4 * var(--page-margin));
+		--responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+		--responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+	}
+}
+@media (min-width: 960px) {
+
+	:root {
+		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--page-margin)), 610px);
+		--responsive--alignwide-width: min(calc(100vw - 8 * var(--page-margin)), 1240px);
+	}
+}
+
+/**
+* Extends
+*/
+.default-max-width {
+	max-width: var(--responsive--aligndefault-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wide-max-width {
+	max-width: var(--responsive--alignwide-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-max-width {
+	max-width: var(--responsive--alignfull-width);
+	width: var(--responsive--alignfull-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 480px) {
+
+	.full-max-width {
+		max-width: var(--responsive--alignfull-width);
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+blockquote {
+	padding: 0;
+	position: relative;
+	margin: 1rem 0 1rem;
+}
+
+blockquote > * {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+blockquote > *:first-child {
+	margin-top: 0;
+}
+
+blockquote > *:last-child {
+	margin-bottom: 0;
+}
+
+blockquote cite,
+blockquote footer {
+	font-weight: normal;
+	color: var(--color-1);
+	font-size: var(--font-size-s);
+}
+
+blockquote.alignleft,
+blockquote.alignright {
+	padding-left: inherit;
+}
+
+blockquote.alignleft p,
+blockquote.alignright p {
+	max-width: inherit;
+	width: inherit;
+}
+
+blockquote.alignleft cite,
+blockquote.alignleft footer,
+blockquote.alignright cite,
+blockquote.alignright footer {
+	font-size: var(--font-size-s);
+}
+
+blockquote strong {
+	font-weight: var(--font-weight-strong);
+}
+
+blockquote:before {
+	content: "“";
+	font-size: var(--font-size-xl);
+	position: absolute;
+	left: 0.5rem;
+}
+
+blockquote .wp-block-quote__citation,
+blockquote cite,
+blockquote footer {
+	color: var(--color-1);
+	font-size: var(--font-size-s);
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+/* Classic editor images */
+.entry-content img {
+	max-width: 100%;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+/* Media captions */
+figcaption,
+.wp-caption,
+.wp-caption-text,
+.wp-block-embed figcaption {
+	color: var(--color-1);
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-xs);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.alignleft figcaption,
+.alignright figcaption,
+.alignleft .wp-caption,
+.alignright .wp-caption,
+.alignleft .wp-caption-text,
+.alignright .wp-caption-text,
+.alignleft .wp-block-embed figcaption,
+.alignright .wp-block-embed figcaption {
+	margin-bottom: 0;
+}
+
+/* WP Smiley */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+select {
+	border: 0.0625rem solid var(--color-1);
+	color: var(--color-1);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: 0.5rem 1rem;
+	background: var(--color-2) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+	background-position: right 0.5rem top 60%;
+}
+
+/*
+ * text-underline-offset doesn't work in Chrome at all 👎
+ * But looks nice in Safari/Firefox, so let's keep it and
+ * maybe Chrome will support it soon.
+ */
+a {
+	cursor: pointer;
+	color: var(--color-1);
+	text-underline-offset: 0.125;
+	text-decoration-skip-ink: all;
+}
+
+a:hover {
+	text-decoration-style: wavy;
+	text-decoration-skip-ink: none;
+}
+
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
+
+	/* Only visible in Windows High Contrast mode */
+	outline: 2px solid transparent;
+	text-decoration: underline 1px dotted currentColor;
+	text-decoration-skip-ink: none;
+}
+
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link {
+
+	/* Only visible in Windows High Contrast mode */
+	outline: 2px solid transparent;
+	outline-offset: -2px;
+}
+
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link:focus {
+	color: #21759b;
+	background-color: #f1f1f1;
+}
+
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).custom-logo-link {
+	background: none;
+}
+
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) img {
+	outline: 2px dotted var(--color-1);
+}
+
+.has-background .has-link-color a,
+.has-background.has-link-color a {
+	color: var(--color-1);
+}
+
+.wp-block-button__link {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-m);
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+}
+
+.wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-button__link:not(:hover):not(:active):not(.has-text-color).has-background {
+	color: var(--color-1);
+}
+
+.wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--color-1);
+}
+
+.has-background .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--color-1);
+}
+
+.wp-block-button__link:hover,
+.wp-block-button__link:active {
+	background-color: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+.wp-block-button__link:focus {
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
+}
+
+/**
+ * Block Options
+ */
+[data-block].wp-block-buttons {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+[data-block].wp-block-buttons .wp-block-button:first-child {
+	margin-top: 2rem;
+}
+
+[data-block].wp-block-buttons .wp-block-button:last-child {
+	margin-bottom: 2rem;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-2);
+}
+
+.has-background .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-2);
+}
+
+.has-background .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-text-color).has-background {
+	color: var(--color-2);
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--color-1);
+}
+
+.has-background .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--local--color-primary, var(--color-1));
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
+	border-color: currentColor !important;
+	background-color: transparent !important;
+	color: inherit !important;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:focus {
+	outline-offset: inherit;
+	outline: inherit;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active):not(.has-text-color),
+.wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active):not(.has-background),
+.wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active).has-background {
+	border-color: currentColor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active).has-background:not(.has-text-color) {
+	color: inherit;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
+	background-color: transparent;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-button.is-style-outline .wp-block-button__link:active {
+	background-color: var(--color-1) !important;
+	border-color: transparent !important;
+	color: var(--color-2) !important;
+}
+
+.has-background .wp-block-button.is-style-outline .wp-block-button__link:hover,
+.has-background .wp-block-button.is-style-outline .wp-block-button__link:active {
+	background-color: var(--color-1) !important;
+	color: var(--color-2) !important;
+}
+
+.has-text-color .wp-block-button.is-style-outline .wp-block-button__link:hover,
+.has-text-color .wp-block-button.is-style-outline .wp-block-button__link:active {
+	color: var(--color-2) !important;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:focus {
+	outline-offset: inherit;
+	outline: inherit;
+}
+
+.wp-block-button.is-style-squared {
+	border-radius: 0;
+}
+
+.is-style-outline .wp-block-button__link[style*=radius],
+.wp-block-button__link[style*=radius] {
+	outline-offset: 0.125rem;
+}
+
+code {
+	display: inline-block;
+	padding: 0 0.25rem;
+	border: 0.0625rem solid var(--color-3);
+	border-radius: 0.1875rem;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-s);
+}
+
+.wp-block-code {
+	border: 0.0625rem solid var(--color-1);
+	color: var(--color-1);
+	border-radius: 0.1875rem;
+	padding: 1rem;
+}
+
+.wp-block-code code {
+	border: 0;
+	display: block;
+	white-space: pre;
+	overflow-x: auto;
+}
+
+.wp-block-file .wp-block-file__textlink,
+.wp-block-file a:not(.wp-block-file__button) {
+	display: inline-block;
+	font-family: var(--font-family-mono);
+	border-top-left-radius: 0.1875rem;
+	border-bottom-left-radius: 0.1875rem;
+}
+@media (min-width: 782px) {
+
+	.wp-block-file .wp-block-file__textlink,
+	.wp-block-file a:not(.wp-block-file__button) {
+		border: 1px solid var(--color-1);
+		border-right: 0;
+		padding: 0.5rem 0.75rem;
+	}
+}
+
+.wp-block-file a.wp-block-file__button:active,
+.wp-block-file a.wp-block-file__button:focus,
+.wp-block-file a.wp-block-file__button:hover {
+	opacity: inherit;
+}
+
+.wp-block-file .wp-block-file__button,
+.wp-block-file a.wp-block-file__button {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-m);
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color),
+.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color),
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background,
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background {
+	color: var(--color-1);
+}
+
+.wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background),
+.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--color-1);
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background),
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--color-1);
+}
+
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-file .wp-block-file__button:active,
+.wp-block-file a.wp-block-file__button:hover,
+.wp-block-file a.wp-block-file__button:active {
+	background-color: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+.wp-block-file .wp-block-file__button:focus,
+.wp-block-file a.wp-block-file__button:focus {
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
+}
+@media (min-width: 782px) {
+
+	.wp-block-file .wp-block-file__button,
+	.wp-block-file a.wp-block-file__button {
+		margin-left: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+.wp-block-heading h1,
+h1,
+.h1,
+.wp-block-heading h2,
+h2,
+.h2,
+.wp-block-heading h3,
+h3,
+.h3,
+.wp-block-heading h4,
+h4,
+.h4,
+.wp-block-heading h5,
+h5,
+.h5,
+.wp-block-heading h6,
+h6,
+.h6 {
+	clear: both;
+	font-family: var(--font-family-mono);
+	font-weight: var(--font-weight-heavy);
+}
+
+.wp-block-heading h1 strong,
+h1 strong,
+.h1 strong,
+.wp-block-heading h2 strong,
+h2 strong,
+.h2 strong,
+.wp-block-heading h3 strong,
+h3 strong,
+.h3 strong,
+.wp-block-heading h4 strong,
+h4 strong,
+.h4 strong,
+.wp-block-heading h5 strong,
+h5 strong,
+.h5 strong,
+.wp-block-heading h6 strong,
+h6 strong,
+.h6 strong {
+	font-weight: var(--font-weight-heavy);
+}
+
+.wp-block-heading h1,
+h1,
+.h1 {
+	font-size: var(--font-size-xxxxl);
+	text-transform: uppercase;
+	line-height: 1.25;
+}
+
+.wp-block-heading h2,
+h2,
+.h2 {
+	font-size: var(--font-size-xxl);
+}
+
+.wp-block-heading h3,
+h3,
+.h3 {
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weight-strong);
+}
+
+.wp-block-heading h4,
+h4,
+.h4 {
+	font-size: var(--font-size-l);
+	font-weight: var(--font-weight-strong);
+}
+
+.wp-block-heading h5,
+h5,
+.h5 {
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-strong);
+}
+
+.wp-block-heading h6,
+h6,
+.h6 {
+	font-size: var(--font-size-s);
+	text-transform: uppercase;
+}
+
+p.has-background {
+	padding: 1rem;
+}
+
+pre.wp-block-preformatted {
+	overflow-x: auto;
+	white-space: pre;
+}
+
+.wp-block-pullquote {
+	padding: 2rem 0;
+	text-align: center;
+	border-width: 0.0625rem;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	color: currentColor;
+	border-color: currentColor;
+	position: relative;
+
+	/**
+   * Block Options
+   */
+}
+
+.wp-block-pullquote blockquote::before {
+	color: currentColor;
+	content: "“";
+	display: block;
+	position: relative;
+	left: 0;
+	font-size: 3rem;
+	font-weight: var(--font-weight-strong);
+	line-height: 1;
+}
+
+.wp-block-pullquote p {
+	margin: 0;
+}
+
+.wp-block-pullquote a {
+	color: currentColor;
+}
+
+.wp-block-pullquote .wp-block-pullquote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
+	color: currentColor;
+	display: block;
+	font-size: var(--font-size-xs);
+	text-transform: none;
+}
+
+.wp-block-pullquote:not(.is-style-solid-color) {
+	background: none;
+}
+
+.wp-block-pullquote.alignleft:not(.is-style-solid-color) blockquote:before,
+.wp-block-pullquote.alignleft:not(.is-style-solid-color) cite {
+	text-align: center;
+}
+
+.wp-block-pullquote.alignwide > p,
+.wp-block-pullquote.alignwide blockquote {
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block-pullquote.alignfull:not(.is-style-solid-color) > p,
+.wp-block-pullquote.alignfull:not(.is-style-solid-color) blockquote {
+	padding: 0 2rem;
+}
+
+.wp-block-pullquote.is-style-solid-color {
+	color: var(--color-1);
+	padding: crem(40px);
+	border-width: 0.0625rem;
+	border-style: solid;
+	border-color: var(--color-1);
+}
+@media (min-width: 600px) {
+
+	.wp-block-pullquote.is-style-solid-color {
+		padding: 0.5rem;
+	}
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote::before {
+	text-align: left;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+	margin: 0;
+	max-width: inherit;
+}
+
+.wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,
+.wp-block-pullquote.is-style-solid-color cite,
+.wp-block-pullquote.is-style-solid-color footer {
+	color: currentColor;
+}
+
+.wp-block-pullquote.is-style-solid-color.alignleft,
+.wp-block-pullquote.is-style-solid-color.alignright {
+	padding: 1rem;
+}
+
+.wp-block-pullquote.is-style-solid-color.alignleft blockquote,
+.wp-block-pullquote.is-style-solid-color.alignright blockquote {
+	max-width: initial;
+}
+
+.wp-block-quote {
+	border-left: none;
+	font-size: var(--font-size-l);
+	padding-left: 3rem;
+
+	/**
+   * Block Options
+   */
+}
+
+.wp-block-quote:before {
+	content: "“";
+	font-size: var(--font-size-xl);
+	left: 8px;
+}
+
+.wp-block-quote .wp-block-quote__citation,
+.wp-block-quote cite,
+.wp-block-quote footer {
+	font-size: var(--font-size-s);
+}
+
+.has-background .wp-block-quote .wp-block-quote__citation,
+[class*=background-color] .wp-block-quote .wp-block-quote__citation,
+[style*=background-color] .wp-block-quote .wp-block-quote__citation,
+.wp-block-cover[style*=background-image] .wp-block-quote .wp-block-quote__citation,
+.has-background .wp-block-quote cite,
+[class*=background-color] .wp-block-quote cite,
+[style*=background-color] .wp-block-quote cite,
+.wp-block-cover[style*=background-image] .wp-block-quote cite,
+.has-background .wp-block-quote footer,
+[class*=background-color] .wp-block-quote footer,
+[style*=background-color] .wp-block-quote footer,
+.wp-block-cover[style*=background-image] .wp-block-quote footer {
+	color: currentColor;
+}
+
+.wp-block-quote.has-text-align-right {
+	margin: 2rem 2.5rem 2rem auto;
+	padding-left: 0;
+	padding-right: calc(0.5 * rem(40px));
+	border-right: none;
+}
+@media (min-width: 480px) {
+
+	.wp-block-quote.has-text-align-right {
+		padding-right: 0;
+	}
+}
+
+.wp-block-quote.has-text-align-right:before {
+	right: 0;
+	display: none;
+}
+@media (min-width: 480px) {
+
+	.wp-block-quote.has-text-align-right:before {
+		right: auto;
+	}
+}
+
+.wp-block-quote.has-text-align-right p:before {
+	content: "”";
+	font-weight: normal;
+	margin-right: 0.3125rem;
+}
+
+.wp-block-quote.has-text-align-center {
+	margin: 2rem auto;
+}
+@media (min-width: 480px) {
+
+	.wp-block-quote.has-text-align-center {
+		padding-left: auto;
+		padding-right: auto;
+	}
+}
+
+.wp-block-quote.has-text-align-center:before {
+	display: none;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+	padding-left: 0;
+	padding-right: 0;
+
+	/* Resetting margins to match _block-container.scss */
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.wp-block-quote.is-large p,
+.wp-block-quote.is-style-large p {
+	font-size: var(--font-size-xl);
+}
+
+.wp-block-quote.is-large:before,
+.wp-block-quote.is-style-large:before {
+	font-size: var(--font-size-xl);
+	left: -2.5rem;
+}
+
+.wp-block-quote.is-large.has-text-align-right:before,
+.wp-block-quote.is-style-large.has-text-align-right:before {
+	display: none;
+}
+
+.wp-block-quote.is-large.has-text-align-right p:before,
+.wp-block-quote.is-style-large.has-text-align-right p:before {
+	content: "”";
+	font-size: var(--font-size-xl);
+	font-weight: normal;
+	margin-right: 10px;
+}
+
+.wp-block-quote.is-large .wp-block-quote__citation,
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large .wp-block-quote__citation,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.is-style-large footer {
+	color: var(--color-1);
+	font-size: var(--font-size-s);
+}
+@media (min-width: 480px) {
+
+	.wp-block-quote.is-large,
+	.wp-block-quote.is-style-large {
+		padding-left: 2.5rem;
+	}
+
+	.wp-block-quote.is-large:before,
+	.wp-block-quote.is-style-large:before {
+		left: 0;
+	}
+
+	.wp-block-quote.is-large.has-text-align-right,
+	.wp-block-quote.is-style-large.has-text-align-right {
+		padding-left: 0;
+		padding-right: 2.5rem;
+	}
+
+	.wp-block-quote.is-large.has-text-align-right:before,
+	.wp-block-quote.is-style-large.has-text-align-right:before {
+		right: 0;
+	}
+
+	.wp-block-quote.is-large.has-text-align-center,
+	.wp-block-quote.is-style-large.has-text-align-center {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+:root .is-extra-small-text,
+:root .has-extra-small-font-size {
+	font-size: var(--font-size-xs);
+}
+
+:root .is-small-text,
+:root .has-small-font-size {
+	font-size: var(--font-size-s);
+}
+
+:root .is-regular-text,
+:root .has-regular-font-size,
+:root .is-normal-font-size,
+:root .has-normal-font-size,
+:root .has-medium-font-size {
+	font-size: var(--font-size-m);
+}
+
+:root .is-large-text,
+:root .has-large-font-size {
+	font-size: var(--font-size-l);
+}
+
+:root .is-larger-text,
+:root .has-larger-font-size,
+:root .is-extra-large-text,
+:root .has-extra-large-font-size {
+	font-size: var(--font-size-xl);
+}
+
+:root .is-huge-text,
+:root .has-huge-font-size {
+	font-size: var(--font-size-xxl);
+	font-weight: var(--font-weight-strong);
+}
+
+:root .is-gigantic-text,
+:root .has-gigantic-font-size {
+	font-size: var(--font-size-xxxl);
+	font-weight: var(--font-weight-strong);
+}
+
+/**
+* Editor Post Title
+* - Needs a special styles
+*/
+.wp-block.editor-post-title__block {
+	padding-bottom: calc(2 * 2rem);
+	margin-bottom: calc(3 * 2rem);
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block.editor-post-title__block .editor-post-title__input {
+	text-align: center;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-xxxxl);
+	font-weight: var(--font-weight-heavy);
+	line-height: 1.25;
+}
+
+.wp-block.block-editor-default-block-appender > textarea {
+	font-family: var(--font-family-serif);
+	font-size: var(--font-size-m);
+}
+
+[data-block] {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.wp-block {
+	max-width: var(--responsive--aligndefault-width);
+}
+
+.wp-block[data-align=wide],
+.wp-block.alignwide {
+	max-width: var(--responsive--alignwide-width);
+}
+
+.wp-block[data-align=full],
+.wp-block.alignfull {
+	max-width: none;
+}
+
+.alignleft {
+	margin: 0;
+	margin-right: 2.5rem;
+}
+
+.alignright {
+	margin: 0;
+	margin-left: 2.5rem;
+}
+
+.has-drop-cap:not(:focus)::first-letter {
+	font-weight: var(--font-weight-heavy);
+	line-height: 1;
+	text-transform: uppercase;
+	font-style: normal;
+	float: left;
+	margin: 0.05em 0.1em 0 0;
+	font-size: 3.5rem;
+}
+@media (min-width: 782px) {
+
+	.has-drop-cap:not(:focus)::first-letter {
+		margin-top: 0.16em;
+	}
+}
+
+.has-drop-cap:not(:focus)::after {
+	content: "";
+	display: table;
+	clear: both;
+	padding-top: 14px;
+}
+
+@media only screen and (min-width: 482px) {
+
+	.wp-block[data-align=left] > * {
+		max-width: 18.125rem;
+		margin-right: 2.5rem;
+	}
+
+	.wp-block[data-align=right] > * {
+		max-width: 18.125rem;
+		margin-left: 2.5rem;
+	}
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote {
+	border: none;
+}
+
+.wp-block-freeform.block-library-rich-text__tinymce blockquote:before {
+	left: 5px;
+}
+
+html {
+	font-family: var(--font-family-serif);
+	line-height: 1.5;
+}
+
+body {
+	color: var(--color-1);
+	background-color: var(--color-2);
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-normal);
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+.has-background .has-link-color a,
+.has-background.has-link-color a {
+	color: var(--wp--style--color--link, var(--color-1));
+}
+
+button,
+a {
+	cursor: pointer;
+}

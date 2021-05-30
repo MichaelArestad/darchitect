@@ -125,7 +125,7 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
-		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+		$background_color = get_theme_mod( 'background_color', '000000' );
 		if ( 127 > Darchitect_Custom_Colors::get_relative_luminance_from_hex( $background_color ) ) {
 			add_theme_support( 'dark-editor-style' );
 		}
@@ -140,7 +140,13 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 		}
 
 		// Enqueue editor styles.
-		add_editor_style( $editor_stylesheet_path );
+		// add_editor_style( $editor_stylesheet_path );
+		add_editor_style(
+			array(
+				'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap',
+				$editor_stylesheet_path,
+			)
+		);
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -149,19 +155,19 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 				array(
 					'name'      => esc_html__( 'Extra small', 'darchitect' ),
 					'shortName' => esc_html_x( 'XS', 'Font size', 'darchitect' ),
-					'size'      => 16,
+					'size'      => 12,
 					'slug'      => 'extra-small',
 				),
 				array(
 					'name'      => esc_html__( 'Small', 'darchitect' ),
 					'shortName' => esc_html_x( 'S', 'Font size', 'darchitect' ),
-					'size'      => 18,
+					'size'      => 14,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => esc_html__( 'Normal', 'darchitect' ),
 					'shortName' => esc_html_x( 'M', 'Font size', 'darchitect' ),
-					'size'      => 20,
+					'size'      => 18,
 					'slug'      => 'normal',
 				),
 				array(
@@ -173,19 +179,19 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 				array(
 					'name'      => esc_html__( 'Extra large', 'darchitect' ),
 					'shortName' => esc_html_x( 'XL', 'Font size', 'darchitect' ),
-					'size'      => 40,
+					'size'      => 32,
 					'slug'      => 'extra-large',
 				),
 				array(
 					'name'      => esc_html__( 'Huge', 'darchitect' ),
 					'shortName' => esc_html_x( 'XXL', 'Font size', 'darchitect' ),
-					'size'      => 96,
+					'size'      => 40,
 					'slug'      => 'huge',
 				),
 				array(
 					'name'      => esc_html__( 'Gigantic', 'darchitect' ),
 					'shortName' => esc_html_x( 'XXXL', 'Font size', 'darchitect' ),
-					'size'      => 144,
+					'size'      => 56,
 					'slug'      => 'gigantic',
 				),
 			)
@@ -195,21 +201,21 @@ if ( ! function_exists( 'darchitect_setup' ) ) {
 		add_theme_support(
 			'custom-background',
 			array(
-				'default-color' => 'd1e4dd',
+				'default-color' => 'ffffff',
 			)
 		);
 
 		// Editor color palette.
-		$black     = '#000000';
-		$dark_gray = '#28303D';
-		$gray      = '#39414D';
-		$green     = '#D1E4DD';
-		$blue      = '#D1DFE4';
-		$purple    = '#D1D1E4';
-		$red       = '#E4D1D1';
-		$orange    = '#E4DAD1';
-		$yellow    = '#EEEADD';
-		$white     = '#FFFFFF';
+		// $black     = '#000000';
+		// $dark_gray = '#28303D';
+		// $gray      = '#39414D';
+		// $green     = '#D1E4DD';
+		// $blue      = '#D1DFE4';
+		// $purple    = '#D1D1E4';
+		// $red       = '#E4D1D1';
+		// $orange    = '#E4DAD1';
+		// $yellow    = '#EEEADD';
+		// $white     = '#FFFFFF';
 
 		// add_theme_support(
 		// 	'editor-color-palette',

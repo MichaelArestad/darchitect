@@ -2237,22 +2237,6 @@ input[type=reset] {
 	}
 }
 
-.wp-block-file a.wp-block-file__button {
-	border: 0.0625rem solid transparent;
-	border-radius: 0.1875rem;
-	cursor: pointer;
-	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
-	font-size: 1rem;
-	padding: 0.5rem 0.75rem;
-	text-decoration: none;
-}
-@media (min-width: 782px) {
-
-	.wp-block-file a.wp-block-file__button {
-		font-size: 1.125rem;
-	}
-}
-
 .site .button:not(:hover):not(:active):not(.has-text-color) {
 	color: #000;
 }
@@ -2274,10 +2258,6 @@ input[type=reset]:not(:hover):not(:active):not(.has-text-color) {
 }
 
 .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
-	color: #000;
-}
-
-.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
 	color: #000;
 }
 
@@ -2305,10 +2285,6 @@ input[type=reset]:not(:hover):not(:active):not(.has-text-color) {
 	color: #000;
 }
 
-.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
-	color: #000;
-}
-
 .has-background .site .button:not(:hover):not(:active):not(.has-text-color).has-background {
 	color: #000;
 }
@@ -2330,10 +2306,6 @@ input[type=reset]:not(:hover):not(:active):not(.has-text-color) {
 }
 
 .has-background .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-text-color).has-background {
-	color: #000;
-}
-
-.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background {
 	color: #000;
 }
 
@@ -2361,10 +2333,6 @@ input[type=reset]:not(:hover):not(:active):not(.has-background) {
 	background-color: #000;
 }
 
-.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
-	background-color: #000;
-}
-
 .has-background .site .button:not(:hover):not(:active):not(.has-background) {
 	background-color: #000;
 }
@@ -2386,10 +2354,6 @@ input[type=reset]:not(:hover):not(:active):not(.has-background) {
 }
 
 .has-background .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
-	background-color: #000;
-}
-
-.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
 	background-color: #000;
 }
 
@@ -2510,13 +2474,13 @@ input[type=reset]:focus,
 }
 
 .is-style-outline .wp-block-button__link[style*=radius]:focus {
-	outline-offset: 2px;
-	outline: 2px dotted #000;
+	outline-offset: 0.125rem;
+	outline: 0.125rem dotted #000;
 }
 
 .wp-block-button a.wp-block-button__link[style*=radius]:focus {
-	outline-offset: 2px;
-	outline: 2px dotted #000;
+	outline-offset: 0.125rem;
+	outline: 0.125rem dotted #000;
 }
 
 code {
@@ -2875,6 +2839,13 @@ code {
 	background-color: unset;
 }
 
+.wp-block-file .wp-block-file__textlink {
+	display: inline-block;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	border-top-left-radius: 0.1875rem;
+	border-bottom-left-radius: 0.1875rem;
+}
+
 .wp-block-file a:not(.wp-block-file__button) {
 	display: inline-block;
 	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
@@ -2882,6 +2853,12 @@ code {
 	border-bottom-left-radius: 0.1875rem;
 }
 @media (min-width: 782px) {
+
+	.wp-block-file .wp-block-file__textlink {
+		border: 1px solid #000;
+		border-right: 0;
+		padding: 0.5rem 0.75rem;
+	}
 
 	.wp-block-file a:not(.wp-block-file__button) {
 		border: 1px solid #000;
@@ -2896,11 +2873,97 @@ code {
 	opacity: inherit;
 }
 
-.wp-block-file a.wp-block-file__button {
+.wp-block-file .wp-block-file__button {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
 	display: inline-block;
 }
 @media (min-width: 782px) {
 
+	.wp-block-file .wp-block-file__button {
+		font-size: 1.125rem;
+	}
+}
+
+.wp-block-file a.wp-block-file__button {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-size: 1rem;
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+	display: inline-block;
+}
+@media (min-width: 782px) {
+
+	.wp-block-file a.wp-block-file__button {
+		font-size: 1.125rem;
+	}
+}
+
+.wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: #000;
+}
+
+.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: #000;
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: #000;
+}
+
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: #000;
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background {
+	color: #000;
+}
+
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background {
+	color: #000;
+}
+
+.wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: #000;
+}
+
+.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: #000;
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: #000;
+}
+
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: #000;
+}
+
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-file .wp-block-file__button:active,
+.wp-block-file a.wp-block-file__button:hover,
+.wp-block-file a.wp-block-file__button:active {
+	background-color: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+.wp-block-file .wp-block-file__button:focus,
+.wp-block-file a.wp-block-file__button:focus {
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
+}
+@media (min-width: 782px) {
+
+	.wp-block-file .wp-block-file__button,
 	.wp-block-file a.wp-block-file__button {
 		margin-left: 0;
 		border-top-left-radius: 0;
@@ -3054,6 +3117,12 @@ code {
 	margin-left: -2rem;
 }
 
+.wp-block-heading h1 {
+	clear: both;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-weight: 700;
+}
+
 h1 {
 	clear: both;
 	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
@@ -3061,6 +3130,12 @@ h1 {
 }
 
 .h1 {
+	clear: both;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-weight: 700;
+}
+
+.wp-block-heading h2 {
 	clear: both;
 	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
@@ -3078,6 +3153,12 @@ h2 {
 	font-weight: 700;
 }
 
+.wp-block-heading h3 {
+	clear: both;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-weight: 700;
+}
+
 h3 {
 	clear: both;
 	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
@@ -3085,6 +3166,12 @@ h3 {
 }
 
 .h3 {
+	clear: both;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-weight: 700;
+}
+
+.wp-block-heading h4 {
 	clear: both;
 	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
@@ -3102,6 +3189,12 @@ h4 {
 	font-weight: 700;
 }
 
+.wp-block-heading h5 {
+	clear: both;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-weight: 700;
+}
+
 h5 {
 	clear: both;
 	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
@@ -3109,6 +3202,12 @@ h5 {
 }
 
 .h5 {
+	clear: both;
+	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+	font-weight: 700;
+}
+
+.wp-block-heading h6 {
 	clear: both;
 	font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 	font-weight: 700;
@@ -3126,11 +3225,19 @@ h6 {
 	font-weight: 700;
 }
 
+.wp-block-heading h1 strong {
+	font-weight: 700;
+}
+
 h1 strong {
 	font-weight: 700;
 }
 
 .h1 strong {
+	font-weight: 700;
+}
+
+.wp-block-heading h2 strong {
 	font-weight: 700;
 }
 
@@ -3142,11 +3249,19 @@ h2 strong {
 	font-weight: 700;
 }
 
+.wp-block-heading h3 strong {
+	font-weight: 700;
+}
+
 h3 strong {
 	font-weight: 700;
 }
 
 .h3 strong {
+	font-weight: 700;
+}
+
+.wp-block-heading h4 strong {
 	font-weight: 700;
 }
 
@@ -3158,11 +3273,19 @@ h4 strong {
 	font-weight: 700;
 }
 
+.wp-block-heading h5 strong {
+	font-weight: 700;
+}
+
 h5 strong {
 	font-weight: 700;
 }
 
 .h5 strong {
+	font-weight: 700;
+}
+
+.wp-block-heading h6 strong {
 	font-weight: 700;
 }
 
@@ -3172,6 +3295,19 @@ h6 strong {
 
 .h6 strong {
 	font-weight: 700;
+}
+
+.wp-block-heading h1 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	line-height: 1.25;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-heading h1 {
+		font-size: 5rem;
+	}
 }
 
 h1 {
@@ -3200,6 +3336,17 @@ h1 {
 	}
 }
 
+.wp-block-heading h2 {
+	font-size: 1.75rem;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-heading h2 {
+		font-size: 2.5rem;
+	}
+}
+
 h2 {
 	font-size: 1.75rem;
 }
@@ -3219,6 +3366,18 @@ h2 {
 
 	.h2 {
 		font-size: 2.5rem;
+	}
+}
+
+.wp-block-heading h3 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-heading h3 {
+		font-size: 2rem;
 	}
 }
 
@@ -3246,6 +3405,18 @@ h3 {
 	}
 }
 
+.wp-block-heading h4 {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-heading h4 {
+		font-size: 1.5rem;
+	}
+}
+
 h4 {
 	font-size: 1.25rem;
 	font-weight: 500;
@@ -3270,6 +3441,18 @@ h4 {
 	}
 }
 
+.wp-block-heading h5 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-heading h5 {
+		font-size: 1.125rem;
+	}
+}
+
 h5 {
 	font-size: 1rem;
 	font-weight: 500;
@@ -3291,6 +3474,18 @@ h5 {
 
 	.h5 {
 		font-size: 1.125rem;
+	}
+}
+
+.wp-block-heading h6 {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+}
+
+@media (min-width: 782px) {
+
+	.wp-block-heading h6 {
+		font-size: 0.875rem;
 	}
 }
 

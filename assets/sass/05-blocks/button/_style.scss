@@ -117,6 +117,6 @@ input[type="reset"],
 
 .is-style-outline .wp-block-button__link[style*="radius"]:focus,
 .wp-block-button a.wp-block-button__link[style*="radius"]:focus {
-	outline-offset: 2px;
-	outline: 2px dotted var(--color-1);
+	outline-offset: rem(2px);
+	outline: rem(2px) dotted var(--color-1);
 }

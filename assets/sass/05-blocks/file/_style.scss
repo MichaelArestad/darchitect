@@ -1,5 +1,6 @@
 .wp-block-file {
 
+	.wp-block-file__textlink,
 	a:not(.wp-block-file__button) {
 		display: inline-block;
 		font-family: var(--font-family-mono);
@@ -20,7 +21,9 @@
 		opacity: inherit;
 	}
 
+	.wp-block-file__button,
 	a.wp-block-file__button {
+		@include button-style();
 		display: inline-block;
 		
 		@include break-m {

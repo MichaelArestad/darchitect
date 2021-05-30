@@ -14,11 +14,11 @@
 	margin-bottom: 0;
 
 	.wp-block-button:first-child {
-		margin-top: var(--global--spacing-vertical);
+		margin-top: rem(32px);
 	}
 
 	.wp-block-button:last-child {
-		margin-bottom: var(--global--spacing-vertical);
+		margin-bottom: rem(32px);
 	}
 }
 
@@ -31,25 +31,25 @@
 
 			// Text colors
 			&:not(.has-text-color) {
-				color: var(--global--color-background);
+				color: var(--color-2);
 
 				// Nested
 				.has-background & {
-					color: var(--local--color-background, var(--global--color-background));
+					color: var(--color-2);
 
 					&.has-background {
-						color: var(--global--color-primary);
+						color: var(--color-2);
 					}
 				}
 			}
 
 			// Background-colors
 			&:not(.has-background) {
-				background-color: var(--global--color-primary);
+				background-color: var(--color-1);
 
 				// Nested
 				.has-background & {
-					background-color: var(--local--color-primary, var(--global--color-primary));
+					background-color: var(--local--color-primary, var(--color-1));
 				}
 			}
 		}
@@ -83,11 +83,11 @@
 
 			// Text colors
 			&:not(.has-text-color) {
-				color: var(--global--color-primary);
+				color: var(--color-1);
 
 				// Nested
 				.has-background & {
-					color: var(--local--color-primary, var(--global--color-primary));
+					color: var(--color-1);
 				}
 			}
 
@@ -108,17 +108,17 @@
 		.wp-block-button__link:hover,
 		.wp-block-button__link:active {
 
-			background-color: var(--global--color-primary) !important;
+			background-color: var(--color-1) !important;
 			border-color: transparent !important;
-			color: var(--global--color-background) !important;
+			color: var(--color-2) !important;
 
 			.has-background & {
-				background-color: var(--local--color-primary, var(--global--color-primary)) !important;
-				color: var(--local--color-background, var(--global--color-background)) !important;
+				background-color: var(--color-1) !important;
+				color: var(--color-2) !important;
 			}
 
 			.has-text-color & {	
-				color: var(--local--color-background, var(--global--color-background)) !important;
+				color: var(--color-2) !important;
 			}
 		}
 
@@ -137,5 +137,5 @@
 
 .is-style-outline .wp-block-button__link[style*="radius"],
 .wp-block-button__link[style*="radius"] {
-	outline-offset: 2px;
+	outline-offset: rem(2px);
 }

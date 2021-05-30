@@ -16,21 +16,11 @@ blockquote {
 		}
 	}
 
-	p {
-		// letter-spacing: var(--heading--letter-spacing-h4);
-		// font-family: var(--quote--font-family);
-		// font-size: var(--quote--font-size);
-		// font-style: var(--quote--font-style);
-		// font-weight: var(--quote--font-weight);
-		// line-height: var(--quote--line-height);
-	}
-
 	cite,
 	footer {
 		font-weight: normal;
 		color: var(--color-1);
 		font-size: var(--font-size-s);
-		// letter-spacing: var(--global--letter-spacing);
 	}
 
 	&.alignleft,
@@ -39,7 +29,6 @@ blockquote {
 		padding-left: inherit;
 
 		p {
-			// font-size: var(--heading--font-size-h5);
 			max-width: inherit;
 			width: inherit;
 		}
@@ -47,7 +36,6 @@ blockquote {
 		cite,
 		footer {
 			font-size: var(--font-size-s);
-			// letter-spacing: var(--global--letter-spacing);
 		}
 	}
 
@@ -58,7 +46,6 @@ blockquote {
 	&:before {
 		content: "\201C";
 		font-size: var(--font-size-xl);
-		// line-height: var(--quote--line-height);
 		position: absolute;
 		left: rem(8px);
 	}
@@ -68,14 +55,5 @@ blockquote {
 	footer {
 		color: var(--color-1);
 		font-size: var(--font-size-s);
-		// font-style: var(--quote--font-style-cite);
 	}
-
-	// @include media(mobile-only) {
-	// 	padding-left: rem(8px);
-
-	// 	&:before {
-	// 		left: 0;
-	// 	}
-	// }
 }

@@ -1714,8 +1714,8 @@ input[type=reset]:focus,
 
 .is-style-outline .wp-block-button__link[style*=radius]:focus,
 .wp-block-button a.wp-block-button__link[style*=radius]:focus {
-	outline-offset: 2px;
-	outline: 2px dotted var(--color-1);
+	outline-offset: 0.125rem;
+	outline: 0.125rem dotted var(--color-1);
 }
 
 code {
@@ -1983,6 +1983,7 @@ code {
 	background-color: unset;
 }
 
+.wp-block-file .wp-block-file__textlink,
 .wp-block-file a:not(.wp-block-file__button) {
 	display: inline-block;
 	font-family: var(--font-family-mono);
@@ -1991,6 +1992,7 @@ code {
 }
 @media (min-width: 782px) {
 
+	.wp-block-file .wp-block-file__textlink,
 	.wp-block-file a:not(.wp-block-file__button) {
 		border: 1px solid var(--color-1);
 		border-right: 0;
@@ -2004,11 +2006,60 @@ code {
 	opacity: inherit;
 }
 
+.wp-block-file .wp-block-file__button,
 .wp-block-file a.wp-block-file__button {
+	border: 0.0625rem solid transparent;
+	border-radius: 0.1875rem;
+	cursor: pointer;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-m);
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
 	display: inline-block;
+}
+
+.wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color),
+.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color),
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
+	color: var(--color-1);
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background,
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background {
+	color: var(--color-1);
+}
+
+.wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background),
+.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--color-1);
+}
+
+.has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background),
+.has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+	background-color: var(--color-1);
+}
+
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-file .wp-block-file__button:active,
+.wp-block-file a.wp-block-file__button:hover,
+.wp-block-file a.wp-block-file__button:active {
+	background-color: transparent;
+	border-color: currentColor;
+	color: inherit;
+}
+
+.wp-block-file .wp-block-file__button:focus,
+.wp-block-file a.wp-block-file__button:focus {
+	outline-offset: -6px;
+	outline: 2px dotted currentColor;
 }
 @media (min-width: 782px) {
 
+	.wp-block-file .wp-block-file__button,
 	.wp-block-file a.wp-block-file__button {
 		margin-left: 0;
 		border-top-left-radius: 0;
@@ -2116,16 +2167,22 @@ code {
 	margin-left: -2rem;
 }
 
+.wp-block-heading h1,
 h1,
 .h1,
+.wp-block-heading h2,
 h2,
 .h2,
+.wp-block-heading h3,
 h3,
 .h3,
+.wp-block-heading h4,
 h4,
 .h4,
+.wp-block-heading h5,
 h5,
 .h5,
+.wp-block-heading h6,
 h6,
 .h6 {
 	clear: both;
@@ -2133,21 +2190,28 @@ h6,
 	font-weight: var(--font-weight-heavy);
 }
 
+.wp-block-heading h1 strong,
 h1 strong,
 .h1 strong,
+.wp-block-heading h2 strong,
 h2 strong,
 .h2 strong,
+.wp-block-heading h3 strong,
 h3 strong,
 .h3 strong,
+.wp-block-heading h4 strong,
 h4 strong,
 .h4 strong,
+.wp-block-heading h5 strong,
 h5 strong,
 .h5 strong,
+.wp-block-heading h6 strong,
 h6 strong,
 .h6 strong {
 	font-weight: var(--font-weight-heavy);
 }
 
+.wp-block-heading h1,
 h1,
 .h1 {
 	font-size: var(--font-size-xxxxl);
@@ -2155,29 +2219,34 @@ h1,
 	line-height: 1.25;
 }
 
+.wp-block-heading h2,
 h2,
 .h2 {
 	font-size: var(--font-size-xxl);
 }
 
+.wp-block-heading h3,
 h3,
 .h3 {
 	font-size: var(--font-size-xl);
 	font-weight: var(--font-weight-strong);
 }
 
+.wp-block-heading h4,
 h4,
 .h4 {
 	font-size: var(--font-size-l);
 	font-weight: var(--font-weight-strong);
 }
 
+.wp-block-heading h5,
 h5,
 .h5 {
 	font-size: var(--font-size-m);
 	font-weight: var(--font-weight-strong);
 }
 
+.wp-block-heading h6,
 h6,
 .h6 {
 	font-size: var(--font-size-s);

@@ -15,6 +15,11 @@
 		font-size: var(--font-size-xxxxl);
 		font-weight: var(--font-weight-heavy);
 		line-height: 1.25;
+		text-transform: uppercase;
+
+		&:focus {
+			text-transform: none;
+		}
 	}
 }
 

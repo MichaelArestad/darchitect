@@ -14,14 +14,14 @@
 
 		// Text colors
 		&:not(.has-text-color) {
-			color: var(--color-1);
+			color: var(--color-2);
 
 			// Nested
 			.has-background & {
-				color: var(--color-1);
+				color: var(--color-2);
 
 				&.has-background {
-					color: var(--color-1);
+					color: var(--color-2);
 				}
 			}
 		}

@@ -9,15 +9,15 @@
 // @import "cover/editor";
 // @import "columns/editor";
 @import "file/style";
-// @import "gallery/editor";
+@import "gallery/editor";
 // @import "group/editor";
 @import "heading/style";
-// @import "html/editor";
+@import "html/editor";
 // @import "image/editor";
-// @import "latest-comments/editor";
-// @import "latest-posts/editor";
-// @import "legacy/editor"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
-// @import "list/editor";
+@import "latest-comments/style";
+@import "latest-posts/style";
+@import "legacy/editor"; // "Blocks" from the legacy WP editor, ie: galleries, .button class, etc.
+@import "list/style";
 // @import "media-text/editor";
 // @import "navigation/editor";
 @import "paragraph/editor";
@@ -25,11 +25,11 @@
 @import "pullquote/style";
 @import "quote/style";
 // @import "rss/editor";
-// @import "search/editor";
-// @import "separator/editor";
+@import "search/editor";
+@import "separator/style";
 // @import "social-icons/editor";
 // @import "table/editor";
-// @import "tag-clould/editor";
+@import "tag-clould/style";
 // @import "verse/editor";
 @import "utilities/font-sizes";
 @import "utilities/editor"; // Import LAST to cascade properly

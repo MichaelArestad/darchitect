@@ -1,3 +1,4 @@
+.wp-block-separator,
 hr {
 	border-style: none;
 	border-bottom: rem(3px) solid var(--color-1);
@@ -29,9 +30,12 @@ hr {
 		 */
 		&.is-style-darchitect-separator-thick {
 			border-bottom-width: rem(32px);
+			width: auto;
 		}
 
 		&.is-style-dots {
+			border-bottom: none;
+
 			&:before {
 				content: '×××';
 			}

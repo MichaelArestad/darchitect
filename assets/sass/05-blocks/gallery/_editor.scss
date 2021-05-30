@@ -2,9 +2,11 @@
 
 	figcaption {
 		margin-bottom: 0;
+		color: var(--color-2);
+		font-size: var(--font-size-xs);
 
 		a {
-			color: var(--global--color-white);
+			color: var(--color-2);
 		}
 	}
 }

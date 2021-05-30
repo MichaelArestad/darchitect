@@ -1,4 +1,4 @@
-.wp-block-separator,
+.wp-block-separator.wp-block-separator.wp-block-separator.wp-block-separator,
 hr {
 	border-bottom: var(--separator--height) solid var(--separator--border-color);
 	clear: both;
@@ -23,7 +23,7 @@ hr {
 	}
 
 	&.is-style-dots {
-		border-bottom: none;
+		border: none;
 
 		&.has-background,
 		&.has-text-color {

@@ -43,6 +43,7 @@
 
 .wp-block-latest-comments .avatar,
 .wp-block-latest-comments__comment-avatar {
+	box-sizing: border-box;
 	width: rem(40px);
 	height: rem(40px);
 	margin-right: rem(16px);

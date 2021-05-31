@@ -8,7 +8,7 @@ Description: Darchitect is an opinionated theme by Michael Arestad.
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.6
-Version: 1.5
+Version: 1.51
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: darchitect
@@ -2020,16 +2020,6 @@ h6,
 }
 .wp-block-image a:focus img {
   outline-offset: 2px;
-}
-
-.entry-content > *[class=wp-block-image],
-.entry-content [class*=inner-container] > *[class=wp-block-image] {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.entry-content > *[class=wp-block-image] + *,
-.entry-content [class*=inner-container] > *[class=wp-block-image] + * {
-  margin-top: 0;
 }
 
 .wp-block-image.is-style-darchitect-border img,

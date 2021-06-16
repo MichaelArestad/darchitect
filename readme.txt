@@ -1,27 +1,24 @@
 === Darchitect ===
-Contributors: wordpressdotorg
+Contributors: wordpressdotorg, MichaelArestad
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.3
+Stable tag: 1.53
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Darchitect is a blank canvas for your ideas and it makes the block editor your best brush.
-
-With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine.
-
-Take it for a spin! See how Darchitect elevates your portfolio, business website, or personal blog.
+I wanted an opinionated minimal theme for my blog that was paired down to just the elements I liked. It makes posts look good and has dark mode.
 
 == Installation ==
 
-1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Darchitect in the search form and press the 'Enter' key on your keyboard.
-3. Click on the 'Activate' button to use your new theme right away.
-4. Go to INSERT ABOUT PAGE for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to your taste.
+0. Clone this repository.
+1. Package the new directory as a `zip` file.
+2. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+3. Then, click the 'Upload Theme' button and upload the `zip` file.
+4. Click on the 'Activate' button to use your new theme right away.
+5. You will also need to install Reading Time WP.
 
 == Privacy ==
 Darchitect uses LocalStorage to save the setting when Dark Mode support is turned on or off.
@@ -30,25 +27,9 @@ No data is saved in the database or transferred.
 
 == Changelog ==
 
-= 1.3 =
-* Released: April 14, 2021
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.3
-
-= 1.2 =
-* Released: March 9, 2021
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.2
-
-= 1.1 =
-* Released: December 22, 2020
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.1
-
-= 1.0 =
-* Released: December 8, 2020
-
-https://wordpress.org/support/article/twenty-twenty-one-changelog#Version_1.0
+= 1.53 =
+* Released: June 15, 2021
+* First release I'm talking about. Rad.
 
 == Copyright ==
 

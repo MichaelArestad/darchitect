@@ -1,19 +1,17 @@
 .wp-block-quote {
-	border-left: none;
-	font-size: var(--font-size-l);
-	padding-left: rem(48px);
+	border-left: rem(4px) solid var(--color-1);
+	font-size: var(--font-size-m);
+	padding-left: rem(16px);
 
 	&:before {
-		content: "\201C";
-		font-size: var(--font-size-xl);
-		// line-height: var(--quote--line-height);
-		left: 8px;
+		display: none;
 	}
 
 	.wp-block-quote__citation,
 	cite,
 	footer {
-		font-size: var(--font-size-s);
+		font-family: var(--font-family-mono);
+		font-size: var(--font-size-xs);
 
 		.has-background &,
 		[class*="background-color"] &,
@@ -27,52 +25,24 @@
 	 * Block Options
 	 */	
 	&.has-text-align-right {
-		margin: rem(32px) rem(40px) rem(32px) auto;
 		padding-left: 0;
-		padding-right: calc(0.5 * rem(40px));
-		border-right: none;
-		
-		@include break-xs {
-			padding-right: 0;
-		}
-		
-		// Hide the left aligned quote.
-		&:before {
-			right: 0;
-			display: none;
-
-			@include break-xs {
-				right: auto;
-			}	
-		}
-
-		// Align the quote left of the text.
-		p:before {
-			content: "\201D";
-			// font-size: var(--quote--font-size);
-			font-weight: normal;
-			// line-height: var(--quote--line-height);
-			margin-right: rem(5px);
-		}
+		padding-right: rem(16px);
+		border: 0;
+		border-right: rem(4px) solid var(--color-1);
 	}
 
 	&.has-text-align-center {
-		margin: rem(32px) auto;
-
-		@include break-xs {
-			padding-left: auto;
-			padding-right: auto;
-		}
-
-		&:before {
-			display: none;
-		}
+		// margin: rem(32px) auto;
+		padding-left: rem(16px);
+		padding-right: rem(16px);
+		border-left: rem(4px) solid var(--color-1);
+		border-right: rem(4px) solid var(--color-1);
 	}
 
 	&.is-large,
 	&.is-style-large {
-		padding-left: 0;
-		padding-right: 0;
+		padding: 0;
+		border: 0;
 
 		/* Resetting margins to match _block-container.scss */
 		margin-top: rem(32px);
@@ -80,60 +50,13 @@
 
 		p {
 			font-size: var(--font-size-xl);
-			// font-style: var(--quote--font-style-large);
-			// line-height: var(--quote--line-height-large);
-		}
-
-		&:before {
-			font-size: var(--font-size-xl);
-			// line-height: var(--quote--line-height-large);
-			left: rem(-40px);
-		}
-
-		&.has-text-align-right {
-
-			// Hide the left aligned quote.
-			&:before {
-				display: none;
-			}
-
-			// Align the quote left of the text.
-			p:before {
-				content: "\201D";
-				font-size: var(--font-size-xl);
-				font-weight: normal;
-				// line-height: var(--quote--line-height-large);
-				margin-right: 10px;
-			}
 		}
 
 		.wp-block-quote__citation,
 		cite,
 		footer {
 			color: var(--color-1);
-			font-size: var(--font-size-s);
-		}
-
-		@include break-xs {
-			padding-left: rem(40px);
-
-			&:before {
-				left: 0;
-			}
-
-			&.has-text-align-right {
-				padding-left: 0;
-				padding-right: rem(40px);
-
-				&:before {
-					right: 0;
-				}
-			}
-
-			&.has-text-align-center {
-				padding-left: 0;
-				padding-right: 0;
-			}
+			font-size: var(--font-size-xs);
 		}
 	}
 }

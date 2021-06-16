@@ -2069,9 +2069,9 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-quote {
-  border-left: none;
-  font-size: 1.25rem;
-  padding-left: 3rem;
+  border-left: 0.25rem solid #000;
+  font-size: 1rem;
+  padding-left: 1rem;
   /**
    * Block Options
    */
@@ -2079,41 +2079,37 @@ pre.wp-block-preformatted {
 
 @media (min-width: 782px){
   .wp-block-quote{
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   }
 }
 .wp-block-quote:before {
-  content: "“";
-  font-size: 1.5rem;
-  left: 8px;
-}
-@media (min-width: 782px){
-  .wp-block-quote:before{
-  font-size: 2rem;
-  }
+  display: none;
 }
 .wp-block-quote .wp-block-quote__citation {
-  font-size: 0.875rem;
+  font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote .wp-block-quote__citation{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .wp-block-quote cite {
-  font-size: 0.875rem;
+  font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote cite{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .wp-block-quote footer {
-  font-size: 0.875rem;
+  font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote footer{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .has-background .wp-block-quote .wp-block-quote__citation, [class*=background-color] .wp-block-quote .wp-block-quote__citation, [style*=background-color] .wp-block-quote .wp-block-quote__citation, .wp-block-cover[style*=background-image] .wp-block-quote .wp-block-quote__citation,
@@ -2128,45 +2124,20 @@ pre.wp-block-preformatted {
   color: currentColor;
 }
 .wp-block-quote.has-text-align-right {
-  margin: 2rem 2.5rem 2rem auto;
   padding-left: 0;
-  padding-right: calc(rem(40px)*1);
-  border-right: none;
-}
-@media (min-width: 480px) {
-  .wp-block-quote.has-text-align-right {
-    padding-right: 0;
-  }
-}
-.wp-block-quote.has-text-align-right:before {
-  right: 0;
-  display: none;
-}
-@media (min-width: 480px) {
-  .wp-block-quote.has-text-align-right:before {
-    right: auto;
-  }
-}
-.wp-block-quote.has-text-align-right p:before {
-  content: "”";
-  font-weight: normal;
-  margin-right: 0.3125rem;
+  padding-right: 1rem;
+  border: 0;
+  border-right: 0.25rem solid #000;
 }
 .wp-block-quote.has-text-align-center {
-  margin: 2rem auto;
-}
-@media (min-width: 480px) {
-  .wp-block-quote.has-text-align-center {
-    padding-left: auto;
-    padding-right: auto;
-  }
-}
-.wp-block-quote.has-text-align-center:before {
-  display: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 0.25rem solid #000;
+  border-right: 0.25rem solid #000;
 }
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
+  border: 0;
   /* Resetting margins to match _block-container.scss */
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -2187,120 +2158,58 @@ pre.wp-block-preformatted {
   font-size: 2rem;
   }
 }
-.wp-block-quote.is-large:before {
-  font-size: 1.5rem;
-  left: -2.5rem;
-}
-@media (min-width: 782px){
-  .wp-block-quote.is-large:before{
-  font-size: 2rem;
-  }
-}
-.wp-block-quote.is-style-large:before {
-  font-size: 1.5rem;
-  left: -2.5rem;
-}
-@media (min-width: 782px){
-  .wp-block-quote.is-style-large:before{
-  font-size: 2rem;
-  }
-}
-.wp-block-quote.is-large.has-text-align-right:before, .wp-block-quote.is-style-large.has-text-align-right:before {
-  display: none;
-}
-.wp-block-quote.is-large.has-text-align-right p:before {
-  content: "”";
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin-right: 10px;
-}
-@media (min-width: 782px){
-  .wp-block-quote.is-large.has-text-align-right p:before{
-  font-size: 2rem;
-  }
-}
-.wp-block-quote.is-style-large.has-text-align-right p:before {
-  content: "”";
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin-right: 10px;
-}
-@media (min-width: 782px){
-  .wp-block-quote.is-style-large.has-text-align-right p:before{
-  font-size: 2rem;
-  }
-}
 .wp-block-quote.is-large .wp-block-quote__citation {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote.is-large .wp-block-quote__citation{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .wp-block-quote.is-large cite {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote.is-large cite{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .wp-block-quote.is-large footer {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote.is-large footer{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .wp-block-quote.is-style-large .wp-block-quote__citation {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote.is-style-large .wp-block-quote__citation{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .wp-block-quote.is-style-large cite {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote.is-style-large cite{
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   }
 }
 .wp-block-quote.is-style-large footer {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 782px){
   .wp-block-quote.is-style-large footer{
-  font-size: 0.875rem;
-  }
-}
-@media (min-width: 480px) {
-  .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-    padding-left: 2.5rem;
-  }
-  .wp-block-quote.is-large:before, .wp-block-quote.is-style-large:before {
-    left: 0;
-  }
-  .wp-block-quote.is-large.has-text-align-right, .wp-block-quote.is-style-large.has-text-align-right {
-    padding-left: 0;
-    padding-right: 2.5rem;
-  }
-  .wp-block-quote.is-large.has-text-align-right:before, .wp-block-quote.is-style-large.has-text-align-right:before {
-    right: 0;
-  }
-  .wp-block-quote.is-large.has-text-align-center, .wp-block-quote.is-style-large.has-text-align-center {
-    padding-left: 0;
-    padding-right: 0;
+  font-size: 0.75rem;
   }
 }
 

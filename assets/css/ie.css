@@ -1046,7 +1046,7 @@ body {
 @media (min-width: 480px) {
   .entry-content > .alignleft {
     /*rtl:ignore*/
-    margin-left: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    margin-left: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1 - 5rem);
     /*rtl:ignore*/
     margin-right: 2.5rem;
   }
@@ -1057,12 +1057,12 @@ body {
   }
   @media (min-width: 480px){
     .entry-content > .alignleft{
-    margin-left: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    margin-left: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1 - 5rem);
     }
   }
   @media (min-width: 960px){
     .entry-content > .alignleft{
-    margin-left: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    margin-left: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1 - 5rem);
     }
   }
 }
@@ -1071,16 +1071,16 @@ body {
     /*rtl:ignore*/
     margin-left: 2.5rem;
     /*rtl:ignore*/
-    margin-right: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    margin-right: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1 - 5rem);
   }
   @media (min-width: 480px){
     .entry-content > .alignright{
-    margin-right: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    margin-right: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1 - 5rem);
     }
   }
   @media (min-width: 960px){
     .entry-content > .alignright{
-    margin-right: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    margin-right: calc(50vw - min(calc(100vw - 4 * 2.5rem), 610px)*1 - 5rem);
     }
   }
   @media (min-width: 480px){
@@ -3632,15 +3632,8 @@ pre.wp-block-preformatted {
    * Block Options
    */
 }
-.wp-block-pullquote blockquote::before {
-  color: currentColor;
-  content: "“";
-  display: block;
-  position: relative;
-  left: 0;
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1;
+.wp-block-pullquote blockquote:before {
+  display: none;
 }
 .wp-block-pullquote p {
   margin: 0;
@@ -3653,6 +3646,7 @@ pre.wp-block-preformatted {
   display: block;
   font-size: 0.75rem;
   text-transform: none;
+  font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 }
 @media (min-width: 782px){
   .wp-block-pullquote .wp-block-pullquote__citation{
@@ -3664,6 +3658,7 @@ pre.wp-block-preformatted {
   display: block;
   font-size: 0.75rem;
   text-transform: none;
+  font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 }
 @media (min-width: 782px){
   .wp-block-pullquote cite{
@@ -3675,6 +3670,7 @@ pre.wp-block-preformatted {
   display: block;
   font-size: 0.75rem;
   text-transform: none;
+  font-family: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
 }
 @media (min-width: 782px){
   .wp-block-pullquote footer{
@@ -3684,7 +3680,28 @@ pre.wp-block-preformatted {
 .wp-block-pullquote:not(.is-style-solid-color) {
   background: none;
 }
-.wp-block-pullquote.alignleft:not(.is-style-solid-color) blockquote:before,
+.wp-block-pullquote.alignleft, .wp-block-pullquote.alignright {
+  margin-top: 0.5rem;
+}
+.wp-block-pullquote.alignleft p {
+  font-size: 1rem;
+}
+@media (min-width: 782px){
+  .wp-block-pullquote.alignleft p{
+  font-size: 1.125rem;
+  }
+}
+.wp-block-pullquote.alignright p {
+  font-size: 1rem;
+}
+@media (min-width: 782px){
+  .wp-block-pullquote.alignright p{
+  font-size: 1.125rem;
+  }
+}
+.wp-block-pullquote.alignleft:not(.is-style-solid-color) {
+  text-align: center;
+}
 .wp-block-pullquote.alignleft:not(.is-style-solid-color) cite {
   text-align: center;
 }
@@ -3719,22 +3736,27 @@ pre.wp-block-preformatted {
 }
 .wp-block-pullquote.is-style-solid-color {
   color: #000;
-  padding: crem(40px);
+  padding: 2.5rem;
   border-width: 0.0625rem;
   border-style: solid;
   border-color: #000;
 }
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .wp-block-pullquote.is-style-solid-color {
     padding: 0.5rem;
   }
 }
-.wp-block-pullquote.is-style-solid-color blockquote::before {
-  text-align: left;
-}
 .wp-block-pullquote.is-style-solid-color blockquote {
   margin: 0;
   max-width: inherit;
+}
+.wp-block-pullquote.is-style-solid-color blockquote p {
+  font-size: 1.75rem;
+}
+@media (min-width: 782px){
+  .wp-block-pullquote.is-style-solid-color blockquote p{
+  font-size: 2.5rem;
+  }
 }
 .wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,
 .wp-block-pullquote.is-style-solid-color cite,
@@ -3742,10 +3764,26 @@ pre.wp-block-preformatted {
   color: currentColor;
 }
 .wp-block-pullquote.is-style-solid-color.alignleft, .wp-block-pullquote.is-style-solid-color.alignright {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .wp-block-pullquote.is-style-solid-color.alignleft blockquote, .wp-block-pullquote.is-style-solid-color.alignright blockquote {
   max-width: initial;
+}
+.wp-block-pullquote.is-style-solid-color.alignleft p {
+  font-size: 1.25rem;
+}
+@media (min-width: 782px){
+  .wp-block-pullquote.is-style-solid-color.alignleft p{
+  font-size: 1.5rem;
+  }
+}
+.wp-block-pullquote.is-style-solid-color.alignright p {
+  font-size: 1.25rem;
+}
+@media (min-width: 782px){
+  .wp-block-pullquote.is-style-solid-color.alignright p{
+  font-size: 1.5rem;
+  }
 }
 
 .wp-block-quote {
@@ -4579,18 +4617,18 @@ table.wp-calendar-table caption {
   }
 
   .entry-content > .alignleft {
-    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1 + 5rem);
   }
 
   @media (min-width: 480px){
     .entry-content > .alignleft{
-    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1 + 5rem);
     }
   }
 
   @media (min-width: 960px){
     .entry-content > .alignleft{
-    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1 + 5rem);
     }
   }
 }
@@ -4639,18 +4677,18 @@ table.wp-calendar-table caption {
   }
 
   .entry-content > .alignright {
-    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1 + 5rem);
   }
 
   @media (min-width: 480px){
     .entry-content > .alignright{
-    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1 + 5rem);
     }
   }
 
   @media (min-width: 960px){
     .entry-content > .alignright{
-    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1);
+    max-width: calc(50% - 50vw + min(calc(100vw - 4 * 2.5rem), 610px)*1 + 5rem);
     }
   }
 }

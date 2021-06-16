@@ -8,15 +8,8 @@
 	border-color: currentColor;
 	position: relative;
 
-	blockquote::before {
-		color: currentColor;
-		content: "\201C";
-		display: block;
-		position: relative; // Override the absolute position.
-		left: 0;
-		font-size: 3rem;
-		font-weight: var(--font-weight-strong);
-		line-height: 1;
+	blockquote:before {
+		display: none;
 	}
 
 	p {
@@ -34,6 +27,7 @@
 		display: block;
 		font-size: var(--font-size-xs);
 		text-transform: none;
+		font-family: var(--font-family-mono);
 	}
 
 	/**
@@ -43,9 +37,18 @@
 		background: none;
 	}
 
-	&.alignleft:not(.is-style-solid-color) {
+	&.alignleft,
+	&.alignright {
+		margin-top: rem(8px);
 
-		blockquote:before,
+		p {
+			font-size: var(--font-size-m);
+		}
+	}
+
+	&.alignleft:not(.is-style-solid-color) {
+		text-align: center;
+
 		cite {
 			text-align: center;
 		}
@@ -63,22 +66,22 @@
 
 	&.is-style-solid-color {
 		color: var(--color-1);
-		padding: crem(40px);
+		padding: rem(40px);
 		border-width: rem(1px);
 		border-style: solid;
 		border-color: var(--color-1);
 
-		@media (min-width: 600px) {
+		@media (max-width: 600px) {
 			padding: rem(8px);
-		}
-
-		blockquote::before {
-			text-align: left;
 		}
 
 		blockquote {
 			margin: 0;
 			max-width: inherit;
+
+			p {
+				font-size: var(--font-size-xxl);
+			}
 		}
 
 		.wp-block-pullquote__citation,
@@ -89,10 +92,14 @@
 
 		&.alignleft,
 		&.alignright {
-			padding: rem(16px);
-
+			padding: rem(24px);
+			
 			blockquote {
 				max-width: initial;
+			}
+
+			p {
+				font-size: var(--font-size-l);
 			}
 		}
 	}

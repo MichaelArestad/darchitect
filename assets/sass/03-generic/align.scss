@@ -31,8 +31,8 @@
   :root {
     --responsive--aligndefault-width: min(calc(100vw - 4 * var(--page-margin)), #{$default_width});
     --responsive--alignwide-width: calc(100vw - 4 * var(--page-margin));
-    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
-    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+    --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)) - 2 * var(--page-margin));
+    --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)) - 2 * var(--page-margin));
   }
 }
 
